@@ -1,0 +1,3420 @@
+initializing dataset
+loading model checkpoint
+CoCa(
+  (text): TextTransformer(
+    (token_embedding): Embedding(32007, 768)
+    (transformer): Transformer(
+      (resblocks): ModuleList(
+        (0-11): 12 x ResidualAttentionBlock(
+          (ln_1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (ls_1): Identity()
+          (ln_2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+          (mlp): Sequential(
+            (c_fc): Linear(in_features=768, out_features=3072, bias=True)
+            (gelu): GELU(approximate='none')
+            (c_proj): Linear(in_features=3072, out_features=768, bias=True)
+          )
+          (ls_2): Identity()
+        )
+      )
+    )
+    (ln_final): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  )
+  (visual): VisualModel(
+    (trunk): VisionTransformer(
+      (patch_embed): PatchEmbed(
+        (proj): Conv2d(3, 768, kernel_size=(16, 16), stride=(16, 16))
+        (norm): Identity()
+      )
+      (pos_drop): Dropout(p=0.0, inplace=False)
+      (patch_drop): Identity()
+      (norm_pre): Identity()
+      (blocks): Sequential(
+        (0): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+        (1): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+        (2): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+        (3): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+        (4): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+        (5): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+        (6): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+        (7): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+        (8): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+        (9): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+        (10): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+        (11): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+      )
+      (norm): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+      (fc_norm): Identity()
+      (head_drop): Dropout(p=0.0, inplace=False)
+      (head): Identity()
+    )
+    (attn_pool_contrast): AttentionalPooler(
+      (attn): MultiheadAttention(
+        (out_proj): NonDynamicallyQuantizableLinear(in_features=512, out_features=512, bias=True)
+      )
+      (ln_q): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      (ln_k): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    )
+    (ln_contrast): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+    (head): Sequential()
+    (attn_pool_caption): AttentionalPooler(
+      (attn): MultiheadAttention(
+        (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+      )
+      (ln_q): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (ln_k): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    )
+    (ln_caption): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  )
+  (text_decoder): MultimodalTransformer(
+    (resblocks): ModuleList(
+      (0-11): 12 x ResidualAttentionBlock(
+        (ln_1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (attn): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+        )
+        (ls_1): Identity()
+        (ln_2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (mlp): Sequential(
+          (c_fc): Linear(in_features=768, out_features=3072, bias=True)
+          (gelu): GELU(approximate='none')
+          (c_proj): Linear(in_features=3072, out_features=768, bias=True)
+        )
+        (ls_2): Identity()
+      )
+    )
+    (cross_attn): ModuleList(
+      (0-11): 12 x ResidualAttentionBlock(
+        (ln_1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (attn): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+        )
+        (ls_1): Identity()
+        (ln_1_kv): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (ln_2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (mlp): Sequential(
+          (c_fc): Linear(in_features=768, out_features=3072, bias=True)
+          (gelu): GELU(approximate='none')
+          (c_proj): Linear(in_features=3072, out_features=768, bias=True)
+        )
+        (ls_2): Identity()
+      )
+    )
+    (ln_final): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  )
+)
+
+progress: 0/138
+0044FA7C-BE66-4CF0-9DA8-DFB9518F74C2
+downsample [1. 1.]
+downsampled_level_dim [ 8835 12468]
+level_dim [ 8835 12468]
+name 0044FA7C-BE66-4CF0-9DA8-DFB9518F74C2
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/0044FA7C-BE66-4CF0-9DA8-DFB9518F74C2.h5 took 11.7477388381958 s
+features size:  (738, 512)
+coordinates size:  (738, 2)
+
+progress: 1/138
+02065575-D8B1-4BF0-8D6B-4FA4C6BD75A9
+downsample [1. 1.]
+downsampled_level_dim [ 8282 13392]
+level_dim [ 8282 13392]
+name 02065575-D8B1-4BF0-8D6B-4FA4C6BD75A9
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/02065575-D8B1-4BF0-8D6B-4FA4C6BD75A9.h5 took 13.747329711914062 s
+features size:  (843, 512)
+coordinates size:  (843, 2)
+
+progress: 2/138
+031AFF5A-D4D8-46C4-A2A9-82376B8A11EF
+downsample [1. 1.]
+downsampled_level_dim [ 8286 12009]
+level_dim [ 8286 12009]
+name 031AFF5A-D4D8-46C4-A2A9-82376B8A11EF
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/031AFF5A-D4D8-46C4-A2A9-82376B8A11EF.h5 took 12.590380430221558 s
+features size:  (822, 512)
+coordinates size:  (822, 2)
+
+progress: 3/138
+08D2B39F-D478-452E-893F-DAB76E65A370
+downsample [1. 1.]
+downsampled_level_dim [ 7733 12471]
+level_dim [ 7733 12471]
+name 08D2B39F-D478-452E-893F-DAB76E65A370
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/08D2B39F-D478-452E-893F-DAB76E65A370.h5 took 11.442596197128296 s
+features size:  (818, 512)
+coordinates size:  (818, 2)
+
+progress: 4/138
+0996B091-20E9-4A6A-8774-5C1FD0C92CB3
+downsample [1. 1.]
+downsampled_level_dim [10495 10618]
+level_dim [10495 10618]
+name 0996B091-20E9-4A6A-8774-5C1FD0C92CB3
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/0996B091-20E9-4A6A-8774-5C1FD0C92CB3.h5 took 14.124035596847534 s
+features size:  (1069, 512)
+coordinates size:  (1069, 2)
+
+progress: 5/138
+0ADE98A8-4560-45C9-9AAD-396394E683C1
+downsample [1. 1.]
+downsampled_level_dim [ 9937 12464]
+level_dim [ 9937 12464]
+name 0ADE98A8-4560-45C9-9AAD-396394E683C1
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/0ADE98A8-4560-45C9-9AAD-396394E683C1.h5 took 9.774749040603638 s
+features size:  (537, 512)
+coordinates size:  (537, 2)
+
+progress: 6/138
+0C400E0A-5BD7-4888-B169-062B1E33124C
+downsample [1. 1.]
+downsampled_level_dim [ 8287 11548]
+level_dim [ 8287 11548]
+name 0C400E0A-5BD7-4888-B169-062B1E33124C
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/0C400E0A-5BD7-4888-B169-062B1E33124C.h5 took 6.360183238983154 s
+features size:  (358, 512)
+coordinates size:  (358, 2)
+
+progress: 7/138
+0ECB5417-75D7-4D69-87A1-7D9FA96981E5
+downsample [1. 1.]
+downsampled_level_dim [9947 9236]
+level_dim [9947 9236]
+name 0ECB5417-75D7-4D69-87A1-7D9FA96981E5
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/0ECB5417-75D7-4D69-87A1-7D9FA96981E5.h5 took 8.565813302993774 s
+features size:  (520, 512)
+coordinates size:  (520, 2)
+
+progress: 8/138
+16C29D2B-7006-4E41-8E62-A471A0D3B2A0
+downsample [1. 1.]
+downsampled_level_dim [11598  9691]
+level_dim [11598  9691]
+name 16C29D2B-7006-4E41-8E62-A471A0D3B2A0
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/16C29D2B-7006-4E41-8E62-A471A0D3B2A0.h5 took 11.787359952926636 s
+features size:  (864, 512)
+coordinates size:  (864, 2)
+
+progress: 9/138
+16FDEA0E-668B-46EC-AC1D-54505D4406D2
+downsample [1. 1.]
+downsampled_level_dim [10473 16610]
+level_dim [10473 16610]
+name 16FDEA0E-668B-46EC-AC1D-54505D4406D2
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/16FDEA0E-668B-46EC-AC1D-54505D4406D2.h5 took 19.249374389648438 s
+features size:  (1404, 512)
+coordinates size:  (1404, 2)
+
+progress: 10/138
+1708C0D1-7885-4AC2-B3EF-4B8D3477840E
+downsample [1. 1.]
+downsampled_level_dim [8297 8320]
+level_dim [8297 8320]
+name 1708C0D1-7885-4AC2-B3EF-4B8D3477840E
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/1708C0D1-7885-4AC2-B3EF-4B8D3477840E.h5 took 8.072591543197632 s
+features size:  (527, 512)
+coordinates size:  (527, 2)
+
+progress: 11/138
+17826517-CB95-4640-885C-4C7154A8EB1B
+downsample [1. 1.]
+downsampled_level_dim [10484 13846]
+level_dim [10484 13846]
+name 17826517-CB95-4640-885C-4C7154A8EB1B
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/17826517-CB95-4640-885C-4C7154A8EB1B.h5 took 14.82010531425476 s
+features size:  (1020, 512)
+coordinates size:  (1020, 2)
+
+progress: 12/138
+180F9528-1A5E-42E9-8AFB-1538B0DFD163
+downsample [1. 1.]
+downsampled_level_dim [6101 6023]
+level_dim [6101 6023]
+name 180F9528-1A5E-42E9-8AFB-1538B0DFD163
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/180F9528-1A5E-42E9-8AFB-1538B0DFD163.h5 took 3.8259119987487793 s
+features size:  (231, 512)
+coordinates size:  (231, 2)
+
+progress: 13/138
+1C56C0C3-0219-4D54-A4AB-AFAEF31982B0
+downsample [1. 1.]
+downsampled_level_dim [9396 9700]
+level_dim [9396 9700]
+name 1C56C0C3-0219-4D54-A4AB-AFAEF31982B0
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/1C56C0C3-0219-4D54-A4AB-AFAEF31982B0.h5 took 11.270086765289307 s
+features size:  (455, 512)
+coordinates size:  (455, 2)
+
+progress: 14/138
+2180B799-3B70-41B1-A1C4-D5FC7C6FD207
+downsample [1. 1.]
+downsampled_level_dim [10494 10617]
+level_dim [10494 10617]
+name 2180B799-3B70-41B1-A1C4-D5FC7C6FD207
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/2180B799-3B70-41B1-A1C4-D5FC7C6FD207.h5 took 15.393561840057373 s
+features size:  (1020, 512)
+coordinates size:  (1020, 2)
+
+progress: 15/138
+23515CDA-1131-4847-85E9-E42C1A50CFFF
+downsample [1. 1.]
+downsampled_level_dim [2503 2461]
+level_dim [2503 2461]
+name 23515CDA-1131-4847-85E9-E42C1A50CFFF
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/23515CDA-1131-4847-85E9-E42C1A50CFFF.h5 took 0.9526271820068359 s
+features size:  (37, 512)
+coordinates size:  (37, 2)
+
+progress: 16/138
+25FB0B6C-17E2-4828-8E08-36455D1987F5
+downsample [1. 1.]
+downsampled_level_dim [ 9383 13849]
+level_dim [ 9383 13849]
+name 25FB0B6C-17E2-4828-8E08-36455D1987F5
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/25FB0B6C-17E2-4828-8E08-36455D1987F5.h5 took 15.906256675720215 s
+features size:  (1187, 512)
+coordinates size:  (1187, 2)
+
+progress: 17/138
+2702FD00-4F1F-490C-A958-B8C9DBB4AB63
+downsample [1. 1.]
+downsampled_level_dim [10496  9695]
+level_dim [10496  9695]
+name 2702FD00-4F1F-490C-A958-B8C9DBB4AB63
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/2702FD00-4F1F-490C-A958-B8C9DBB4AB63.h5 took 7.893312215805054 s
+features size:  (393, 512)
+coordinates size:  (393, 2)
+
+progress: 18/138
+292B8EF7-8E01-45EE-AA7F-E27A15EB2796
+downsample [1. 1.]
+downsampled_level_dim [6645 8326]
+level_dim [6645 8326]
+name 292B8EF7-8E01-45EE-AA7F-E27A15EB2796
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/292B8EF7-8E01-45EE-AA7F-E27A15EB2796.h5 took 6.2485620975494385 s
+features size:  (289, 512)
+coordinates size:  (289, 2)
+
+progress: 19/138
+2A88489D-5B58-43DC-A6D5-31D775BDA757
+downsample [1. 1.]
+downsampled_level_dim [ 9389 11544]
+level_dim [ 9389 11544]
+name 2A88489D-5B58-43DC-A6D5-31D775BDA757
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/2A88489D-5B58-43DC-A6D5-31D775BDA757.h5 took 7.007675647735596 s
+features size:  (384, 512)
+coordinates size:  (384, 2)
+
+progress: 20/138
+2BC3F663-FC98-473B-AB36-21AAD15D38E9
+downsample [1. 1.]
+downsampled_level_dim [4993 7871]
+level_dim [4993 7871]
+name 2BC3F663-FC98-473B-AB36-21AAD15D38E9
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/2BC3F663-FC98-473B-AB36-21AAD15D38E9.h5 took 3.08579158782959 s
+features size:  (159, 512)
+coordinates size:  (159, 2)
+
+progress: 21/138
+3DE4F1C1-8EC5-418D-9B5B-D67078F2EA5E
+downsample [1. 1.]
+downsampled_level_dim [10496 10157]
+level_dim [10496 10157]
+name 3DE4F1C1-8EC5-418D-9B5B-D67078F2EA5E
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/3DE4F1C1-8EC5-418D-9B5B-D67078F2EA5E.h5 took 10.897104501724243 s
+features size:  (721, 512)
+coordinates size:  (721, 2)
+
+progress: 22/138
+3F071C8F-3E97-437A-A9F5-85C152C695F5
+downsample [1. 1.]
+downsampled_level_dim [7200 6941]
+level_dim [7200 6941]
+name 3F071C8F-3E97-437A-A9F5-85C152C695F5
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/3F071C8F-3E97-437A-A9F5-85C152C695F5.h5 took 7.908828258514404 s
+features size:  (338, 512)
+coordinates size:  (338, 2)
+
+progress: 23/138
+41A26D44-227B-4745-A6A9-56BFB7A2371E
+downsample [1. 1.]
+downsampled_level_dim [ 8811 20305]
+level_dim [ 8811 20305]
+name 41A26D44-227B-4745-A6A9-56BFB7A2371E
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/41A26D44-227B-4745-A6A9-56BFB7A2371E.h5 took 12.334400653839111 s
+features size:  (724, 512)
+coordinates size:  (724, 2)
+
+progress: 24/138
+42B7064E-E1CA-45DE-A1C3-9D2CF7D35864
+downsample [1. 1.]
+downsampled_level_dim [7193 9246]
+level_dim [7193 9246]
+name 42B7064E-E1CA-45DE-A1C3-9D2CF7D35864
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/42B7064E-E1CA-45DE-A1C3-9D2CF7D35864.h5 took 7.0087809562683105 s
+features size:  (323, 512)
+coordinates size:  (323, 2)
+
+progress: 25/138
+42D976C4-8F34-448D-8330-119A7526685D
+downsample [1. 1.]
+downsampled_level_dim [8855 6474]
+level_dim [8855 6474]
+name 42D976C4-8F34-448D-8330-119A7526685D
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/42D976C4-8F34-448D-8330-119A7526685D.h5 took 7.15540885925293 s
+features size:  (473, 512)
+coordinates size:  (473, 2)
+
+progress: 26/138
+449DAD36-84B2-4349-91BB-FC94AC5FB9B3
+downsample [1. 1.]
+downsampled_level_dim [6641 9248]
+level_dim [6641 9248]
+name 449DAD36-84B2-4349-91BB-FC94AC5FB9B3
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/449DAD36-84B2-4349-91BB-FC94AC5FB9B3.h5 took 4.661369562149048 s
+features size:  (235, 512)
+coordinates size:  (235, 2)
+
+progress: 27/138
+45D9F521-5749-48F6-8B32-22139D0CDEB9
+downsample [1. 1.]
+downsampled_level_dim [7757 5095]
+level_dim [7757 5095]
+name 45D9F521-5749-48F6-8B32-22139D0CDEB9
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/45D9F521-5749-48F6-8B32-22139D0CDEB9.h5 took 4.792085409164429 s
+features size:  (250, 512)
+coordinates size:  (250, 2)
+
+progress: 28/138
+4841333F-0CC9-4BC3-AD25-28FE37EBF4F2
+downsample [1. 1.]
+downsampled_level_dim [11592 11997]
+level_dim [11592 11997]
+name 4841333F-0CC9-4BC3-AD25-28FE37EBF4F2
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/4841333F-0CC9-4BC3-AD25-28FE37EBF4F2.h5 took 13.957358598709106 s
+features size:  (1059, 512)
+coordinates size:  (1059, 2)
+
+progress: 29/138
+491AB82D-40D7-4BE0-B2C1-107E8CEE4775
+downsample [1. 1.]
+downsampled_level_dim [ 9386 12466]
+level_dim [ 9386 12466]
+name 491AB82D-40D7-4BE0-B2C1-107E8CEE4775
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/491AB82D-40D7-4BE0-B2C1-107E8CEE4775.h5 took 10.719667673110962 s
+features size:  (472, 512)
+coordinates size:  (472, 2)
+
+progress: 30/138
+4976B4E9-7C7C-49C4-B40D-AAF225262130
+downsample [1. 1.]
+downsampled_level_dim [ 8840 11085]
+level_dim [ 8840 11085]
+name 4976B4E9-7C7C-49C4-B40D-AAF225262130
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/4976B4E9-7C7C-49C4-B40D-AAF225262130.h5 took 10.630469799041748 s
+features size:  (738, 512)
+coordinates size:  (738, 2)
+
+progress: 31/138
+4E01E528-1232-4659-82DD-05841D9D8E25
+downsample [1. 1.]
+downsampled_level_dim [ 8278 14313]
+level_dim [ 8278 14313]
+name 4E01E528-1232-4659-82DD-05841D9D8E25
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/4E01E528-1232-4659-82DD-05841D9D8E25.h5 took 10.799896001815796 s
+features size:  (478, 512)
+coordinates size:  (478, 2)
+
+progress: 32/138
+51F2B1CC-E792-4AA1-BDC1-7212724D8C8D
+downsample [1. 1.]
+downsampled_level_dim [6642 9248]
+level_dim [6642 9248]
+name 51F2B1CC-E792-4AA1-BDC1-7212724D8C8D
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/51F2B1CC-E792-4AA1-BDC1-7212724D8C8D.h5 took 7.835942983627319 s
+features size:  (500, 512)
+coordinates size:  (500, 2)
+
+progress: 33/138
+5371FD0B-D78C-4A18-AC08-52B2296CA7C0
+downsample [1. 1.]
+downsampled_level_dim [7193 9246]
+level_dim [7193 9246]
+name 5371FD0B-D78C-4A18-AC08-52B2296CA7C0
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/5371FD0B-D78C-4A18-AC08-52B2296CA7C0.h5 took 8.591769933700562 s
+features size:  (515, 512)
+coordinates size:  (515, 2)
+
+progress: 34/138
+53AF2655-A892-4834-836A-1F372D396055
+downsample [1. 1.]
+downsampled_level_dim [9401 7855]
+level_dim [9401 7855]
+name 53AF2655-A892-4834-836A-1F372D396055
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/53AF2655-A892-4834-836A-1F372D396055.h5 took 7.605640411376953 s
+features size:  (336, 512)
+coordinates size:  (336, 2)
+
+progress: 35/138
+542B2870-9ACE-4C68-A062-AF547DFF43B0
+downsample [1. 1.]
+downsampled_level_dim [7754 6480]
+level_dim [7754 6480]
+name 542B2870-9ACE-4C68-A062-AF547DFF43B0
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/542B2870-9ACE-4C68-A062-AF547DFF43B0.h5 took 2.089953660964966 s
+features size:  (83, 512)
+coordinates size:  (83, 2)
+
+progress: 36/138
+565F65F8-3BDD-4B95-B03F-52194F7BA5AC
+downsample [1. 1.]
+downsampled_level_dim [10493 11079]
+level_dim [10493 11079]
+name 565F65F8-3BDD-4B95-B03F-52194F7BA5AC
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/565F65F8-3BDD-4B95-B03F-52194F7BA5AC.h5 took 12.94872260093689 s
+features size:  (962, 512)
+coordinates size:  (962, 2)
+
+progress: 37/138
+57B1BA04-4CBE-4171-931E-9D7B2D6A6233
+downsample [1. 1.]
+downsampled_level_dim [10502  8313]
+level_dim [10502  8313]
+name 57B1BA04-4CBE-4171-931E-9D7B2D6A6233
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/57B1BA04-4CBE-4171-931E-9D7B2D6A6233.h5 took 9.713609457015991 s
+features size:  (453, 512)
+coordinates size:  (453, 2)
+
+progress: 38/138
+5AB0F734-E649-4443-A0F9-DDD4007A3AF1
+downsample [1. 1.]
+downsampled_level_dim [7193 9246]
+level_dim [7193 9246]
+name 5AB0F734-E649-4443-A0F9-DDD4007A3AF1
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/5AB0F734-E649-4443-A0F9-DDD4007A3AF1.h5 took 6.486078977584839 s
+features size:  (295, 512)
+coordinates size:  (295, 2)
+
+progress: 39/138
+5C81E60A-8B99-4DA2-998C-8BC1FAD1CCD9
+downsample [1. 1.]
+downsampled_level_dim [4452 4645]
+level_dim [4452 4645]
+name 5C81E60A-8B99-4DA2-998C-8BC1FAD1CCD9
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/5C81E60A-8B99-4DA2-998C-8BC1FAD1CCD9.h5 took 2.710014581680298 s
+features size:  (121, 512)
+coordinates size:  (121, 2)
+
+progress: 40/138
+5D78CB62-F45C-4601-A363-F623E98D7885
+downsample [1. 1.]
+downsampled_level_dim [ 9388 12005]
+level_dim [ 9388 12005]
+name 5D78CB62-F45C-4601-A363-F623E98D7885
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/5D78CB62-F45C-4601-A363-F623E98D7885.h5 took 10.71087646484375 s
+features size:  (683, 512)
+coordinates size:  (683, 2)
+
+progress: 41/138
+5F29BC16-41DA-4F1B-9362-3A0EA548E180
+downsample [1. 1.]
+downsampled_level_dim [ 7184 12013]
+level_dim [ 7184 12013]
+name 5F29BC16-41DA-4F1B-9362-3A0EA548E180
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/5F29BC16-41DA-4F1B-9362-3A0EA548E180.h5 took 9.9429190158844 s
+features size:  (449, 512)
+coordinates size:  (449, 2)
+
+progress: 42/138
+617F3D1E-1151-498A-9FA6-F1CEF7BDD3C5
+downsample [1. 1.]
+downsampled_level_dim [ 8284 12469]
+level_dim [ 8284 12469]
+name 617F3D1E-1151-498A-9FA6-F1CEF7BDD3C5
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/617F3D1E-1151-498A-9FA6-F1CEF7BDD3C5.h5 took 7.3508312702178955 s
+features size:  (445, 512)
+coordinates size:  (445, 2)
+
+progress: 43/138
+636468D7-843E-42CB-A478-99B2C6876585
+downsample [1. 1.]
+downsampled_level_dim [10500  9236]
+level_dim [10500  9236]
+name 636468D7-843E-42CB-A478-99B2C6876585
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/636468D7-843E-42CB-A478-99B2C6876585.h5 took 9.283730745315552 s
+features size:  (524, 512)
+coordinates size:  (524, 2)
+
+progress: 44/138
+642FD4AB-288B-43E9-9556-A332C7B00C9B
+downsample [1. 1.]
+downsampled_level_dim [ 9943 10620]
+level_dim [ 9943 10620]
+name 642FD4AB-288B-43E9-9556-A332C7B00C9B
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/642FD4AB-288B-43E9-9556-A332C7B00C9B.h5 took 10.077659606933594 s
+features size:  (610, 512)
+coordinates size:  (610, 2)
+
+progress: 45/138
+65730A49-42B6-402F-A833-73E050722988
+downsample [1. 1.]
+downsampled_level_dim [ 8839 11546]
+level_dim [ 8839 11546]
+name 65730A49-42B6-402F-A833-73E050722988
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/65730A49-42B6-402F-A833-73E050722988.h5 took 11.434962749481201 s
+features size:  (507, 512)
+coordinates size:  (507, 2)
+
+progress: 46/138
+6795455F-67C0-4CBA-9837-B185F0E82B58
+downsample [1. 1.]
+downsampled_level_dim [4445 6950]
+level_dim [4445 6950]
+name 6795455F-67C0-4CBA-9837-B185F0E82B58
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/6795455F-67C0-4CBA-9837-B185F0E82B58.h5 took 3.003391981124878 s
+features size:  (132, 512)
+coordinates size:  (132, 2)
+
+progress: 47/138
+6CBDA7A7-EB7E-4CE5-9982-6AF0740E9373
+downsample [1. 1.]
+downsampled_level_dim [7745 8783]
+level_dim [7745 8783]
+name 6CBDA7A7-EB7E-4CE5-9982-6AF0740E9373
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/6CBDA7A7-EB7E-4CE5-9982-6AF0740E9373.h5 took 7.030473470687866 s
+features size:  (292, 512)
+coordinates size:  (292, 2)
+
+progress: 48/138
+6FB95CFF-C743-41D7-B851-AD6EF0BE42BB
+downsample [1. 1.]
+downsampled_level_dim [6644 8787]
+level_dim [6644 8787]
+name 6FB95CFF-C743-41D7-B851-AD6EF0BE42BB
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/6FB95CFF-C743-41D7-B851-AD6EF0BE42BB.h5 took 6.669382810592651 s
+features size:  (279, 512)
+coordinates size:  (279, 2)
+
+progress: 49/138
+71C58391-D8AB-464F-8288-41CE86D28E09
+downsample [1. 1.]
+downsampled_level_dim [10491 11540]
+level_dim [10491 11540]
+name 71C58391-D8AB-464F-8288-41CE86D28E09
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/71C58391-D8AB-464F-8288-41CE86D28E09.h5 took 15.657561779022217 s
+features size:  (1175, 512)
+coordinates size:  (1175, 2)
+
+progress: 50/138
+793B915C-6C04-4F4D-9A5E-63E07DFD66AE
+downsample [1. 1.]
+downsampled_level_dim [11039 12460]
+level_dim [11039 12460]
+name 793B915C-6C04-4F4D-9A5E-63E07DFD66AE
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/793B915C-6C04-4F4D-9A5E-63E07DFD66AE.h5 took 12.489696025848389 s
+features size:  (920, 512)
+coordinates size:  (920, 2)
+
+progress: 51/138
+7A255BDE-5CE9-4C29-89D6-9064E333689F
+downsample [1. 1.]
+downsampled_level_dim [8846 9703]
+level_dim [8846 9703]
+name 7A255BDE-5CE9-4C29-89D6-9064E333689F
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/7A255BDE-5CE9-4C29-89D6-9064E333689F.h5 took 8.648927450180054 s
+features size:  (537, 512)
+coordinates size:  (537, 2)
+
+progress: 52/138
+7B1B52F8-9497-4575-8EFD-83556F8B8922
+downsample [1. 1.]
+downsampled_level_dim [ 9390 11544]
+level_dim [ 9390 11544]
+name 7B1B52F8-9497-4575-8EFD-83556F8B8922
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/7B1B52F8-9497-4575-8EFD-83556F8B8922.h5 took 10.393143892288208 s
+features size:  (756, 512)
+coordinates size:  (756, 2)
+
+progress: 53/138
+7D8574DE-91E5-46AD-A7E6-95C320160FE7
+downsample [1. 1.]
+downsampled_level_dim [6097 7406]
+level_dim [6097 7406]
+name 7D8574DE-91E5-46AD-A7E6-95C320160FE7
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/7D8574DE-91E5-46AD-A7E6-95C320160FE7.h5 took 5.6696507930755615 s
+features size:  (271, 512)
+coordinates size:  (271, 2)
+
+progress: 54/138
+7FDE7F60-8117-4CD1-B285-DEA14C06148B
+downsample [1. 1.]
+downsampled_level_dim [ 8840 10623]
+level_dim [ 8840 10623]
+name 7FDE7F60-8117-4CD1-B285-DEA14C06148B
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/7FDE7F60-8117-4CD1-B285-DEA14C06148B.h5 took 8.389840126037598 s
+features size:  (523, 512)
+coordinates size:  (523, 2)
+
+progress: 55/138
+80FCC79D-599E-4C02-BCDC-B96AE8CF16DE
+downsample [1. 1.]
+downsampled_level_dim [7195 8785]
+level_dim [7195 8785]
+name 80FCC79D-599E-4C02-BCDC-B96AE8CF16DE
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/80FCC79D-599E-4C02-BCDC-B96AE8CF16DE.h5 took 8.833173274993896 s
+features size:  (543, 512)
+coordinates size:  (543, 2)
+
+progress: 56/138
+832C814C-9184-48CA-ACEB-90678AFD3FD6
+downsample [1. 1.]
+downsampled_level_dim [7194 8785]
+level_dim [7194 8785]
+name 832C814C-9184-48CA-ACEB-90678AFD3FD6
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/832C814C-9184-48CA-ACEB-90678AFD3FD6.h5 took 7.610132455825806 s
+features size:  (437, 512)
+coordinates size:  (437, 2)
+
+progress: 57/138
+871FE29A-4878-4486-AC24-71B3C3028457
+downsample [1. 1.]
+downsampled_level_dim [11044 11077]
+level_dim [11044 11077]
+name 871FE29A-4878-4486-AC24-71B3C3028457
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/871FE29A-4878-4486-AC24-71B3C3028457.h5 took 18.755394220352173 s
+features size:  (1393, 512)
+coordinates size:  (1393, 2)
+
+progress: 58/138
+8A37CCEC-47DF-460D-88EC-363322D700DC
+downsample [1. 1.]
+downsampled_level_dim [7203 6019]
+level_dim [7203 6019]
+name 8A37CCEC-47DF-460D-88EC-363322D700DC
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/8A37CCEC-47DF-460D-88EC-363322D700DC.h5 took 7.267171144485474 s
+features size:  (316, 512)
+coordinates size:  (316, 2)
+
+progress: 59/138
+8DFE9696-1755-4779-88DF-3DD494132BCE
+downsample [1. 1.]
+downsampled_level_dim [11596 11076]
+level_dim [11596 11076]
+name 8DFE9696-1755-4779-88DF-3DD494132BCE
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/8DFE9696-1755-4779-88DF-3DD494132BCE.h5 took 13.88631296157837 s
+features size:  (832, 512)
+coordinates size:  (832, 2)
+
+progress: 60/138
+8F12948C-811E-4B75-BCE8-BF804F706BCB
+downsample [1. 1.]
+downsampled_level_dim [8302 6936]
+level_dim [8302 6936]
+name 8F12948C-811E-4B75-BCE8-BF804F706BCB
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/8F12948C-811E-4B75-BCE8-BF804F706BCB.h5 took 5.143759727478027 s
+features size:  (309, 512)
+coordinates size:  (309, 2)
+
+progress: 61/138
+8F5C35EC-6727-4A67-9CB7-7B9305CC1C28
+downsample [1. 1.]
+downsampled_level_dim [7195 8324]
+level_dim [7195 8324]
+name 8F5C35EC-6727-4A67-9CB7-7B9305CC1C28
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/8F5C35EC-6727-4A67-9CB7-7B9305CC1C28.h5 took 7.299544811248779 s
+features size:  (340, 512)
+coordinates size:  (340, 2)
+
+progress: 62/138
+8FCC7625-F54F-4FDB-9E35-3839CB6E7579
+downsample [1. 1.]
+downsampled_level_dim [ 7739 10627]
+level_dim [ 7739 10627]
+name 8FCC7625-F54F-4FDB-9E35-3839CB6E7579
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/8FCC7625-F54F-4FDB-9E35-3839CB6E7579.h5 took 8.07617735862732 s
+features size:  (380, 512)
+coordinates size:  (380, 2)
+
+progress: 63/138
+90263E1F-50A6-4F19-BA21-6DF8A01D7348
+downsample [1. 1.]
+downsampled_level_dim [10491 11540]
+level_dim [10491 11540]
+name 90263E1F-50A6-4F19-BA21-6DF8A01D7348
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/90263E1F-50A6-4F19-BA21-6DF8A01D7348.h5 took 11.039011240005493 s
+features size:  (858, 512)
+coordinates size:  (858, 2)
+
+progress: 64/138
+9036EF73-394E-4627-B545-F2856AE8F112
+downsample [1. 1.]
+downsampled_level_dim [ 7189 10168]
+level_dim [ 7189 10168]
+name 9036EF73-394E-4627-B545-F2856AE8F112
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/9036EF73-394E-4627-B545-F2856AE8F112.h5 took 8.366405963897705 s
+features size:  (523, 512)
+coordinates size:  (523, 2)
+
+progress: 65/138
+91D2B150-23F7-4D84-9D9C-9C7E9132CE3C
+downsample [1. 1.]
+downsampled_level_dim [ 7190 10168]
+level_dim [ 7190 10168]
+name 91D2B150-23F7-4D84-9D9C-9C7E9132CE3C
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/91D2B150-23F7-4D84-9D9C-9C7E9132CE3C.h5 took 10.350688219070435 s
+features size:  (489, 512)
+coordinates size:  (489, 2)
+
+progress: 66/138
+92905901-97E4-4D7D-A95F-52F39B4152A6
+downsample [1. 1.]
+downsampled_level_dim [ 9940 11541]
+level_dim [ 9940 11541]
+name 92905901-97E4-4D7D-A95F-52F39B4152A6
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/92905901-97E4-4D7D-A95F-52F39B4152A6.h5 took 10.787134885787964 s
+features size:  (903, 512)
+coordinates size:  (903, 2)
+
+progress: 67/138
+932759AE-F2AE-4386-993C-FBF2FA1B8F3E
+downsample [1. 1.]
+downsampled_level_dim [ 8833 13391]
+level_dim [ 8833 13391]
+name 932759AE-F2AE-4386-993C-FBF2FA1B8F3E
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/932759AE-F2AE-4386-993C-FBF2FA1B8F3E.h5 took 10.42422103881836 s
+features size:  (483, 512)
+coordinates size:  (483, 2)
+
+progress: 68/138
+95C8B009-603E-4B3B-AC13-F4E5937EAA14
+downsample [1. 1.]
+downsampled_level_dim [11575 17531]
+level_dim [11575 17531]
+name 95C8B009-603E-4B3B-AC13-F4E5937EAA14
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/95C8B009-603E-4B3B-AC13-F4E5937EAA14.h5 took 20.292130708694458 s
+features size:  (1387, 512)
+coordinates size:  (1387, 2)
+
+progress: 69/138
+99DC99C1-B9B7-4A2E-B561-CC42E72DEAA8
+downsample [1. 1.]
+downsampled_level_dim [7192 9246]
+level_dim [7192 9246]
+name 99DC99C1-B9B7-4A2E-B561-CC42E72DEAA8
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/99DC99C1-B9B7-4A2E-B561-CC42E72DEAA8.h5 took 9.924370050430298 s
+features size:  (386, 512)
+coordinates size:  (386, 2)
+
+progress: 70/138
+9A9F4B83-DA1A-4C05-B11A-0752E5F1C422
+downsample [1. 1.]
+downsampled_level_dim [ 8837 12007]
+level_dim [ 8837 12007]
+name 9A9F4B83-DA1A-4C05-B11A-0752E5F1C422
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/9A9F4B83-DA1A-4C05-B11A-0752E5F1C422.h5 took 13.70881175994873 s
+features size:  (789, 512)
+coordinates size:  (789, 2)
+
+progress: 71/138
+9AF6BBD4-ABA1-4F23-A6E2-C69417402659
+downsample [1. 1.]
+downsampled_level_dim [ 9942 11081]
+level_dim [ 9942 11081]
+name 9AF6BBD4-ABA1-4F23-A6E2-C69417402659
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/9AF6BBD4-ABA1-4F23-A6E2-C69417402659.h5 took 11.855061769485474 s
+features size:  (511, 512)
+coordinates size:  (511, 2)
+
+progress: 72/138
+9B41CBB3-F7C7-4FFB-AA6D-152EFAE44092
+downsample [1. 1.]
+downsampled_level_dim [ 8833 12928]
+level_dim [ 8833 12928]
+name 9B41CBB3-F7C7-4FFB-AA6D-152EFAE44092
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/9B41CBB3-F7C7-4FFB-AA6D-152EFAE44092.h5 took 9.844488143920898 s
+features size:  (580, 512)
+coordinates size:  (580, 2)
+
+progress: 73/138
+9C1FBC50-9364-4440-80E3-93608303D5B6
+downsample [1. 1.]
+downsampled_level_dim [11044 11078]
+level_dim [11044 11078]
+name 9C1FBC50-9364-4440-80E3-93608303D5B6
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/9C1FBC50-9364-4440-80E3-93608303D5B6.h5 took 16.7352454662323 s
+features size:  (978, 512)
+coordinates size:  (978, 2)
+
+progress: 74/138
+9CDA69FA-FBF2-42E4-B2E7-57B8E2D72F1B
+downsample [1. 1.]
+downsampled_level_dim [ 8842 10162]
+level_dim [ 8842 10162]
+name 9CDA69FA-FBF2-42E4-B2E7-57B8E2D72F1B
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/9CDA69FA-FBF2-42E4-B2E7-57B8E2D72F1B.h5 took 9.751583099365234 s
+features size:  (712, 512)
+coordinates size:  (712, 2)
+
+progress: 75/138
+9D5AA451-9B0A-4629-9F4F-003C033C122B
+downsample [1. 1.]
+downsampled_level_dim [7748 7861]
+level_dim [7748 7861]
+name 9D5AA451-9B0A-4629-9F4F-003C033C122B
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/9D5AA451-9B0A-4629-9F4F-003C033C122B.h5 took 5.531499147415161 s
+features size:  (255, 512)
+coordinates size:  (255, 2)
+
+progress: 76/138
+A383097B-DE9C-40DE-92CF-8A02F6C75AAF
+downsample [1. 1.]
+downsampled_level_dim [ 7177 13856]
+level_dim [ 7177 13856]
+name A383097B-DE9C-40DE-92CF-8A02F6C75AAF
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/A383097B-DE9C-40DE-92CF-8A02F6C75AAF.h5 took 11.300227880477905 s
+features size:  (734, 512)
+coordinates size:  (734, 2)
+
+progress: 77/138
+A662F598-1370-4620-BC5C-4C27D465C582
+downsample [1. 1.]
+downsampled_level_dim [9947 9699]
+level_dim [9947 9699]
+name A662F598-1370-4620-BC5C-4C27D465C582
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/A662F598-1370-4620-BC5C-4C27D465C582.h5 took 9.947086095809937 s
+features size:  (660, 512)
+coordinates size:  (660, 2)
+
+progress: 78/138
+A88C49D7-8D2E-46F9-B1FB-BA23BA6B0DB9
+downsample [1. 1.]
+downsampled_level_dim [ 9394 10161]
+level_dim [ 9394 10161]
+name A88C49D7-8D2E-46F9-B1FB-BA23BA6B0DB9
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/A88C49D7-8D2E-46F9-B1FB-BA23BA6B0DB9.h5 took 13.802268266677856 s
+features size:  (872, 512)
+coordinates size:  (872, 2)
+
+progress: 79/138
+AA0DEC29-8970-4AAF-B502-85A57F3B3BC7
+downsample [1. 1.]
+downsampled_level_dim [11036 13844]
+level_dim [11036 13844]
+name AA0DEC29-8970-4AAF-B502-85A57F3B3BC7
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/AA0DEC29-8970-4AAF-B502-85A57F3B3BC7.h5 took 13.99559497833252 s
+features size:  (880, 512)
+coordinates size:  (880, 2)
+
+progress: 80/138
+ABB375C1-3856-416B-83D9-CAF1047E26D7
+downsample [1. 1.]
+downsampled_level_dim [11042 11538]
+level_dim [11042 11538]
+name ABB375C1-3856-416B-83D9-CAF1047E26D7
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/ABB375C1-3856-416B-83D9-CAF1047E26D7.h5 took 16.0638370513916 s
+features size:  (1205, 512)
+coordinates size:  (1205, 2)
+
+progress: 81/138
+ABE9442C-453C-479E-945D-59D8ABCB5E8A
+downsample [1. 1.]
+downsampled_level_dim [11041 12000]
+level_dim [11041 12000]
+name ABE9442C-453C-479E-945D-59D8ABCB5E8A
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/ABE9442C-453C-479E-945D-59D8ABCB5E8A.h5 took 13.820146322250366 s
+features size:  (955, 512)
+coordinates size:  (955, 2)
+
+progress: 82/138
+ACDABCA5-A7D1-47D8-AEF4-355C731EAED9
+downsample [1. 1.]
+downsampled_level_dim [7197 7863]
+level_dim [7197 7863]
+name ACDABCA5-A7D1-47D8-AEF4-355C731EAED9
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/ACDABCA5-A7D1-47D8-AEF4-355C731EAED9.h5 took 8.885640382766724 s
+features size:  (392, 512)
+coordinates size:  (392, 2)
+
+progress: 83/138
+AD4F5DC8-A149-47F1-A55B-7B5E93D6F117
+downsample [1. 1.]
+downsampled_level_dim [ 8840 11085]
+level_dim [ 8840 11085]
+name AD4F5DC8-A149-47F1-A55B-7B5E93D6F117
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/AD4F5DC8-A149-47F1-A55B-7B5E93D6F117.h5 took 9.450609683990479 s
+features size:  (552, 512)
+coordinates size:  (552, 2)
+
+progress: 84/138
+AEDF6101-32D2-4AE8-81D3-5FA609465416
+downsample [1. 1.]
+downsampled_level_dim [ 9392 11084]
+level_dim [ 9392 11084]
+name AEDF6101-32D2-4AE8-81D3-5FA609465416
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/AEDF6101-32D2-4AE8-81D3-5FA609465416.h5 took 9.574233531951904 s
+features size:  (418, 512)
+coordinates size:  (418, 2)
+
+progress: 85/138
+B1C3E0F5-6778-4F1E-AAFE-2EE3B0913145
+downsample [1. 1.]
+downsampled_level_dim [ 9390 11082]
+level_dim [ 9390 11082]
+name B1C3E0F5-6778-4F1E-AAFE-2EE3B0913145
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/B1C3E0F5-6778-4F1E-AAFE-2EE3B0913145.h5 took 11.858020067214966 s
+features size:  (801, 512)
+coordinates size:  (801, 2)
+
+progress: 86/138
+B2ED362D-9E7B-4AA4-A770-39C85449A029
+downsample [1. 1.]
+downsampled_level_dim [11045 11541]
+level_dim [11045 11541]
+name B2ED362D-9E7B-4AA4-A770-39C85449A029
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/B2ED362D-9E7B-4AA4-A770-39C85449A029.h5 took 14.585205554962158 s
+features size:  (964, 512)
+coordinates size:  (964, 2)
+
+progress: 87/138
+B32CC379-2DD1-4161-8312-79597E0FD7F2
+downsample [1. 1.]
+downsampled_level_dim [9396 9700]
+level_dim [9396 9700]
+name B32CC379-2DD1-4161-8312-79597E0FD7F2
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/B32CC379-2DD1-4161-8312-79597E0FD7F2.h5 took 6.007500171661377 s
+features size:  (322, 512)
+coordinates size:  (322, 2)
+
+progress: 88/138
+B51F9798-ACEF-48F0-A178-1561C74229FD
+downsample [1. 1.]
+downsampled_level_dim [ 6635 11553]
+level_dim [ 6635 11553]
+name B51F9798-ACEF-48F0-A178-1561C74229FD
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/B51F9798-ACEF-48F0-A178-1561C74229FD.h5 took 5.9841389656066895 s
+features size:  (298, 512)
+coordinates size:  (298, 2)
+
+progress: 89/138
+B5ACA4BC-4B0F-4682-9270-19B816ACEC10
+downsample [1. 1.]
+downsampled_level_dim [ 9386 12466]
+level_dim [ 9386 12466]
+name B5ACA4BC-4B0F-4682-9270-19B816ACEC10
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/B5ACA4BC-4B0F-4682-9270-19B816ACEC10.h5 took 13.61534309387207 s
+features size:  (793, 512)
+coordinates size:  (793, 2)
+
+progress: 90/138
+B668E778-A189-4210-8E8F-901407125FF3
+downsample [1. 1.]
+downsampled_level_dim [6092 8789]
+level_dim [6092 8789]
+name B668E778-A189-4210-8E8F-901407125FF3
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/B668E778-A189-4210-8E8F-901407125FF3.h5 took 7.7000837326049805 s
+features size:  (323, 512)
+coordinates size:  (323, 2)
+
+progress: 91/138
+BA545210-52B7-4FA3-A118-64EB09EA3762
+downsample [1. 1.]
+downsampled_level_dim [9954 7393]
+level_dim [9954 7393]
+name BA545210-52B7-4FA3-A118-64EB09EA3762
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/BA545210-52B7-4FA3-A118-64EB09EA3762.h5 took 8.812132120132446 s
+features size:  (392, 512)
+coordinates size:  (392, 2)
+
+progress: 92/138
+BD12FD9A-C264-492E-A745-C8928A8FBC95
+downsample [1. 1.]
+downsampled_level_dim [6648 7404]
+level_dim [6648 7404]
+name BD12FD9A-C264-492E-A745-C8928A8FBC95
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/BD12FD9A-C264-492E-A745-C8928A8FBC95.h5 took 3.125174045562744 s
+features size:  (115, 512)
+coordinates size:  (115, 2)
+
+progress: 93/138
+BD82B218-0B8C-476B-951F-252A7141F4D3
+downsample [1. 1.]
+downsampled_level_dim [10500  8774]
+level_dim [10500  8774]
+name BD82B218-0B8C-476B-951F-252A7141F4D3
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/BD82B218-0B8C-476B-951F-252A7141F4D3.h5 took 11.127649068832397 s
+features size:  (503, 512)
+coordinates size:  (503, 2)
+
+progress: 94/138
+BE527ABE-047D-48F4-8F68-C9F1FDEC65E2
+downsample [1. 1.]
+downsampled_level_dim [11593 11536]
+level_dim [11593 11536]
+name BE527ABE-047D-48F4-8F68-C9F1FDEC65E2
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/BE527ABE-047D-48F4-8F68-C9F1FDEC65E2.h5 took 15.531235694885254 s
+features size:  (1168, 512)
+coordinates size:  (1168, 2)
+
+progress: 95/138
+BF8F07B9-5F79-42DF-A50B-E9B3C6BA35C3
+downsample [1. 1.]
+downsampled_level_dim [11038 12921]
+level_dim [11038 12921]
+name BF8F07B9-5F79-42DF-A50B-E9B3C6BA35C3
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/BF8F07B9-5F79-42DF-A50B-E9B3C6BA35C3.h5 took 13.958539009094238 s
+features size:  (1047, 512)
+coordinates size:  (1047, 2)
+
+progress: 96/138
+C0991E55-1A8F-460D-AE2C-D6BFC17B7744
+downsample [1. 1.]
+downsampled_level_dim [6649 6943]
+level_dim [6649 6943]
+name C0991E55-1A8F-460D-AE2C-D6BFC17B7744
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/C0991E55-1A8F-460D-AE2C-D6BFC17B7744.h5 took 3.7282848358154297 s
+features size:  (185, 512)
+coordinates size:  (185, 2)
+
+progress: 97/138
+C0C5E568-2371-4844-B9F8-59F492C60152
+downsample [1. 1.]
+downsampled_level_dim [6642 9248]
+level_dim [6642 9248]
+name C0C5E568-2371-4844-B9F8-59F492C60152
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/C0C5E568-2371-4844-B9F8-59F492C60152.h5 took 8.375149250030518 s
+features size:  (396, 512)
+coordinates size:  (396, 2)
+
+progress: 98/138
+C12F6A92-D395-4C86-883F-666F9228569D
+downsample [1. 1.]
+downsampled_level_dim [ 4983 10636]
+level_dim [ 4983 10636]
+name C12F6A92-D395-4C86-883F-666F9228569D
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/C12F6A92-D395-4C86-883F-666F9228569D.h5 took 6.891235589981079 s
+features size:  (313, 512)
+coordinates size:  (313, 2)
+
+progress: 99/138
+C15B4B3A-8829-41EF-ADB9-A7C6CA10189B
+downsample [1. 1.]
+downsampled_level_dim [8844 9702]
+level_dim [8844 9702]
+name C15B4B3A-8829-41EF-ADB9-A7C6CA10189B
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/C15B4B3A-8829-41EF-ADB9-A7C6CA10189B.h5 took 11.182269811630249 s
+features size:  (699, 512)
+coordinates size:  (699, 2)
+
+progress: 100/138
+C1F6B520-1FD4-4CF5-BFF6-DBEF0D21C29A
+downsample [1. 1.]
+downsampled_level_dim [6654 5559]
+level_dim [6654 5559]
+name C1F6B520-1FD4-4CF5-BFF6-DBEF0D21C29A
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/C1F6B520-1FD4-4CF5-BFF6-DBEF0D21C29A.h5 took 5.075462341308594 s
+features size:  (208, 512)
+coordinates size:  (208, 2)
+
+progress: 101/138
+C22D3A0F-6F7D-42EB-9485-116C29A30052
+downsample [1. 1.]
+downsampled_level_dim [ 9392 11083]
+level_dim [ 9392 11083]
+name C22D3A0F-6F7D-42EB-9485-116C29A30052
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/C22D3A0F-6F7D-42EB-9485-116C29A30052.h5 took 11.657201766967773 s
+features size:  (805, 512)
+coordinates size:  (805, 2)
+
+progress: 102/138
+C2F16456-C0C0-4280-B646-82F86A535171
+downsample [1. 1.]
+downsampled_level_dim [9951 8315]
+level_dim [9951 8315]
+name C2F16456-C0C0-4280-B646-82F86A535171
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/C2F16456-C0C0-4280-B646-82F86A535171.h5 took 9.195988655090332 s
+features size:  (514, 512)
+coordinates size:  (514, 2)
+
+progress: 103/138
+C3047B94-AAD6-42AD-BC75-4405914FF765
+downsample [1. 1.]
+downsampled_level_dim [ 8832 13390]
+level_dim [ 8832 13390]
+name C3047B94-AAD6-42AD-BC75-4405914FF765
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/C3047B94-AAD6-42AD-BC75-4405914FF765.h5 took 13.3035409450531 s
+features size:  (789, 512)
+coordinates size:  (789, 2)
+
+progress: 104/138
+C597834E-CFB8-494F-B1F3-EA7F6D3C23F9
+downsample [1. 1.]
+downsampled_level_dim [ 9386 12466]
+level_dim [ 9386 12466]
+name C597834E-CFB8-494F-B1F3-EA7F6D3C23F9
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/C597834E-CFB8-494F-B1F3-EA7F6D3C23F9.h5 took 11.938191175460815 s
+features size:  (691, 512)
+coordinates size:  (691, 2)
+
+progress: 105/138
+C89D920F-59CA-4650-9263-92D0CE328C21
+downsample [1. 1.]
+downsampled_level_dim [ 7189 10168]
+level_dim [ 7189 10168]
+name C89D920F-59CA-4650-9263-92D0CE328C21
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/C89D920F-59CA-4650-9263-92D0CE328C21.h5 took 10.188124179840088 s
+features size:  (448, 512)
+coordinates size:  (448, 2)
+
+progress: 106/138
+C9B2ED63-E977-41FA-A401-70A74BB59135
+downsample [1. 1.]
+downsampled_level_dim [ 7730 13394]
+level_dim [ 7730 13394]
+name C9B2ED63-E977-41FA-A401-70A74BB59135
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/C9B2ED63-E977-41FA-A401-70A74BB59135.h5 took 10.3692786693573 s
+features size:  (464, 512)
+coordinates size:  (464, 2)
+
+progress: 107/138
+CC0E1010-1B3D-4FFB-BDDF-A022238CA9B8
+downsample [1. 1.]
+downsampled_level_dim [5000 6027]
+level_dim [5000 6027]
+name CC0E1010-1B3D-4FFB-BDDF-A022238CA9B8
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/CC0E1010-1B3D-4FFB-BDDF-A022238CA9B8.h5 took 2.1002776622772217 s
+features size:  (82, 512)
+coordinates size:  (82, 2)
+
+progress: 108/138
+CC3DBFA8-FB93-43A6-B0BB-21A2AF6F4B21
+downsample [1. 1.]
+downsampled_level_dim [10496  9695]
+level_dim [10496  9695]
+name CC3DBFA8-FB93-43A6-B0BB-21A2AF6F4B21
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/CC3DBFA8-FB93-43A6-B0BB-21A2AF6F4B21.h5 took 16.654249668121338 s
+features size:  (1010, 512)
+coordinates size:  (1010, 2)
+
+progress: 109/138
+CF2A2E55-018C-4822-AC5C-F33315A13B99
+downsample [1. 1.]
+downsampled_level_dim [ 9936 12925]
+level_dim [ 9936 12925]
+name CF2A2E55-018C-4822-AC5C-F33315A13B99
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/CF2A2E55-018C-4822-AC5C-F33315A13B99.h5 took 11.664068698883057 s
+features size:  (724, 512)
+coordinates size:  (724, 2)
+
+progress: 110/138
+D1A541FD-0143-440D-85E2-F7114D337F01
+downsample [1. 1.]
+downsampled_level_dim [8846 9240]
+level_dim [8846 9240]
+name D1A541FD-0143-440D-85E2-F7114D337F01
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/D1A541FD-0143-440D-85E2-F7114D337F01.h5 took 11.392159461975098 s
+features size:  (644, 512)
+coordinates size:  (644, 2)
+
+progress: 111/138
+D1C64CD0-9E21-486D-85D8-4AE9A1EC1313
+downsample [1. 1.]
+downsampled_level_dim [ 6085 11094]
+level_dim [ 6085 11094]
+name D1C64CD0-9E21-486D-85D8-4AE9A1EC1313
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/D1C64CD0-9E21-486D-85D8-4AE9A1EC1313.h5 took 10.101830244064331 s
+features size:  (423, 512)
+coordinates size:  (423, 2)
+
+progress: 112/138
+D23D52EE-52EE-423A-BAF4-F8080EBFDBCC
+downsample [1. 1.]
+downsampled_level_dim [ 9390 11082]
+level_dim [ 9390 11082]
+name D23D52EE-52EE-423A-BAF4-F8080EBFDBCC
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/D23D52EE-52EE-423A-BAF4-F8080EBFDBCC.h5 took 11.759803295135498 s
+features size:  (674, 512)
+coordinates size:  (674, 2)
+
+progress: 113/138
+D448060D-ED8B-4BF3-BDAE-A8912AC8CC26
+downsample [1. 1.]
+downsampled_level_dim [ 9393 10622]
+level_dim [ 9393 10622]
+name D448060D-ED8B-4BF3-BDAE-A8912AC8CC26
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/D448060D-ED8B-4BF3-BDAE-A8912AC8CC26.h5 took 16.303945302963257 s
+features size:  (965, 512)
+coordinates size:  (965, 2)
+
+progress: 114/138
+D4D32D5E-23BC-4D44-A912-8A220B11CAFF
+downsample [1. 1.]
+downsampled_level_dim [ 9391 11083]
+level_dim [ 9391 11083]
+name D4D32D5E-23BC-4D44-A912-8A220B11CAFF
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/D4D32D5E-23BC-4D44-A912-8A220B11CAFF.h5 took 13.375680923461914 s
+features size:  (795, 512)
+coordinates size:  (795, 2)
+
+progress: 115/138
+D6545D64-4D7B-4241-977D-C4281B988A67
+downsample [1. 1.]
+downsampled_level_dim [11038 12921]
+level_dim [11038 12921]
+name D6545D64-4D7B-4241-977D-C4281B988A67
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/D6545D64-4D7B-4241-977D-C4281B988A67.h5 took 15.508519649505615 s
+features size:  (1189, 512)
+coordinates size:  (1189, 2)
+
+progress: 116/138
+D7855063-F981-4DC2-B73F-2E8CDA42A384
+downsample [1. 1.]
+downsampled_level_dim [6642 9248]
+level_dim [6642 9248]
+name D7855063-F981-4DC2-B73F-2E8CDA42A384
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/D7855063-F981-4DC2-B73F-2E8CDA42A384.h5 took 5.329904079437256 s
+features size:  (230, 512)
+coordinates size:  (230, 2)
+
+progress: 117/138
+D7DB1CB7-C231-42F4-80E3-DBB684094533
+downsample [1. 1.]
+downsampled_level_dim [10491 12002]
+level_dim [10491 12002]
+name D7DB1CB7-C231-42F4-80E3-DBB684094533
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/D7DB1CB7-C231-42F4-80E3-DBB684094533.h5 took 14.049477100372314 s
+features size:  (876, 512)
+coordinates size:  (876, 2)
+
+progress: 118/138
+DBA5CA4E-8281-4E94-A0BC-6C413AE67433
+downsample [1. 1.]
+downsampled_level_dim [ 9911 21224]
+level_dim [ 9911 21224]
+name DBA5CA4E-8281-4E94-A0BC-6C413AE67433
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/DBA5CA4E-8281-4E94-A0BC-6C413AE67433.h5 took 17.80123209953308 s
+features size:  (1273, 512)
+coordinates size:  (1273, 2)
+
+progress: 119/138
+DBA6797B-7E6A-47FA-B981-BF5A0A682091
+downsample [1. 1.]
+downsampled_level_dim [ 8288 11548]
+level_dim [ 8288 11548]
+name DBA6797B-7E6A-47FA-B981-BF5A0A682091
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/DBA6797B-7E6A-47FA-B981-BF5A0A682091.h5 took 12.988898992538452 s
+features size:  (822, 512)
+coordinates size:  (822, 2)
+
+progress: 120/138
+DD2721BE-F1A0-4440-B84D-12B31158B83F
+downsample [1. 1.]
+downsampled_level_dim [10483 13844]
+level_dim [10483 13844]
+name DD2721BE-F1A0-4440-B84D-12B31158B83F
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/DD2721BE-F1A0-4440-B84D-12B31158B83F.h5 took 11.634553670883179 s
+features size:  (729, 512)
+coordinates size:  (729, 2)
+
+progress: 121/138
+DD9378D5-28E2-44E6-ABB8-36709E942830
+downsample [1. 1.]
+downsampled_level_dim [ 9942 11081]
+level_dim [ 9942 11081]
+name DD9378D5-28E2-44E6-ABB8-36709E942830
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/DD9378D5-28E2-44E6-ABB8-36709E942830.h5 took 9.878393411636353 s
+features size:  (585, 512)
+coordinates size:  (585, 2)
+
+progress: 122/138
+DFFB9FB4-AF82-4AB6-AE36-BCDF242FC1B3
+downsample [1. 1.]
+downsampled_level_dim [ 9918 18458]
+level_dim [ 9918 18458]
+name DFFB9FB4-AF82-4AB6-AE36-BCDF242FC1B3
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/DFFB9FB4-AF82-4AB6-AE36-BCDF242FC1B3.h5 took 12.14548373222351 s
+features size:  (676, 512)
+coordinates size:  (676, 2)
+
+progress: 123/138
+E0A4DECC-AF33-413C-A5FB-E4DF6EE9E859
+downsample [1. 1.]
+downsampled_level_dim [11041 11537]
+level_dim [11041 11537]
+name E0A4DECC-AF33-413C-A5FB-E4DF6EE9E859
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/E0A4DECC-AF33-413C-A5FB-E4DF6EE9E859.h5 took 14.740472078323364 s
+features size:  (1054, 512)
+coordinates size:  (1054, 2)
+
+progress: 124/138
+E5BE2824-054B-4D67-8EF0-2FAFEBA03DA7
+downsample [1. 1.]
+downsampled_level_dim [11587 13380]
+level_dim [11587 13380]
+name E5BE2824-054B-4D67-8EF0-2FAFEBA03DA7
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/E5BE2824-054B-4D67-8EF0-2FAFEBA03DA7.h5 took 14.614971399307251 s
+features size:  (1103, 512)
+coordinates size:  (1103, 2)
+
+progress: 125/138
+E80A55DB-E90B-4BAC-97EC-3FE1048E12B0
+downsample [1. 1.]
+downsampled_level_dim [7201 6941]
+level_dim [7201 6941]
+name E80A55DB-E90B-4BAC-97EC-3FE1048E12B0
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/E80A55DB-E90B-4BAC-97EC-3FE1048E12B0.h5 took 6.552727460861206 s
+features size:  (371, 512)
+coordinates size:  (371, 2)
+
+progress: 126/138
+E923C4EC-D334-487E-8474-AD1C340E8E08
+downsample [1. 1.]
+downsampled_level_dim [ 6637 10631]
+level_dim [ 6637 10631]
+name E923C4EC-D334-487E-8474-AD1C340E8E08
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/E923C4EC-D334-487E-8474-AD1C340E8E08.h5 took 6.999410390853882 s
+features size:  (320, 512)
+coordinates size:  (320, 2)
+
+progress: 127/138
+E9F957BE-7397-45EF-A0C2-896DA1681510
+downsample [1. 1.]
+downsampled_level_dim [ 7739 10628]
+level_dim [ 7739 10628]
+name E9F957BE-7397-45EF-A0C2-896DA1681510
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/E9F957BE-7397-45EF-A0C2-896DA1681510.h5 took 4.486023426055908 s
+features size:  (309, 512)
+coordinates size:  (309, 2)
+
+progress: 128/138
+EE28794C-A6D6-4A76-82D4-E466779541B3
+downsample [1. 1.]
+downsampled_level_dim [ 9392 10622]
+level_dim [ 9392 10622]
+name EE28794C-A6D6-4A76-82D4-E466779541B3
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/EE28794C-A6D6-4A76-82D4-E466779541B3.h5 took 8.223280668258667 s
+features size:  (558, 512)
+coordinates size:  (558, 2)
+
+progress: 129/138
+EF3EF99A-89FE-4972-97B2-1403862C017C
+downsample [1. 1.]
+downsampled_level_dim [6644 8326]
+level_dim [6644 8326]
+name EF3EF99A-89FE-4972-97B2-1403862C017C
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/EF3EF99A-89FE-4972-97B2-1403862C017C.h5 took 6.955296754837036 s
+features size:  (288, 512)
+coordinates size:  (288, 2)
+
+progress: 130/138
+F13D3751-3AA0-4DCD-9186-EB805938B61A
+downsample [1. 1.]
+downsampled_level_dim [6090 9711]
+level_dim [6090 9711]
+name F13D3751-3AA0-4DCD-9186-EB805938B61A
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/F13D3751-3AA0-4DCD-9186-EB805938B61A.h5 took 3.2594993114471436 s
+features size:  (133, 512)
+coordinates size:  (133, 2)
+
+progress: 131/138
+F1694E95-F746-4BA1-8356-5C56B908471E
+downsample [1. 1.]
+downsampled_level_dim [ 9390 11544]
+level_dim [ 9390 11544]
+name F1694E95-F746-4BA1-8356-5C56B908471E
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/F1694E95-F746-4BA1-8356-5C56B908471E.h5 took 15.246678829193115 s
+features size:  (916, 512)
+coordinates size:  (916, 2)
+
+progress: 132/138
+F18D6EA6-8C5A-4E68-8F1C-5C67FA4EBD42
+downsample [1. 1.]
+downsampled_level_dim [ 9943 10620]
+level_dim [ 9943 10620]
+name F18D6EA6-8C5A-4E68-8F1C-5C67FA4EBD42
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/F18D6EA6-8C5A-4E68-8F1C-5C67FA4EBD42.h5 took 14.815279006958008 s
+features size:  (843, 512)
+coordinates size:  (843, 2)
+
+progress: 133/138
+F28F3AD0-9F35-4365-A1F1-A4B01E2036F5
+downsample [1. 1.]
+downsampled_level_dim [ 8290 10625]
+level_dim [ 8290 10625]
+name F28F3AD0-9F35-4365-A1F1-A4B01E2036F5
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/F28F3AD0-9F35-4365-A1F1-A4B01E2036F5.h5 took 11.777175903320312 s
+features size:  (724, 512)
+coordinates size:  (724, 2)
+
+progress: 134/138
+F2E2EA1C-0FBC-444E-9282-6B5C689A88E1
+downsample [1. 1.]
+downsampled_level_dim [8847 8780]
+level_dim [8847 8780]
+name F2E2EA1C-0FBC-444E-9282-6B5C689A88E1
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/F2E2EA1C-0FBC-444E-9282-6B5C689A88E1.h5 took 8.13578748703003 s
+features size:  (439, 512)
+coordinates size:  (439, 2)
+
+progress: 135/138
+F3F63530-A0F5-4D0E-8D18-7F4383B6A309
+downsample [1. 1.]
+downsampled_level_dim [10486 12923]
+level_dim [10486 12923]
+name F3F63530-A0F5-4D0E-8D18-7F4383B6A309
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/F3F63530-A0F5-4D0E-8D18-7F4383B6A309.h5 took 13.907888889312744 s
+features size:  (923, 512)
+coordinates size:  (923, 2)
+
+progress: 136/138
+F632A5AC-B826-402F-B6C0-458A39516BBF
+downsample [1. 1.]
+downsampled_level_dim [7743 9706]
+level_dim [7743 9706]
+name F632A5AC-B826-402F-B6C0-458A39516BBF
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/F632A5AC-B826-402F-B6C0-458A39516BBF.h5 took 8.651055574417114 s
+features size:  (540, 512)
+coordinates size:  (540, 2)
+
+progress: 137/138
+F635239F-47AC-419F-83E6-B4B684B3A815
+downsample [1. 1.]
+downsampled_level_dim [6644 8787]
+level_dim [6644 8787]
+name F635239F-47AC-419F-83E6-B4B684B3A815
+patch_level 0
+patch_size 256
+save_path /home/graduate2024/data/CLAM_output5/Other/patches
+
+feature extraction settings
+transformations:  Compose(
+    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+)
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data/CLAM_features/Other/h5_files/F635239F-47AC-419F-83E6-B4B684B3A815.h5 took 9.86536955833435 s
+features size:  (440, 512)
+coordinates size:  (440, 2)

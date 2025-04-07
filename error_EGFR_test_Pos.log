@@ -1,0 +1,124 @@
+/home/graduate2024/code/zxb/CLAM-master/utils/eval_utils_new_fengru.py:38: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ckpt = torch.load(ckpt_path)
+/home/graduate2024/code/zxb/CLAM-master/utils/eval_utils_new_fengru.py:38: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ckpt = torch.load(ckpt_path)
+/home/graduate2024/code/zxb/CLAM-master/utils/eval_utils_new_fengru.py:38: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ckpt = torch.load(ckpt_path)
+/home/graduate2024/code/zxb/CLAM-master/utils/eval_utils_new_fengru.py:38: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ckpt = torch.load(ckpt_path)
+/home/graduate2024/code/zxb/CLAM-master/utils/eval_utils_new_fengru.py:38: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ckpt = torch.load(ckpt_path)
+/home/graduate2024/code/zxb/CLAM-master/utils/eval_utils_new_fengru.py:38: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ckpt = torch.load(ckpt_path)
+/home/graduate2024/code/zxb/CLAM-master/utils/eval_utils_new_fengru.py:38: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ckpt = torch.load(ckpt_path)
+/home/graduate2024/code/zxb/CLAM-master/utils/eval_utils_new_fengru.py:38: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ckpt = torch.load(ckpt_path)
+/home/graduate2024/code/zxb/CLAM-master/utils/eval_utils_new_fengru.py:38: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ckpt = torch.load(ckpt_path)
+/home/graduate2024/code/zxb/CLAM-master/utils/eval_utils_new_fengru.py:38: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ckpt = torch.load(ckpt_path)
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:479: RuntimeWarning: divide by zero encountered in divide
+  slope = (y_hi - y_lo) / (x_hi - x_lo)[:, None]
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:482: RuntimeWarning: invalid value encountered in multiply
+  y_new = slope*(x_new - x_lo)[:, None] + y_lo
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:479: RuntimeWarning: divide by zero encountered in divide
+  slope = (y_hi - y_lo) / (x_hi - x_lo)[:, None]
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:482: RuntimeWarning: invalid value encountered in multiply
+  y_new = slope*(x_new - x_lo)[:, None] + y_lo
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:479: RuntimeWarning: divide by zero encountered in divide
+  slope = (y_hi - y_lo) / (x_hi - x_lo)[:, None]
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:482: RuntimeWarning: invalid value encountered in multiply
+  y_new = slope*(x_new - x_lo)[:, None] + y_lo
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:479: RuntimeWarning: divide by zero encountered in divide
+  slope = (y_hi - y_lo) / (x_hi - x_lo)[:, None]
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:482: RuntimeWarning: invalid value encountered in multiply
+  y_new = slope*(x_new - x_lo)[:, None] + y_lo
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:479: RuntimeWarning: divide by zero encountered in divide
+  slope = (y_hi - y_lo) / (x_hi - x_lo)[:, None]
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:482: RuntimeWarning: invalid value encountered in multiply
+  y_new = slope*(x_new - x_lo)[:, None] + y_lo
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:479: RuntimeWarning: divide by zero encountered in divide
+  slope = (y_hi - y_lo) / (x_hi - x_lo)[:, None]
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:482: RuntimeWarning: invalid value encountered in multiply
+  y_new = slope*(x_new - x_lo)[:, None] + y_lo
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:479: RuntimeWarning: divide by zero encountered in divide
+  slope = (y_hi - y_lo) / (x_hi - x_lo)[:, None]
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:482: RuntimeWarning: invalid value encountered in multiply
+  y_new = slope*(x_new - x_lo)[:, None] + y_lo
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:479: RuntimeWarning: divide by zero encountered in divide
+  slope = (y_hi - y_lo) / (x_hi - x_lo)[:, None]
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:482: RuntimeWarning: invalid value encountered in multiply
+  y_new = slope*(x_new - x_lo)[:, None] + y_lo
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:479: RuntimeWarning: divide by zero encountered in divide
+  slope = (y_hi - y_lo) / (x_hi - x_lo)[:, None]
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:482: RuntimeWarning: invalid value encountered in multiply
+  y_new = slope*(x_new - x_lo)[:, None] + y_lo
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:479: RuntimeWarning: divide by zero encountered in divide
+  slope = (y_hi - y_lo) / (x_hi - x_lo)[:, None]
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:482: RuntimeWarning: invalid value encountered in multiply
+  y_new = slope*(x_new - x_lo)[:, None] + y_lo
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:479: RuntimeWarning: divide by zero encountered in divide
+  slope = (y_hi - y_lo) / (x_hi - x_lo)[:, None]
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:482: RuntimeWarning: invalid value encountered in multiply
+  y_new = slope*(x_new - x_lo)[:, None] + y_lo
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:479: RuntimeWarning: divide by zero encountered in divide
+  slope = (y_hi - y_lo) / (x_hi - x_lo)[:, None]
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:482: RuntimeWarning: invalid value encountered in multiply
+  y_new = slope*(x_new - x_lo)[:, None] + y_lo
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:479: RuntimeWarning: divide by zero encountered in divide
+  slope = (y_hi - y_lo) / (x_hi - x_lo)[:, None]
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:482: RuntimeWarning: invalid value encountered in multiply
+  y_new = slope*(x_new - x_lo)[:, None] + y_lo
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:479: RuntimeWarning: divide by zero encountered in divide
+  slope = (y_hi - y_lo) / (x_hi - x_lo)[:, None]
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:482: RuntimeWarning: invalid value encountered in multiply
+  y_new = slope*(x_new - x_lo)[:, None] + y_lo
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:479: RuntimeWarning: divide by zero encountered in divide
+  slope = (y_hi - y_lo) / (x_hi - x_lo)[:, None]
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:482: RuntimeWarning: invalid value encountered in multiply
+  y_new = slope*(x_new - x_lo)[:, None] + y_lo
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:479: RuntimeWarning: divide by zero encountered in divide
+  slope = (y_hi - y_lo) / (x_hi - x_lo)[:, None]
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:482: RuntimeWarning: invalid value encountered in multiply
+  y_new = slope*(x_new - x_lo)[:, None] + y_lo
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:479: RuntimeWarning: divide by zero encountered in divide
+  slope = (y_hi - y_lo) / (x_hi - x_lo)[:, None]
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:482: RuntimeWarning: invalid value encountered in multiply
+  y_new = slope*(x_new - x_lo)[:, None] + y_lo
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:479: RuntimeWarning: divide by zero encountered in divide
+  slope = (y_hi - y_lo) / (x_hi - x_lo)[:, None]
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:482: RuntimeWarning: invalid value encountered in multiply
+  y_new = slope*(x_new - x_lo)[:, None] + y_lo
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:479: RuntimeWarning: divide by zero encountered in divide
+  slope = (y_hi - y_lo) / (x_hi - x_lo)[:, None]
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:482: RuntimeWarning: invalid value encountered in multiply
+  y_new = slope*(x_new - x_lo)[:, None] + y_lo
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:479: RuntimeWarning: divide by zero encountered in divide
+  slope = (y_hi - y_lo) / (x_hi - x_lo)[:, None]
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:482: RuntimeWarning: invalid value encountered in multiply
+  y_new = slope*(x_new - x_lo)[:, None] + y_lo
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:479: RuntimeWarning: divide by zero encountered in divide
+  slope = (y_hi - y_lo) / (x_hi - x_lo)[:, None]
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:482: RuntimeWarning: invalid value encountered in multiply
+  y_new = slope*(x_new - x_lo)[:, None] + y_lo
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:479: RuntimeWarning: divide by zero encountered in divide
+  slope = (y_hi - y_lo) / (x_hi - x_lo)[:, None]
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:482: RuntimeWarning: invalid value encountered in multiply
+  y_new = slope*(x_new - x_lo)[:, None] + y_lo
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:479: RuntimeWarning: divide by zero encountered in divide
+  slope = (y_hi - y_lo) / (x_hi - x_lo)[:, None]
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:482: RuntimeWarning: invalid value encountered in multiply
+  y_new = slope*(x_new - x_lo)[:, None] + y_lo
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:479: RuntimeWarning: divide by zero encountered in divide
+  slope = (y_hi - y_lo) / (x_hi - x_lo)[:, None]
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:482: RuntimeWarning: invalid value encountered in multiply
+  y_new = slope*(x_new - x_lo)[:, None] + y_lo
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:479: RuntimeWarning: divide by zero encountered in divide
+  slope = (y_hi - y_lo) / (x_hi - x_lo)[:, None]
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:482: RuntimeWarning: invalid value encountered in multiply
+  y_new = slope*(x_new - x_lo)[:, None] + y_lo
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:479: RuntimeWarning: divide by zero encountered in divide
+  slope = (y_hi - y_lo) / (x_hi - x_lo)[:, None]
+/home/graduate2024/miniconda3/lib/python3.12/site-packages/scipy/interpolate/_interpolate.py:482: RuntimeWarning: invalid value encountered in multiply
+  y_new = slope*(x_new - x_lo)[:, None] + y_lo

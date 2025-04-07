@@ -1,0 +1,1160 @@
+initializing dataset
+loading model checkpoint
+VisionTransformer(
+  (patch_embed): PatchEmbed(
+    (proj): Conv2d(3, 1024, kernel_size=(16, 16), stride=(16, 16))
+    (norm): Identity()
+  )
+  (pos_drop): Dropout(p=0.0, inplace=False)
+  (patch_drop): Identity()
+  (norm_pre): Identity()
+  (blocks): Sequential(
+    (0): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (1): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (2): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (3): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (4): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (5): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (6): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (7): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (8): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (9): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (10): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (11): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (12): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (13): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (14): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (15): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (16): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (17): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (18): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (19): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (20): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (21): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (22): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (23): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+  )
+  (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+  (fc_norm): Identity()
+  (head_drop): Dropout(p=0.0, inplace=False)
+  (head): Identity()
+)
+model successfully loading!!
+
+progress: 26/121
+
+progress: 27/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KM-8441-01Z-00-DX1-D2CA0ADE-7EDF-49A6-989C-2761F1CFE340/Medium
+processing a total of 10 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KM-8441-01Z-00-DX1-D2CA0ADE-7EDF-49A6-989C-2761F1CFE340.h5 took 257.15504026412964 s
+
+progress: 28/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KM-8442-01Z-00-DX1-46835CE2-819D-4887-9633-422BC9F5E366/Medium
+processing a total of 12 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KM-8442-01Z-00-DX1-46835CE2-819D-4887-9633-422BC9F5E366.h5 took 281.8147237300873 s
+
+progress: 29/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KM-8443-01Z-00-DX1-A97D876A-6453-4335-B805-C54529D3915F/Medium
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KM-8443-01Z-00-DX1-A97D876A-6453-4335-B805-C54529D3915F.h5 took 208.70563530921936 s
+
+progress: 30/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KM-8476-01Z-00-DX1-BDC7C35E-1B36-4CF6-9CF0-B63C68724EF2/Medium
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KM-8476-01Z-00-DX1-BDC7C35E-1B36-4CF6-9CF0-B63C68724EF2.h5 took 145.17119097709656 s
+
+progress: 31/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KM-8477-01Z-00-DX1-5419F74B-EE1C-47C3-A5A7-B22768E613A8/Medium
+processing a total of 10 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KM-8477-01Z-00-DX1-5419F74B-EE1C-47C3-A5A7-B22768E613A8.h5 took 252.37509894371033 s
+
+progress: 32/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KM-8639-01Z-00-DX1-13E1C61C-16F6-4FC5-B1D2-DDBF7DE16639/Medium
+processing a total of 11 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KM-8639-01Z-00-DX1-13E1C61C-16F6-4FC5-B1D2-DDBF7DE16639.h5 took 245.04424571990967 s
+
+progress: 33/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KM-A7QA-01Z-00-DX1-971BE7D3-6E83-44C9-AFC4-50FE85E9C982/Medium
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KM-A7QA-01Z-00-DX1-971BE7D3-6E83-44C9-AFC4-50FE85E9C982.h5 took 118.69637155532837 s
+
+progress: 34/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KM-A7QB-01Z-00-DX1-CC441A0F-8A5C-4406-8A8D-86CB62E7B114/Medium
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KM-A7QB-01Z-00-DX1-CC441A0F-8A5C-4406-8A8D-86CB62E7B114.h5 took 196.05276322364807 s
+
+progress: 35/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KM-A7QC-01Z-00-DX1-4B44EEAA-FA1C-47F9-852F-68EE45E09D5E/Medium
+processing a total of 10 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KM-A7QC-01Z-00-DX1-4B44EEAA-FA1C-47F9-852F-68EE45E09D5E.h5 took 252.94213676452637 s
+
+progress: 36/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KM-A7QD-01Z-00-DX1-E1FCB533-0017-4A90-9835-6CD26FEA30CA/Medium
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KM-A7QD-01Z-00-DX1-E1FCB533-0017-4A90-9835-6CD26FEA30CA.h5 took 194.2456018924713 s
+
+progress: 37/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KM-A7QE-01Z-00-DX1-82CBD529-FBB8-4969-A6E0-B563F0C9D73B/Medium
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KM-A7QE-01Z-00-DX1-82CBD529-FBB8-4969-A6E0-B563F0C9D73B.h5 took 193.69717407226562 s
+
+progress: 38/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KM-A7QG-01Z-00-DX1-7275EEF1-1D4E-4471-89C3-5B99EC03515E/Medium
+processing a total of 10 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KM-A7QG-01Z-00-DX1-7275EEF1-1D4E-4471-89C3-5B99EC03515E.h5 took 261.3784325122833 s
+
+progress: 39/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KM-A7QH-01Z-00-DX1-8CBB8760-A00D-4289-AD09-959FEC2EC03C/Medium
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KM-A7QH-01Z-00-DX1-8CBB8760-A00D-4289-AD09-959FEC2EC03C.h5 took 96.5158281326294 s
+
+progress: 40/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KM-A7QI-01Z-00-DX1-D5284A3E-891C-4750-BE93-C09C7F23C95C/Medium
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KM-A7QI-01Z-00-DX1-D5284A3E-891C-4750-BE93-C09C7F23C95C.h5 took 148.52678418159485 s
+
+progress: 41/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KM-A7QJ-01Z-00-DX1-5011C41F-4385-4AB2-8AFE-5409125EDC31/Medium
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KM-A7QJ-01Z-00-DX1-5011C41F-4385-4AB2-8AFE-5409125EDC31.h5 took 209.79960918426514 s
+
+progress: 42/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KM-A7QK-01Z-00-DX1-8D69EA34-F28A-4267-8A82-159FB2B7008B/Medium
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KM-A7QK-01Z-00-DX1-8D69EA34-F28A-4267-8A82-159FB2B7008B.h5 took 157.74852895736694 s
+
+progress: 43/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KM-A7QL-01Z-00-DX1-2447532C-3635-4F36-952E-F5A5A566A7DB/Medium
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KM-A7QL-01Z-00-DX1-2447532C-3635-4F36-952E-F5A5A566A7DB.h5 took 194.76132011413574 s
+
+progress: 44/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KN-8418-01Z-00-DX1-376DD52D-EF98-4564-B8E3-FE4D219A5C88/Medium
+processing a total of 11 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KN-8418-01Z-00-DX1-376DD52D-EF98-4564-B8E3-FE4D219A5C88.h5 took 277.07758712768555 s
+
+progress: 45/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KN-8419-01Z-00-DX1-15311E57-CCC5-4D15-88DC-0ED9FD2CF2D0/Medium
+processing a total of 10 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KN-8419-01Z-00-DX1-15311E57-CCC5-4D15-88DC-0ED9FD2CF2D0.h5 took 250.21276378631592 s
+
+progress: 46/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KN-8421-01Z-00-DX1-A90EB3F7-DE68-4078-BB5B-B35561F96071/Medium
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KN-8421-01Z-00-DX1-A90EB3F7-DE68-4078-BB5B-B35561F96071.h5 took 94.68694949150085 s
+
+progress: 47/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KN-8422-01Z-00-DX1-26F9BF86-6D2C-4C99-BFEB-A3708AD48734/Medium
+processing a total of 12 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KN-8422-01Z-00-DX1-26F9BF86-6D2C-4C99-BFEB-A3708AD48734.h5 took 294.3171627521515 s
+
+progress: 48/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KN-8423-01Z-00-DX1-EE5F8790-38EB-437F-9C5A-BC6FB58F6ACD/Medium
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KN-8423-01Z-00-DX1-EE5F8790-38EB-437F-9C5A-BC6FB58F6ACD.h5 took 182.14480781555176 s
+
+progress: 49/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KN-8424-01Z-00-DX1-4EC063E2-A058-4610-9B47-FCE2172955B6/Medium
+processing a total of 10 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KN-8424-01Z-00-DX1-4EC063E2-A058-4610-9B47-FCE2172955B6.h5 took 236.20500707626343 s
+
+progress: 50/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KN-8425-01Z-00-DX1-1D2AB7D2-6AC3-4785-9FBC-40AEED5DE558/Medium
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KN-8425-01Z-00-DX1-1D2AB7D2-6AC3-4785-9FBC-40AEED5DE558.h5 took 119.78332948684692 s
+
+progress: 51/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KN-8426-01Z-00-DX1-FA31AC9B-A378-467E-97CB-7EFA06B804A1/Medium
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KN-8426-01Z-00-DX1-FA31AC9B-A378-467E-97CB-7EFA06B804A1.h5 took 84.00064992904663 s
+
+progress: 52/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KN-8427-01Z-00-DX1-8B2A5B0B-977E-4ED9-A9D2-23FFFBA43B7C/Medium
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KN-8427-01Z-00-DX1-8B2A5B0B-977E-4ED9-A9D2-23FFFBA43B7C.h5 took 195.3683831691742 s
+
+progress: 53/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KN-8428-01Z-00-DX1-CA71B178-286E-4EDF-9B37-1D2CEE07F9F4/Medium
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KN-8428-01Z-00-DX1-CA71B178-286E-4EDF-9B37-1D2CEE07F9F4.h5 took 204.15748715400696 s
+
+progress: 54/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KN-8429-01Z-00-DX1-473181A7-5F6A-4B68-B6E0-44EF34F67DA0/Medium
+processing a total of 11 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KN-8429-01Z-00-DX1-473181A7-5F6A-4B68-B6E0-44EF34F67DA0.h5 took 267.3535268306732 s
+
+progress: 55/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KN-8430-01Z-00-DX1-8192F868-A504-44E0-929B-7527EB37ECAB/Medium
+processing a total of 11 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KN-8430-01Z-00-DX1-8192F868-A504-44E0-929B-7527EB37ECAB.h5 took 255.88413262367249 s
+
+progress: 56/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KN-8431-01Z-00-DX1-BAEA4392-5CD8-4B28-8A47-E9DCE88F5820/Medium
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KN-8431-01Z-00-DX1-BAEA4392-5CD8-4B28-8A47-E9DCE88F5820.h5 took 119.26181101799011 s
+
+progress: 57/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KN-8432-01Z-00-DX1-D4136A31-C2DC-432C-96FB-FD5EE47ECC0D/Medium
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KN-8432-01Z-00-DX1-D4136A31-C2DC-432C-96FB-FD5EE47ECC0D.h5 took 43.02118158340454 s
+
+progress: 58/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KN-8433-01Z-00-DX1-4AE64138-3E04-46AC-B905-52CB71261230/Medium
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KN-8433-01Z-00-DX1-4AE64138-3E04-46AC-B905-52CB71261230.h5 took 37.75116324424744 s
+
+progress: 59/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KN-8434-01Z-00-DX1-EC2C42B5-DB0D-44A3-8224-E982201AE337/Medium
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KN-8434-01Z-00-DX1-EC2C42B5-DB0D-44A3-8224-E982201AE337.h5 took 57.2699556350708 s
+
+progress: 60/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KN-8435-01Z-00-DX1-99219621-93BA-448B-8AFE-AEECA888BDA4/Medium
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KN-8435-01Z-00-DX1-99219621-93BA-448B-8AFE-AEECA888BDA4.h5 took 121.99601721763611 s
+
+progress: 61/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KN-8436-01Z-00-DX1-0CCCF11D-ED0E-4575-8F25-813415391524/Medium
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KN-8436-01Z-00-DX1-0CCCF11D-ED0E-4575-8F25-813415391524.h5 took 204.39752507209778 s
+
+progress: 62/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KN-8437-01Z-00-DX1-573F2559-097F-4A87-9AB6-55BF2FEB724F/Medium
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KN-8437-01Z-00-DX1-573F2559-097F-4A87-9AB6-55BF2FEB724F.h5 took 113.97274875640869 s
+
+progress: 63/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KO-8403-01Z-00-DX1-47C5A937-3397-4313-BE8B-0C6E4B12C301/Medium
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KO-8403-01Z-00-DX1-47C5A937-3397-4313-BE8B-0C6E4B12C301.h5 took 177.41009187698364 s
+
+progress: 64/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KO-8404-01Z-00-DX1-0285FDDF-1C75-4DF3-BD59-285870B73B88/Medium
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KO-8404-01Z-00-DX1-0285FDDF-1C75-4DF3-BD59-285870B73B88.h5 took 160.645254611969 s
+
+progress: 65/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KO-8405-01Z-00-DX1-DB2F9FFE-B562-4D52-A4DF-E939DE99B5F7/Medium
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KO-8405-01Z-00-DX1-DB2F9FFE-B562-4D52-A4DF-E939DE99B5F7.h5 took 210.90103673934937 s
+
+progress: 66/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KO-8406-01Z-00-DX1-F9FDAB2C-9EEC-41D0-A29C-530107B96AC2/Medium
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KO-8406-01Z-00-DX1-F9FDAB2C-9EEC-41D0-A29C-530107B96AC2.h5 took 177.6326138973236 s
+
+progress: 67/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KO-8407-01Z-00-DX1-4EB39EA8-2A33-48E1-88A6-EE3B544249AB/Medium
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KO-8407-01Z-00-DX1-4EB39EA8-2A33-48E1-88A6-EE3B544249AB.h5 took 146.59358525276184 s
+
+progress: 68/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KO-8408-01Z-00-DX1-4D45F809-E93A-4221-832A-97C3A4B4E30C/Medium
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KO-8408-01Z-00-DX1-4D45F809-E93A-4221-832A-97C3A4B4E30C.h5 took 176.4988989830017 s
+
+progress: 69/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KO-8409-01Z-00-DX1-C73F6879-81C2-4D2D-9673-4989AADB568D/Medium
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KO-8409-01Z-00-DX1-C73F6879-81C2-4D2D-9673-4989AADB568D.h5 took 180.2269823551178 s
+
+progress: 70/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KO-8410-01Z-00-DX1-95A5FA25-6C01-478E-8CAB-20DF56E8D01C/Medium
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KO-8410-01Z-00-DX1-95A5FA25-6C01-478E-8CAB-20DF56E8D01C.h5 took 150.64304757118225 s
+
+progress: 71/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KO-8411-01Z-00-DX1-57A47A81-003C-4F34-B8FA-D1313114892F/Medium
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KO-8411-01Z-00-DX1-57A47A81-003C-4F34-B8FA-D1313114892F.h5 took 97.80471587181091 s
+
+progress: 72/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KO-8413-01Z-00-DX1-592BC1BB-35B9-4CE1-ACD2-76DD4C4FE7A4/Medium
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KO-8413-01Z-00-DX1-592BC1BB-35B9-4CE1-ACD2-76DD4C4FE7A4.h5 took 154.08783531188965 s
+
+progress: 73/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KO-8414-01Z-00-DX1-F827AA8C-3A50-4697-9788-98A3D87BCE52/Medium
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KO-8414-01Z-00-DX1-F827AA8C-3A50-4697-9788-98A3D87BCE52.h5 took 169.2425570487976 s
+
+progress: 74/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KO-8415-01Z-00-DX1-CB5F5330-C4E6-4ABB-B9A5-92F94EF23837/Medium
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KO-8415-01Z-00-DX1-CB5F5330-C4E6-4ABB-B9A5-92F94EF23837.h5 took 151.9136962890625 s
+
+progress: 75/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KO-8416-01Z-00-DX1-AA58FA3E-02A6-4696-A4F6-2B11C5B0C0E8/Medium
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KO-8416-01Z-00-DX1-AA58FA3E-02A6-4696-A4F6-2B11C5B0C0E8.h5 took 209.84927701950073 s
+
+progress: 76/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-KO-8417-01Z-00-DX1-E145D87F-24DC-4336-98BD-2D142079D73D/Medium
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-KO-8417-01Z-00-DX1-E145D87F-24DC-4336-98BD-2D142079D73D.h5 took 221.40398836135864 s
+
+progress: 77/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-NP-A5B3-01Z-00-DX1-6DE4C2C4-E135-4117-864D-2A477D6FDB86/Medium
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-NP-A5B3-01Z-00-DX1-6DE4C2C4-E135-4117-864D-2A477D6FDB86.h5 took 10.843270540237427 s
+
+progress: 78/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-NP-A5GY-01Z-00-DX1-F405475A-B246-42FB-8380-8953B328193E/Medium
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-NP-A5GY-01Z-00-DX1-F405475A-B246-42FB-8380-8953B328193E.h5 took 38.09368944168091 s
+
+progress: 79/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-NP-A5GZ-01Z-00-DX1-07B19B85-A1CE-4AF2-B3E2-C86D11FAC907/Medium
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-NP-A5GZ-01Z-00-DX1-07B19B85-A1CE-4AF2-B3E2-C86D11FAC907.h5 took 21.36890196800232 s
+
+progress: 80/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-NP-A5H1-01Z-00-DX1-ABF28359-B224-4C36-9217-C6DB90692848/Medium
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-NP-A5H1-01Z-00-DX1-ABF28359-B224-4C36-9217-C6DB90692848.h5 took 36.422619104385376 s
+
+progress: 81/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-NP-A5H5-01Z-00-DX1-E6434A29-9182-4476-9E89-62B9C8EABC5B/Medium
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-NP-A5H5-01Z-00-DX1-E6434A29-9182-4476-9E89-62B9C8EABC5B.h5 took 33.478089332580566 s
+
+progress: 82/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-NP-A5H6-01Z-00-DX1-49B2A361-7BCD-4321-8372-8BAB636E812F/Medium
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-NP-A5H6-01Z-00-DX1-49B2A361-7BCD-4321-8372-8BAB636E812F.h5 took 49.71493458747864 s
+
+progress: 83/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-NP-A5H7-01Z-00-DX1-3AEF89FD-4E13-433C-85D8-C8F9F9EA9EF3/Medium
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-NP-A5H7-01Z-00-DX1-3AEF89FD-4E13-433C-85D8-C8F9F9EA9EF3.h5 took 30.684131145477295 s
+
+progress: 84/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-UW-A72H-01Z-00-DX1-25A52BAA-4000-4AC7-9B93-9D9790C8834A/Medium
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-UW-A72H-01Z-00-DX1-25A52BAA-4000-4AC7-9B93-9D9790C8834A.h5 took 173.24087643623352 s
+
+progress: 85/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-UW-A72I-01Z-00-DX1-EAA44029-3390-4AEF-8B86-E4A1F64E486C/Medium
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-UW-A72I-01Z-00-DX1-EAA44029-3390-4AEF-8B86-E4A1F64E486C.h5 took 107.27270817756653 s
+
+progress: 86/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-UW-A72J-01Z-00-DX1-B62772BA-DC29-40C9-B5C8-AC47AFA0437D/Medium
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-UW-A72J-01Z-00-DX1-B62772BA-DC29-40C9-B5C8-AC47AFA0437D.h5 took 188.2435863018036 s
+
+progress: 87/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-UW-A72K-01Z-00-DX1-F1E38D60-26AA-4D0E-8738-7711611D10D6/Medium
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-UW-A72K-01Z-00-DX1-F1E38D60-26AA-4D0E-8738-7711611D10D6.h5 took 142.64557576179504 s
+
+progress: 88/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-UW-A72L-01Z-00-DX1-0A459BE8-D799-441D-85C0-B02AF6EDC806/Medium
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-UW-A72L-01Z-00-DX1-0A459BE8-D799-441D-85C0-B02AF6EDC806.h5 took 120.31910538673401 s
+
+progress: 89/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-UW-A72M-01Z-00-DX1-D2F473F4-24A1-4F02-B02E-C5A0390F0C8F/Medium
+processing a total of 12 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-UW-A72M-01Z-00-DX1-D2F473F4-24A1-4F02-B02E-C5A0390F0C8F.h5 took 276.66252756118774 s
+
+progress: 90/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-UW-A72N-01Z-00-DX1-458F977B-AA32-4073-BDC6-FCAD44C6B83D/Medium
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-UW-A72N-01Z-00-DX1-458F977B-AA32-4073-BDC6-FCAD44C6B83D.h5 took 133.4958791732788 s
+
+progress: 91/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-UW-A72O-01Z-00-DX1-755C4693-A9CE-48E7-A76B-DAECEE850D35/Medium
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-UW-A72O-01Z-00-DX1-755C4693-A9CE-48E7-A76B-DAECEE850D35.h5 took 143.6651005744934 s
+
+progress: 92/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-UW-A72P-01Z-00-DX1-B16A8F4B-6E8E-4642-AEEF-EBD0613C372D/Medium
+processing a total of 13 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-UW-A72P-01Z-00-DX1-B16A8F4B-6E8E-4642-AEEF-EBD0613C372D.h5 took 292.5408453941345 s
+
+progress: 93/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-UW-A72Q-01Z-00-DX1-6EEF0E01-E576-4DCA-B613-451D0079EB13/Medium
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-UW-A72Q-01Z-00-DX1-6EEF0E01-E576-4DCA-B613-451D0079EB13.h5 took 64.56167197227478 s
+
+progress: 94/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-UW-A72R-01Z-00-DX1-0D9559B0-80C4-42BA-9461-F92792F0FC0F/Medium
+processing a total of 15 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-UW-A72R-01Z-00-DX1-0D9559B0-80C4-42BA-9461-F92792F0FC0F.h5 took 343.5966489315033 s
+
+progress: 95/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-UW-A72S-01Z-00-DX1-EA180EA6-ADD1-4ECC-89D8-082B185AC2B4/Medium
+processing a total of 14 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-UW-A72S-01Z-00-DX1-EA180EA6-ADD1-4ECC-89D8-082B185AC2B4.h5 took 306.84591722488403 s
+
+progress: 96/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-UW-A72T-01Z-00-DX1-1F6EC843-0D4C-4231-99D2-82174C9FF94D/Medium
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-UW-A72T-01Z-00-DX1-1F6EC843-0D4C-4231-99D2-82174C9FF94D.h5 took 111.67894554138184 s
+
+progress: 97/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-UW-A7GC-01Z-00-DX1-D2D6FCC6-719A-4C03-A496-E23D18655538/Medium
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-UW-A7GC-01Z-00-DX1-D2D6FCC6-719A-4C03-A496-E23D18655538.h5 took 74.18951511383057 s
+
+progress: 98/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-UW-A7GC-11Z-00-DX1-ADAF7B0F-8EDC-4022-A873-3A5EBA4A46C3/Medium
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-UW-A7GC-11Z-00-DX1-ADAF7B0F-8EDC-4022-A873-3A5EBA4A46C3.h5 took 52.914193630218506 s
+
+progress: 99/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-UW-A7GG-01Z-00-DX1-83625891-206C-4060-924A-166BE9E893A7/Medium
+processing a total of 11 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-UW-A7GG-01Z-00-DX1-83625891-206C-4060-924A-166BE9E893A7.h5 took 246.78606748580933 s
+
+progress: 100/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-UW-A7GG-11Z-00-DX1-35E063D3-7E85-4BEB-9807-26F96CE31364/Medium
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-UW-A7GG-11Z-00-DX1-35E063D3-7E85-4BEB-9807-26F96CE31364.h5 took 153.57807207107544 s
+
+progress: 101/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-UW-A7GI-01Z-00-DX1-4A1709FC-F8F3-4509-A011-10CBF1B53DA9/Medium
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-UW-A7GI-01Z-00-DX1-4A1709FC-F8F3-4509-A011-10CBF1B53DA9.h5 took 199.89593768119812 s
+
+progress: 102/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-UW-A7GI-11Z-00-DX1-3D506541-C999-4897-B21B-2211ADB364AE/Medium
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-UW-A7GI-11Z-00-DX1-3D506541-C999-4897-B21B-2211ADB364AE.h5 took 143.90136790275574 s
+
+progress: 103/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-UW-A7GJ-01Z-00-DX1-5CA0FD93-E237-4AEC-84D6-0199A62105DE/Medium
+processing a total of 10 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-UW-A7GJ-01Z-00-DX1-5CA0FD93-E237-4AEC-84D6-0199A62105DE.h5 took 213.8289499282837 s
+
+progress: 104/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-UW-A7GJ-11Z-00-DX1-97F9F149-FA58-4535-AE9B-237B8F87DEC7/Medium
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-UW-A7GJ-11Z-00-DX1-97F9F149-FA58-4535-AE9B-237B8F87DEC7.h5 took 173.45730113983154 s
+
+progress: 105/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-UW-A7GK-01Z-00-DX1-B074DEBE-1697-443B-B426-BD57553E1108/Medium
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-UW-A7GK-01Z-00-DX1-B074DEBE-1697-443B-B426-BD57553E1108.h5 took 193.37807321548462 s
+
+progress: 106/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-UW-A7GK-11Z-00-DX1-123382DA-3237-4467-ADDD-21A1617DF4E8/Medium
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-UW-A7GK-11Z-00-DX1-123382DA-3237-4467-ADDD-21A1617DF4E8.h5 took 157.72436785697937 s
+
+progress: 107/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-UW-A7GL-01Z-00-DX1-BE2C0D9F-3F84-4363-9B79-01883E8F0306/Medium
+processing a total of 12 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-UW-A7GL-01Z-00-DX1-BE2C0D9F-3F84-4363-9B79-01883E8F0306.h5 took 278.0034592151642 s
+
+progress: 108/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-UW-A7GL-11Z-00-DX1-3508B4AD-C189-4416-848A-CA6771F2EE46/Medium
+processing a total of 12 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-UW-A7GL-11Z-00-DX1-3508B4AD-C189-4416-848A-CA6771F2EE46.h5 took 273.9630756378174 s
+
+progress: 109/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-UW-A7GN-01Z-00-DX1-0DCDED5B-B0D4-4B0F-81DB-1534E331ED3C/Medium
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-UW-A7GN-01Z-00-DX1-0DCDED5B-B0D4-4B0F-81DB-1534E331ED3C.h5 took 192.57101368904114 s
+
+progress: 110/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-UW-A7GN-11Z-00-DX1-ABAA5DC6-D63C-4BBF-AB0C-213B95C79720/Medium
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-UW-A7GN-11Z-00-DX1-ABAA5DC6-D63C-4BBF-AB0C-213B95C79720.h5 took 143.64006662368774 s
+
+progress: 111/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-UW-A7GP-01Z-00-DX1-C997CBA5-AF20-4CB3-9CB3-82AA65146EF5/Medium
+processing a total of 10 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-UW-A7GP-01Z-00-DX1-C997CBA5-AF20-4CB3-9CB3-82AA65146EF5.h5 took 221.18269109725952 s
+
+progress: 112/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-UW-A7GP-11Z-00-DX1-C89DD837-4B77-4CB5-8FAB-DF9315892B9B/Medium
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-UW-A7GP-11Z-00-DX1-C89DD837-4B77-4CB5-8FAB-DF9315892B9B.h5 took 184.2199990749359 s
+
+progress: 113/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-UW-A7GR-01Z-00-DX1-094D510F-5348-4543-9F18-73815250F824/Medium
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-UW-A7GR-01Z-00-DX1-094D510F-5348-4543-9F18-73815250F824.h5 took 214.46559810638428 s
+
+progress: 114/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-UW-A7GR-11Z-00-DX1-33EC231A-1C19-48A5-B37E-14C79191DDD6/Medium
+processing a total of 13 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-UW-A7GR-11Z-00-DX1-33EC231A-1C19-48A5-B37E-14C79191DDD6.h5 took 286.44281029701233 s
+
+progress: 115/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-UW-A7GU-01Z-00-DX1-30C1C11C-4113-4F8D-8372-5EE3DD33564D/Medium
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-UW-A7GU-01Z-00-DX1-30C1C11C-4113-4F8D-8372-5EE3DD33564D.h5 took 119.7341079711914 s
+
+progress: 116/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-UW-A7GU-11Z-00-DX1-BC340CDF-7F82-4314-86BA-E003AE43389D/Medium
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-UW-A7GU-11Z-00-DX1-BC340CDF-7F82-4314-86BA-E003AE43389D.h5 took 5.316784143447876 s
+
+progress: 117/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-UW-A7GX-01Z-00-DX1-C99CCFC7-C714-4F0D-AC12-D88F6DFAEFB6/Medium
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-UW-A7GX-01Z-00-DX1-C99CCFC7-C714-4F0D-AC12-D88F6DFAEFB6.h5 took 126.73551034927368 s
+
+progress: 118/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-UW-A7GX-11Z-00-DX1-57C4FD28-5463-40C5-9E87-484F3326B395/Medium
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-UW-A7GX-11Z-00-DX1-57C4FD28-5463-40C5-9E87-484F3326B395.h5 took 153.13434886932373 s
+
+progress: 119/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-UW-A7GY-01Z-00-DX1-CD2CCA5D-C92B-409C-B5D6-1EB7C8A0B4CD/Medium
+processing a total of 13 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-UW-A7GY-01Z-00-DX1-CD2CCA5D-C92B-409C-B5D6-1EB7C8A0B4CD.h5 took 279.5951974391937 s
+
+progress: 120/121
+/home/graduate2024/data_TCGA/TCGA_RCC/TCGA-KICH/TCGA-UW-A7GY-11Z-00-DX1-7410A3EA-BFFD-4744-8DB2-66A409C0BFA9/Medium
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_RCC_Feature_d1024/all_features/h5_files/TCGA-UW-A7GY-11Z-00-DX1-7410A3EA-BFFD-4744-8DB2-66A409C0BFA9.h5 took 30.757389783859253 s

@@ -1,0 +1,42 @@
+Traceback (most recent call last):
+  File "/home/graduate2024/code/zxb/CLAM-master/main.py", line 259, in <module>
+    results = main(args)
+              ^^^^^^^^^^
+  File "/home/graduate2024/code/zxb/CLAM-master/main.py", line 49, in main
+    results, test_auc, val_auc, test_acc, val_acc  = train(datasets, i, args)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/graduate2024/code/zxb/CLAM-master/utils/core_utils.py", line 187, in train
+    train_loop_clam(epoch, model, train_loader, optimizer, args.n_classes, args.bag_weight, writer, loss_fn)
+  File "/home/graduate2024/code/zxb/CLAM-master/utils/core_utils.py", line 237, in train_loop_clam
+    for batch_idx, (data, label, _, neighbors) in enumerate(loader):
+  File "/home/graduate2024/miniconda3/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "/home/graduate2024/miniconda3/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1344, in _next_data
+    return self._process_data(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/graduate2024/miniconda3/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1370, in _process_data
+    data.reraise()
+  File "/home/graduate2024/miniconda3/lib/python3.12/site-packages/torch/_utils.py", line 706, in reraise
+    raise exception
+KeyError: Caught KeyError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/graduate2024/miniconda3/lib/python3.12/site-packages/torch/utils/data/_utils/worker.py", line 309, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/graduate2024/miniconda3/lib/python3.12/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+            ~~~~~~~~~~~~^^^^^
+  File "/home/graduate2024/code/zxb/CLAM-master/dataset_modules/dataset_generic.py", line 358, in __getitem__
+    neighbors = hdf5_file['pos'][:]
+                ~~~~~~~~~^^^^^^^
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "/home/graduate2024/miniconda3/lib/python3.12/site-packages/h5py/_hl/group.py", line 357, in __getitem__
+    oid = h5o.open(self.id, self._e(name), lapl=self._lapl)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5o.pyx", line 257, in h5py.h5o.open
+KeyError: "Unable to synchronously open object (object 'pos' doesn't exist)"
+

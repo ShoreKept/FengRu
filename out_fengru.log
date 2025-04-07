@@ -1,0 +1,5590 @@
+initializing dataset
+loading model checkpoint
+CoCa(
+  (text): TextTransformer(
+    (token_embedding): Embedding(32007, 768)
+    (transformer): Transformer(
+      (resblocks): ModuleList(
+        (0-11): 12 x ResidualAttentionBlock(
+          (ln_1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (ls_1): Identity()
+          (ln_2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+          (mlp): Sequential(
+            (c_fc): Linear(in_features=768, out_features=3072, bias=True)
+            (gelu): GELU(approximate='none')
+            (c_proj): Linear(in_features=3072, out_features=768, bias=True)
+          )
+          (ls_2): Identity()
+        )
+      )
+    )
+    (ln_final): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  )
+  (visual): VisualModel(
+    (trunk): VisionTransformer(
+      (patch_embed): PatchEmbed(
+        (proj): Conv2d(3, 768, kernel_size=(16, 16), stride=(16, 16))
+        (norm): Identity()
+      )
+      (pos_drop): Dropout(p=0.0, inplace=False)
+      (patch_drop): Identity()
+      (norm_pre): Identity()
+      (blocks): Sequential(
+        (0): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+        (1): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+        (2): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+        (3): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+        (4): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+        (5): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+        (6): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+        (7): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+        (8): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+        (9): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+        (10): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+        (11): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+      )
+      (norm): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+      (fc_norm): Identity()
+      (head_drop): Dropout(p=0.0, inplace=False)
+      (head): Identity()
+    )
+    (attn_pool_contrast): AttentionalPooler(
+      (attn): MultiheadAttention(
+        (out_proj): NonDynamicallyQuantizableLinear(in_features=512, out_features=512, bias=True)
+      )
+      (ln_q): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      (ln_k): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    )
+    (ln_contrast): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+    (head): Sequential()
+    (attn_pool_caption): AttentionalPooler(
+      (attn): MultiheadAttention(
+        (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+      )
+      (ln_q): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (ln_k): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    )
+    (ln_caption): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  )
+  (text_decoder): MultimodalTransformer(
+    (resblocks): ModuleList(
+      (0-11): 12 x ResidualAttentionBlock(
+        (ln_1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (attn): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+        )
+        (ls_1): Identity()
+        (ln_2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (mlp): Sequential(
+          (c_fc): Linear(in_features=768, out_features=3072, bias=True)
+          (gelu): GELU(approximate='none')
+          (c_proj): Linear(in_features=3072, out_features=768, bias=True)
+        )
+        (ls_2): Identity()
+      )
+    )
+    (cross_attn): ModuleList(
+      (0-11): 12 x ResidualAttentionBlock(
+        (ln_1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (attn): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+        )
+        (ls_1): Identity()
+        (ln_1_kv): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (ln_2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (mlp): Sequential(
+          (c_fc): Linear(in_features=768, out_features=3072, bias=True)
+          (gelu): GELU(approximate='none')
+          (c_proj): Linear(in_features=3072, out_features=768, bias=True)
+        )
+        (ls_2): Identity()
+      )
+    )
+    (ln_final): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  )
+)
+model successfully loading!!
+19DELbegin!!!
+
+progress: 0/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/9C13E1A3-3A06-4E7D-8A4C-5CF42DB813AA.h5 took 18.182851791381836 s
+
+progress: 1/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/2B9572D8-54FD-4F5C-84AD-75D94D51072A.h5 took 6.613789796829224 s
+
+progress: 2/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/E343EB9E-C7CA-4707-8B2A-751A28E3FF5F.h5 took 4.304286956787109 s
+
+progress: 3/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/86B96A2A-A0D6-47C9-9A88-6694187B1716.h5 took 9.061121940612793 s
+
+progress: 4/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/E7BD628B-896B-4368-A131-9C1BD0985F08.h5 took 10.96335744857788 s
+
+progress: 5/116
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/D0F2EFDB-58A4-4701-A943-29A1EA010FEF.h5 took 15.87310791015625 s
+
+progress: 6/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/05150041-9E79-48F5-B53E-2578917E89C8.h5 took 16.61656403541565 s
+
+progress: 7/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/AC51C049-78D1-4E36-BB87-40EA68EDC5C9.h5 took 8.95376205444336 s
+
+progress: 8/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/BAEF5546-DCE3-4C12-A3A8-2C0827288B10.h5 took 11.118166446685791 s
+
+progress: 9/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/2E011845-DD1C-4693-9918-3482F7E500FE.h5 took 9.73049521446228 s
+
+progress: 10/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/AA650DC7-1986-4368-A0E8-4DA20FD540DF.h5 took 4.7207465171813965 s
+
+progress: 11/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/49B41A33-DB9F-43B1-9532-8A770C3BCECF.h5 took 3.713660478591919 s
+
+progress: 12/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/02F9D88F-88BD-4CA5-85B8-9234FD3E65B0.h5 took 6.324873208999634 s
+
+progress: 13/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/CC53B146-260F-48DB-9C4B-97AF16A92658.h5 took 9.384575128555298 s
+
+progress: 14/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/F61B55B8-E91D-4972-81DC-270067DD6D86.h5 took 5.071798801422119 s
+
+progress: 15/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/0E24ACED-CA11-404D-ABE0-13953A665B7B.h5 took 7.878909587860107 s
+
+progress: 16/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/6C962FB1-C3CE-4A42-B162-9E2A9E49184F.h5 took 9.653476238250732 s
+
+progress: 17/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/8AE71B6A-20DA-495D-B982-390451757CAD.h5 took 14.244532108306885 s
+
+progress: 18/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/E7BFADD4-1095-41DF-93E9-DFB66B84E87C.h5 took 18.596992254257202 s
+
+progress: 19/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/4B40B780-4B19-491D-8812-49AEF33CCAA6.h5 took 8.547253131866455 s
+
+progress: 20/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/8815CEC7-F027-483D-A588-75023E7D774E.h5 took 9.829985857009888 s
+
+progress: 21/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/45442F93-E626-4D8A-912B-45E0ED42BE60.h5 took 13.15444016456604 s
+
+progress: 22/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/8ACF6EF9-B2C9-4B08-AD57-089603AB616F.h5 took 9.194854259490967 s
+
+progress: 23/116
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/5EDF66C6-F5BE-447E-89FA-E864AF6AA2E0.h5 took 19.052164793014526 s
+
+progress: 24/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/4EEE4C8E-9AE2-4969-884E-4F9B1E45ECC9.h5 took 10.13279104232788 s
+
+progress: 25/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/6D757FFD-80AD-4A09-9E29-F13FE8F7F481.h5 took 5.6119067668914795 s
+
+progress: 26/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/0880DA44-AEEF-46C3-9A5C-E145CBC0FF34.h5 took 11.389687061309814 s
+
+progress: 27/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/E11314B5-31EB-4246-98CA-1E7CC240F9FA.h5 took 10.77498197555542 s
+
+progress: 28/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/511B6ECD-8A39-4733-BA15-BF5260EB9911.h5 took 9.196953535079956 s
+
+progress: 29/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/827FE5FF-E13B-4360-8C0F-EEF7F0DD032B.h5 took 3.8649351596832275 s
+
+progress: 30/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/56684B15-D2D3-4120-8DD9-FA28E416F0FB.h5 took 9.352267980575562 s
+
+progress: 31/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/2A79FDCE-C130-4EE7-B070-F358088FA07E.h5 took 4.129883527755737 s
+
+progress: 32/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/F1E98674-20D2-4285-8138-EC8E4F3821FD.h5 took 10.791504383087158 s
+
+progress: 33/116
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/E284AFBE-131D-432B-AA4A-2A241ADA9FCB.h5 took 22.391182899475098 s
+
+progress: 34/116
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/D3F46B79-63F2-4E02-A8B1-C88379E77384.h5 took 15.16219687461853 s
+
+progress: 35/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/499502DF-3DFC-426B-95F9-8D5224AB266F.h5 took 6.5997633934021 s
+
+progress: 36/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/B587B45D-B0F1-44B4-9AC9-5A1B34C6F687.h5 took 17.12557363510132 s
+
+progress: 37/116
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/B5C40575-509B-461C-B6A8-10A1509BF643.h5 took 15.759526252746582 s
+
+progress: 38/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/6D34D75A-268E-4EB1-9C59-BF89CAC52D56.h5 took 9.267886877059937 s
+
+progress: 39/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/94ABE04F-C68F-4343-9897-8FD21CE68BA6.h5 took 9.555101871490479 s
+
+progress: 40/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/6BD65A35-2844-4008-8500-C9F71A419279.h5 took 9.079872846603394 s
+
+progress: 41/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/534123F0-02E9-4B08-9D42-E226FCA68C57.h5 took 9.982717990875244 s
+
+progress: 42/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/E67553C4-CBFB-4121-9A33-CB4E0148D214.h5 took 2.1617119312286377 s
+
+progress: 43/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/4BB4453C-99D4-4152-AFFA-3B0CED652A86.h5 took 8.25069260597229 s
+
+progress: 44/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/D33A46BB-6888-4392-996E-FE65611A9C72.h5 took 11.875710725784302 s
+
+progress: 45/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/57F1D507-3279-4767-A320-2631E7EE3ABE.h5 took 14.25394320487976 s
+
+progress: 46/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/DBB49E20-8449-484C-8759-D051C3769BEC.h5 took 9.924407482147217 s
+
+progress: 47/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/A4A33C96-BB05-4202-BDB4-0D215364A315.h5 took 1.9373066425323486 s
+
+progress: 48/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/92B66650-CE30-4E7C-A30A-7BAF682BFA73.h5 took 9.64518404006958 s
+
+progress: 49/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/106DD4A0-5218-4FCF-9E72-A11BFC702C12.h5 took 7.263941764831543 s
+
+progress: 50/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/BDDEFC92-F6F9-4560-92A1-F5F2ABCB7DBB.h5 took 16.44605278968811 s
+
+progress: 51/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/8A921D13-0169-4EAC-967D-576612948233.h5 took 4.16576886177063 s
+
+progress: 52/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/437CCE2E-8F84-482C-8317-60EC16D3DEE9.h5 took 6.39741325378418 s
+
+progress: 53/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/781A80C4-D232-41D2-AF7E-23B7676A9355.h5 took 8.508126974105835 s
+
+progress: 54/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/72F6C6F5-2F64-4A0A-B0B9-E6888BB4C02B.h5 took 3.7837271690368652 s
+
+progress: 55/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/BA33D42F-BF40-49FA-8106-F6323BDEEF13.h5 took 9.943842887878418 s
+
+progress: 56/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/70F99254-F4CB-4E13-9956-A5DE2B9D3DD1.h5 took 4.571996450424194 s
+
+progress: 57/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/C86F90B1-4A31-494C-B7E0-595D2ED922AF.h5 took 5.292589426040649 s
+
+progress: 58/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/2250C39A-E3D6-4B79-809E-22CA3C910D05.h5 took 10.426502227783203 s
+
+progress: 59/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/2F512D8E-7AC4-43F5-88C5-DC9BAAE1890D.h5 took 13.199171543121338 s
+
+progress: 60/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/2A4EE845-0CF8-4788-AD3E-A958666C5F9E.h5 took 9.164217233657837 s
+
+progress: 61/116
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/1E8D3C3C-F6A2-469C-B508-C935E28B9401.h5 took 18.800097465515137 s
+
+progress: 62/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/31F6540B-F6D9-49FF-9811-4518303B5CBB.h5 took 16.094403505325317 s
+
+progress: 63/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/CD39FBC9-2FA8-4F33-87F0-FED3BFD0F772.h5 took 18.434829711914062 s
+
+progress: 64/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/BEEFC089-561F-4412-8AE2-A487C0F60E0B.h5 took 20.903138399124146 s
+
+progress: 65/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/6D7671FA-C8B2-43AB-91AA-E448EC39834B.h5 took 3.9362409114837646 s
+
+progress: 66/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/5298DD29-D9CB-490E-B3CF-311D2B9F3F57.h5 took 1.2207005023956299 s
+
+progress: 67/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/1FE4643F-FA89-47A5-BDC6-50F678669D99.h5 took 12.75725245475769 s
+
+progress: 68/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/51053D36-9D40-45F1-9960-73E356FCBC9C.h5 took 10.93796968460083 s
+
+progress: 69/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/463C798B-05D9-4958-93B2-73257C734827.h5 took 11.37044620513916 s
+
+progress: 70/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/7AB84AC0-E711-400B-9F20-30CBAA25F42C.h5 took 10.095808744430542 s
+
+progress: 71/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/73AD5C28-D092-472A-8CA1-F4C6548941D0.h5 took 9.477490186691284 s
+
+progress: 72/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/D466972F-DA25-427E-96D6-7BBC522E7EAE.h5 took 16.259051084518433 s
+
+progress: 73/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/4518538A-8583-4E4A-8E66-FD3F110C7C0D.h5 took 8.214956998825073 s
+
+progress: 74/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/5119A1F0-49DA-432B-A2B3-1698A5F7676B.h5 took 17.33863401412964 s
+
+progress: 75/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/98A00BE2-21AF-49B5-96FC-E6BD4C207D67.h5 took 20.286773443222046 s
+
+progress: 76/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/A2140954-930A-446D-B9F6-F398EA4EA09E.h5 took 12.20198655128479 s
+
+progress: 77/116
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/04C2C329-D1AA-4754-BCBA-B8517D40C584.h5 took 17.221112728118896 s
+
+progress: 78/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/3826D077-BF33-457F-8B9F-9CAAFD1CCAF2.h5 took 14.209524631500244 s
+
+progress: 79/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/5E087BAA-B469-45AC-9F9E-70252F0AEC2D.h5 took 16.752560138702393 s
+
+progress: 80/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/A1C691A0-113B-4DDC-84EE-8AE418D5431C.h5 took 3.677316427230835 s
+
+progress: 81/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/4B17C109-7100-41E5-BE91-E52551D80556.h5 took 8.955261707305908 s
+
+progress: 82/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/9AF77BE4-C259-4667-867B-571CA9933CDA.h5 took 15.367276668548584 s
+
+progress: 83/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/76BA20BD-3FF0-4779-BC08-EBEB641502AE.h5 took 8.071388721466064 s
+
+progress: 84/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/E361927E-4985-43B4-95C2-B9629BA2A38E.h5 took 13.698020696640015 s
+
+progress: 85/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/738B71ED-9BD8-483C-AA4A-9BCB583D0236.h5 took 7.887500524520874 s
+
+progress: 86/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/ABF253FB-03E1-4DBD-8C2B-9BF18B98ECC2.h5 took 10.074893712997437 s
+
+progress: 87/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/5125D0F0-D962-484E-AA41-5713163B8BB8.h5 took 7.056129217147827 s
+
+progress: 88/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/651AE2F2-4EAC-4081-ACC0-85F1FBA8860F.h5 took 15.003793239593506 s
+
+progress: 89/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/D7843C78-6351-443D-BDDF-8FCCA752E81A.h5 took 16.13265609741211 s
+
+progress: 90/116
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/8C199965-954D-44E7-963E-A21FAEB2AC70.h5 took 20.511993169784546 s
+
+progress: 91/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/7EC819BF-61CA-4924-91B1-D05A5724D2E8.h5 took 12.716744899749756 s
+
+progress: 92/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/42AFBD96-8636-4447-9D22-7D48E93C072F.h5 took 6.441868543624878 s
+
+progress: 93/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/DDA9675D-348A-4F41-A1BB-5E90541489FB.h5 took 3.8396921157836914 s
+
+progress: 94/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/8AA0A98C-4BCB-4D19-91D2-BD1270A09F17.h5 took 9.272335767745972 s
+
+progress: 95/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/CFB0CC13-9FBF-406E-98E9-043BB9209C2F.h5 took 17.663769006729126 s
+
+progress: 96/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/C7DA5758-B775-41C6-99DA-1DA6EDB494A3.h5 took 10.589040517807007 s
+
+progress: 97/116
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/F384DD52-53C2-40F2-8939-F5B631955436.h5 took 20.0642249584198 s
+
+progress: 98/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/B9211FD7-9590-4404-9EBE-95BFED730C21.h5 took 13.97558307647705 s
+
+progress: 99/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/9AD8C89F-6742-4D9B-B819-2D676642739C.h5 took 17.147361993789673 s
+
+progress: 100/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/3EF2F402-A8CB-43E1-B4DD-184162A09D18.h5 took 10.670103788375854 s
+
+progress: 101/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/ECB7D7C0-FF7A-45F3-849C-F5FE40C1BFF0.h5 took 14.787351369857788 s
+
+progress: 102/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/1081838C-9724-4213-8E8B-96DC5707EA8B.h5 took 8.121532440185547 s
+
+progress: 103/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/1D1B98E5-7B98-4B6A-876B-3EE7E1807381.h5 took 1.2343757152557373 s
+
+progress: 104/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/0000C99F-AC7A-4908-84E3-EE665869A09C.h5 took 9.923668384552002 s
+
+progress: 105/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/9F4ED239-C3B0-4018-B3A1-BF0401199614.h5 took 11.681859731674194 s
+
+progress: 106/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/FA077222-60DF-4011-96BD-7C91979D094C.h5 took 13.645155668258667 s
+
+progress: 107/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/9AC53203-C68C-4A4D-9625-C631F0C98434.h5 took 13.010071039199829 s
+
+progress: 108/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/E2B2FE97-7CED-4A45-9962-94A582A04EA5.h5 took 16.375309467315674 s
+
+progress: 109/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/F8313EDD-DAE7-4ED1-AF79-C1CA4C5F389B.h5 took 11.074797868728638 s
+
+progress: 110/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/6EBA9F6E-6E36-481C-A716-21C5247289A8.h5 took 9.700319766998291 s
+
+progress: 111/116
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/7807B668-F9F2-488C-8B7E-92976D89A245.h5 took 13.655062437057495 s
+
+progress: 112/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/564A60D2-5DAC-4D5B-A818-622B4A22F84A.h5 took 10.791644811630249 s
+
+progress: 113/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/498FD9C1-1BBB-4777-BE3D-45DB2E28E36D.h5 took 9.20087718963623 s
+
+progress: 114/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/3DED921D-60E1-4EB9-B749-0B38A62365D6.h5 took 8.069013357162476 s
+
+progress: 115/116
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/19DEL/h5_files/74C0CEB4-7562-4F6E-8ABA-6177C7ABB3BC.h5 took 10.129712581634521 s
+ELSEbegin!!!
+
+progress: 0/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/89CFCBB3-FA69-4405-AC4D-184ED5960678.h5 took 9.059437990188599 s
+
+progress: 1/280
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/4841333F-0CC9-4BC3-AD25-28FE37EBF4F2.h5 took 16.46268391609192 s
+
+progress: 2/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/9CB08CE8-5BBB-466C-9600-1EC4273A1308.h5 took 13.391101360321045 s
+
+progress: 3/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/1949777D-EC76-4DFC-B779-FF76FB2CBA1A.h5 took 9.87955117225647 s
+
+progress: 4/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/5371FD0B-D78C-4A18-AC08-52B2296CA7C0.h5 took 7.570996046066284 s
+
+progress: 5/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/CC0E1010-1B3D-4FFB-BDDF-A022238CA9B8.h5 took 2.4255619049072266 s
+
+progress: 6/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/F18D6EA6-8C5A-4E68-8F1C-5C67FA4EBD42.h5 took 13.222275018692017 s
+
+progress: 7/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/F765AFA4-6342-4D60-B97C-E2B5E4FE6852.h5 took 4.357364892959595 s
+
+progress: 8/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/E917A1D9-19A0-443D-BEF0-2A1E04D381E3.h5 took 3.3221423625946045 s
+
+progress: 9/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/7D8574DE-91E5-46AD-A7E6-95C320160FE7.h5 took 5.649924278259277 s
+
+progress: 10/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/1708C0D1-7885-4AC2-B3EF-4B8D3477840E.h5 took 11.640254020690918 s
+
+progress: 11/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/8FCC7625-F54F-4FDB-9E35-3839CB6E7579.h5 took 8.045943975448608 s
+
+progress: 12/280
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/78B4D8B3-E1DC-43B4-A4F7-157750E36E6D.h5 took 20.10480570793152 s
+
+progress: 13/280
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/DBA5CA4E-8281-4E94-A0BC-6C413AE67433.h5 took 20.190258979797363 s
+
+progress: 14/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/7B1B52F8-9497-4575-8EFD-83556F8B8922.h5 took 13.135201454162598 s
+
+progress: 15/280
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/71C58391-D8AB-464F-8288-41CE86D28E09.h5 took 16.64078426361084 s
+
+progress: 16/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/BD82B218-0B8C-476B-951F-252A7141F4D3.h5 took 8.778398752212524 s
+
+progress: 17/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/AA12AFB6-CE99-4CE2-B890-BC10885972C7.h5 took 6.283404350280762 s
+
+progress: 18/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/A84B3A58-1C8B-48EE-BF70-8426BBB1CBB9.h5 took 9.862076759338379 s
+
+progress: 19/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/1977D0EB-1259-49A6-8C0A-925D4452DEC6.h5 took 9.468618392944336 s
+
+progress: 20/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/9B41CBB3-F7C7-4FFB-AA6D-152EFAE44092.h5 took 9.040233135223389 s
+
+progress: 21/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/DB497C08-1751-4528-9365-0124602CC0CB.h5 took 6.8803651332855225 s
+
+progress: 22/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/B2ED362D-9E7B-4AA4-A770-39C85449A029.h5 took 17.74661350250244 s
+
+progress: 23/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/5D6EECA1-6E06-4AF0-9D20-EE67F7F48020.h5 took 12.701730728149414 s
+
+progress: 24/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/7FDE7F60-8117-4CD1-B285-DEA14C06148B.h5 took 10.466313123703003 s
+
+progress: 25/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/E923C4EC-D334-487E-8474-AD1C340E8E08.h5 took 7.880367279052734 s
+
+progress: 26/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/2E334F12-1807-49ED-8B0F-55F5C86D4860.h5 took 10.972376346588135 s
+
+progress: 27/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/A1FAE736-226A-42D1-801D-9A8AE03BD1B7.h5 took 4.653856039047241 s
+
+progress: 28/280
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/16FDEA0E-668B-46EC-AC1D-54505D4406D2.h5 took 19.77522110939026 s
+
+progress: 29/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/727E3619-C724-48BF-B0A0-F4ED363F4897.h5 took 12.164727926254272 s
+
+progress: 30/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/8A74519C-1667-4EE5-8A62-FE031F3E7EF4.h5 took 10.980860471725464 s
+
+progress: 31/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/D3E5F76A-551D-4EBB-8976-C8E6B0B64B14.h5 took 7.380997180938721 s
+
+progress: 32/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/ACDABCA5-A7D1-47D8-AEF4-355C731EAED9.h5 took 10.913577795028687 s
+
+progress: 33/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/6FB95CFF-C743-41D7-B851-AD6EF0BE42BB.h5 took 6.686548233032227 s
+
+progress: 34/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/A383097B-DE9C-40DE-92CF-8A02F6C75AAF.h5 took 11.45425534248352 s
+
+progress: 35/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/23AB34AE-7E61-4A3A-BFA2-9ACAEE272D91.h5 took 2.048353672027588 s
+
+progress: 36/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/D425451B-F317-4B89-8268-F198B39ECACD.h5 took 10.00890064239502 s
+
+progress: 37/280
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/AC3F4847-3D3F-4CDD-AC58-A53DAA7D3691.h5 took 15.807178497314453 s
+
+progress: 38/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/A88FA6BC-A6AA-4FA9-B264-5136926B80E0.h5 took 2.739341974258423 s
+
+progress: 39/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/3F071C8F-3E97-437A-A9F5-85C152C695F5.h5 took 7.7275071144104 s
+
+progress: 40/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/180F9528-1A5E-42E9-8AFB-1538B0DFD163.h5 took 4.808261871337891 s
+
+progress: 41/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/BD12FD9A-C264-492E-A745-C8928A8FBC95.h5 took 2.651425361633301 s
+
+progress: 42/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/2702FD00-4F1F-490C-A958-B8C9DBB4AB63.h5 took 5.183692693710327 s
+
+progress: 43/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/F63EEF19-BFE7-4DA0-894E-1D6A1BD95BA2.h5 took 3.064145088195801 s
+
+progress: 44/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/589BBEFF-F069-4307-B7CD-15CA75DFC2C1.h5 took 14.348737716674805 s
+
+progress: 45/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/D484F10E-4C96-4238-821E-A15E0418CF8F.h5 took 7.4078192710876465 s
+
+progress: 46/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/B51F9798-ACEF-48F0-A178-1561C74229FD.h5 took 6.980331659317017 s
+
+progress: 47/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/C0B98667-4A28-4891-95AA-198E844B279C.h5 took 9.772948503494263 s
+
+progress: 48/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/3DE4F1C1-8EC5-418D-9B5B-D67078F2EA5E.h5 took 12.273168087005615 s
+
+progress: 49/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/ABE9442C-453C-479E-945D-59D8ABCB5E8A.h5 took 13.030802726745605 s
+
+progress: 50/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/BF8F07B9-5F79-42DF-A50B-E9B3C6BA35C3.h5 took 14.319068908691406 s
+
+progress: 51/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/F28F3AD0-9F35-4365-A1F1-A4B01E2036F5.h5 took 11.059845447540283 s
+
+progress: 52/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/D4D32D5E-23BC-4D44-A912-8A220B11CAFF.h5 took 14.373002767562866 s
+
+progress: 53/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/74908D6E-E373-49A0-83C5-C020A52D990E.h5 took 9.72329306602478 s
+
+progress: 54/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/B8EA5FF1-1BCF-4EF8-8FCD-21A393D33E78.h5 took 12.551343202590942 s
+
+progress: 55/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/16C29D2B-7006-4E41-8E62-A471A0D3B2A0.h5 took 14.101012706756592 s
+
+progress: 56/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/636468D7-843E-42CB-A478-99B2C6876585.h5 took 6.997934341430664 s
+
+progress: 57/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/8F12948C-811E-4B75-BCE8-BF804F706BCB.h5 took 7.288506507873535 s
+
+progress: 58/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/D29CE6E1-55C8-4C15-A7BA-6CA699CFA0EE.h5 took 11.902261972427368 s
+
+progress: 59/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/20851821-A269-4C70-AFEA-DBA4BA6337EE.h5 took 12.533921480178833 s
+
+progress: 60/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/3F26D57D-4160-48EE-9A89-2CE03C910906.h5 took 8.130249738693237 s
+
+progress: 61/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/0ECB5417-75D7-4D69-87A1-7D9FA96981E5.h5 took 7.385000944137573 s
+
+progress: 62/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/6CBDA7A7-EB7E-4CE5-9982-6AF0740E9373.h5 took 7.6607582569122314 s
+
+progress: 63/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/565F65F8-3BDD-4B95-B03F-52194F7BA5AC.h5 took 18.205622673034668 s
+
+progress: 64/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/AC1A6DF5-515D-45AF-9BE0-14D25B105D67.h5 took 6.627429246902466 s
+
+progress: 65/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/216030A7-5805-4606-B816-B23DC6EB4DE4.h5 took 11.809993982315063 s
+
+progress: 66/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/6313F9D8-FE05-49C7-B802-8091C5C68CB3.h5 took 7.439502000808716 s
+
+progress: 67/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/F635239F-47AC-419F-83E6-B4B684B3A815.h5 took 9.495450496673584 s
+
+progress: 68/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/18EAB036-AF5D-4B35-83F9-F4BD33E8C226.h5 took 8.018687009811401 s
+
+progress: 69/280
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/25FB0B6C-17E2-4828-8E08-36455D1987F5.h5 took 15.909160614013672 s
+
+progress: 70/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/48C17842-B446-43C9-B49D-07E53710582A.h5 took 10.371546983718872 s
+
+progress: 71/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/F65FC669-1959-4585-AD72-ADDF2B363368.h5 took 13.82907223701477 s
+
+progress: 72/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/B3325223-BE39-4B16-AA0D-A7512D6D2D6F.h5 took 10.078991413116455 s
+
+progress: 73/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/AD4F5DC8-A149-47F1-A55B-7B5E93D6F117.h5 took 10.39787483215332 s
+
+progress: 74/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/10120F3B-9833-4DB1-A28C-4FE0FE4AC7CF.h5 took 6.196029186248779 s
+
+progress: 75/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/1C56C0C3-0219-4D54-A4AB-AFAEF31982B0.h5 took 10.726067543029785 s
+
+progress: 76/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/610384B7-4E0B-4E54-A439-66B31E40C026.h5 took 6.341917514801025 s
+
+progress: 77/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/F2E2EA1C-0FBC-444E-9282-6B5C689A88E1.h5 took 8.758859634399414 s
+
+progress: 78/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/88459B38-A08E-4214-9097-315053C7C815.h5 took 14.277103900909424 s
+
+progress: 79/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/8311BF4D-465F-47AA-ACAB-E937F2937BBD.h5 took 8.796375036239624 s
+
+progress: 80/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/9ADFBC2B-0BD1-4816-9332-761B29362178.h5 took 14.001657485961914 s
+
+progress: 81/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/B92A18FE-A890-452A-97ED-58F1548A91A0.h5 took 7.357562065124512 s
+
+progress: 82/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/493B3E3B-2FA2-4BD7-9049-87D1C7A91DC8.h5 took 13.046857833862305 s
+
+progress: 83/280
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/04AC9CF8-7C27-46E6-876E-4CD991BF9010.h5 took 15.317363977432251 s
+
+progress: 84/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/42D976C4-8F34-448D-8330-119A7526685D.h5 took 7.4183008670806885 s
+
+progress: 85/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/57B1BA04-4CBE-4171-931E-9D7B2D6A6233.h5 took 10.71070647239685 s
+
+progress: 86/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/C9B2ED63-E977-41FA-A401-70A74BB59135.h5 took 7.095515489578247 s
+
+progress: 87/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/0ADE98A8-4560-45C9-9AAD-396394E683C1.h5 took 9.456680297851562 s
+
+progress: 88/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/46545BFE-B09E-4653-A7B0-496FC4FCEE4D.h5 took 9.616280317306519 s
+
+progress: 89/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/C4672DD0-C16A-4495-8758-698BAD267F0E.h5 took 12.017277002334595 s
+
+progress: 90/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/7DE53151-1E54-4270-8F08-EB10928C85A9.h5 took 6.224974870681763 s
+
+progress: 91/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/7A7958C8-75BD-498B-9DFA-6415BAF2AC0D.h5 took 3.6516451835632324 s
+
+progress: 92/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/542B2870-9ACE-4C68-A062-AF547DFF43B0.h5 took 2.052238702774048 s
+
+progress: 93/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/94BCB46B-F231-4EBC-819B-5D31870427AF.h5 took 16.790911436080933 s
+
+progress: 94/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/D448060D-ED8B-4BF3-BDAE-A8912AC8CC26.h5 took 17.23453378677368 s
+
+progress: 95/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/FB91FB34-133D-4B4F-84E4-A7E4A3E7AB94.h5 took 1.2535436153411865 s
+
+progress: 96/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/23515CDA-1131-4847-85E9-E42C1A50CFFF.h5 took 0.831049919128418 s
+
+progress: 97/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/B668E778-A189-4210-8E8F-901407125FF3.h5 took 5.5092010498046875 s
+
+progress: 98/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/53AF2655-A892-4834-836A-1F372D396055.h5 took 7.636225938796997 s
+
+progress: 99/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/C15B4B3A-8829-41EF-ADB9-A7C6CA10189B.h5 took 10.036226272583008 s
+
+progress: 100/280
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/E339C76B-DE9C-4D0F-B472-178BBF3DD0DB.h5 took 15.757347106933594 s
+
+progress: 101/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/AEDF6101-32D2-4AE8-81D3-5FA609465416.h5 took 10.036478281021118 s
+
+progress: 102/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/84E7CFBD-48E3-455B-85C8-768AEE1149AA.h5 took 7.784386873245239 s
+
+progress: 103/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/1CCBC82C-8B70-4C3A-859D-8C11AAD5D1BE.h5 took 5.842914342880249 s
+
+progress: 104/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/716FE663-23A1-4121-A60F-EC1C830B6163.h5 took 7.324733018875122 s
+
+progress: 105/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/EE28794C-A6D6-4A76-82D4-E466779541B3.h5 took 8.825452327728271 s
+
+progress: 106/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/99E85DD6-2DC7-4FEB-A460-6E0610F35ED8.h5 took 1.152489423751831 s
+
+progress: 107/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/AA0DEC29-8970-4AAF-B502-85A57F3B3BC7.h5 took 16.228973150253296 s
+
+progress: 108/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/92905901-97E4-4D7D-A95F-52F39B4152A6.h5 took 16.380287170410156 s
+
+progress: 109/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/292B8EF7-8E01-45EE-AA7F-E27A15EB2796.h5 took 7.630875110626221 s
+
+progress: 110/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/C60D415C-5869-49BF-A90F-DE097A44B939.h5 took 10.425130367279053 s
+
+progress: 111/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/4E01E528-1232-4659-82DD-05841D9D8E25.h5 took 6.962381362915039 s
+
+progress: 112/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/901371CB-A9FC-44E4-BC5F-283FBCDBEDD8.h5 took 8.462985038757324 s
+
+progress: 113/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/38869563-9B24-4F1C-86BB-7D84CC147A12.h5 took 13.423320293426514 s
+
+progress: 114/280
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/6613A378-056D-46AB-9C19-C2636ABFA4A3.h5 took 18.826868295669556 s
+
+progress: 115/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/FD435622-C81A-44A4-9D86-AF0BEFC2A298.h5 took 6.66978120803833 s
+
+progress: 116/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/FD21AC5A-D8D2-4131-A3A5-9E67430F0BC6.h5 took 10.472889423370361 s
+
+progress: 117/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/9C1FBC50-9364-4440-80E3-93608303D5B6.h5 took 17.155078172683716 s
+
+progress: 118/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/39559A19-339D-4C7D-BB70-C2B6BA097FC8.h5 took 10.371332883834839 s
+
+progress: 119/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/C12F6A92-D395-4C86-883F-666F9228569D.h5 took 3.5637354850769043 s
+
+progress: 120/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/C3047B94-AAD6-42AD-BC75-4405914FF765.h5 took 12.549509286880493 s
+
+progress: 121/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/DCF69B50-7969-4589-9DB9-C359B56FFCF3.h5 took 9.33200192451477 s
+
+progress: 122/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/1EEE9780-4C72-4838-B874-5E8ED694A24D.h5 took 8.62973928451538 s
+
+progress: 123/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/54678751-CCE4-4372-86A1-FEF267278055.h5 took 4.889059782028198 s
+
+progress: 124/280
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/2FD928CF-F48F-4CF7-8FD4-C455D45CA2D8.h5 took 17.304826259613037 s
+
+progress: 125/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/D7855063-F981-4DC2-B73F-2E8CDA42A384.h5 took 4.167528390884399 s
+
+progress: 126/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/C22D3A0F-6F7D-42EB-9485-116C29A30052.h5 took 14.956445693969727 s
+
+progress: 127/280
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/A16DCA4C-EABF-40A9-9362-12E834FA1E56.h5 took 15.15900731086731 s
+
+progress: 128/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/2295D289-9036-4C91-89ED-F0FE064B77E6.h5 took 10.619663000106812 s
+
+progress: 129/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/42E86E4B-467F-49E2-ADB2-3C8DD1160D26.h5 took 6.4040327072143555 s
+
+progress: 130/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/D23D52EE-52EE-423A-BAF4-F8080EBFDBCC.h5 took 11.024006366729736 s
+
+progress: 131/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/CC3DBFA8-FB93-43A6-B0BB-21A2AF6F4B21.h5 took 15.072601079940796 s
+
+progress: 132/280
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/E5BE2824-054B-4D67-8EF0-2FAFEBA03DA7.h5 took 18.897332191467285 s
+
+progress: 133/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/E80A55DB-E90B-4BAC-97EC-3FE1048E12B0.h5 took 6.267459869384766 s
+
+progress: 134/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/F80C86D8-8EEA-41E6-9A96-A03C15220BEC.h5 took 12.964184522628784 s
+
+progress: 135/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/22FE84E4-04BD-4641-8858-9004AB9127C3.h5 took 12.042863607406616 s
+
+progress: 136/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/D698250C-1AEE-4A09-9887-9CA51151B42C.h5 took 13.368231534957886 s
+
+progress: 137/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/766FBEF1-34B4-42FA-AD1D-49280A3C42AD.h5 took 12.61641526222229 s
+
+progress: 138/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/BC5A5C22-4FCD-4377-B122-952D68D6C320.h5 took 8.82110333442688 s
+
+progress: 139/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/620C8F16-0EBD-45CC-9ED1-CD57BECFAB44.h5 took 3.623457431793213 s
+
+progress: 140/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/617F3D1E-1151-498A-9FA6-F1CEF7BDD3C5.h5 took 9.703687906265259 s
+
+progress: 141/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/D99C03AA-0909-409B-9FA4-EC2ECFB0A488.h5 took 5.0612969398498535 s
+
+progress: 142/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/9CDA69FA-FBF2-42E4-B2E7-57B8E2D72F1B.h5 took 11.7338707447052 s
+
+progress: 143/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/CF2A2E55-018C-4822-AC5C-F33315A13B99.h5 took 11.570552825927734 s
+
+progress: 144/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/08E2032F-E452-4AD1-936D-C64371FFAD37.h5 took 10.914128065109253 s
+
+progress: 145/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/40A56349-8884-485F-9C35-14C10F3FEC2F.h5 took 12.91920781135559 s
+
+progress: 146/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/F13D3751-3AA0-4DCD-9186-EB805938B61A.h5 took 3.661910057067871 s
+
+progress: 147/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/D7DB1CB7-C231-42F4-80E3-DBB684094533.h5 took 12.613916635513306 s
+
+progress: 148/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/C0991E55-1A8F-460D-AE2C-D6BFC17B7744.h5 took 3.7451789379119873 s
+
+progress: 149/280
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/E0A4DECC-AF33-413C-A5FB-E4DF6EE9E859.h5 took 15.31032109260559 s
+
+progress: 150/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/9036EF73-394E-4627-B545-F2856AE8F112.h5 took 10.998847484588623 s
+
+progress: 151/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/C1038851-39EF-4754-B924-49B26259A2EB.h5 took 14.291555881500244 s
+
+progress: 152/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/6B668D19-0F05-4604-8590-FBA41796513F.h5 took 6.901325464248657 s
+
+progress: 153/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/46E8D524-71C1-46EE-A112-C78F8EE23629.h5 took 10.689200401306152 s
+
+progress: 154/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/50CFBF95-77C4-4DDD-8D7E-251F21BF69A8.h5 took 9.358304500579834 s
+
+progress: 155/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/793B915C-6C04-4F4D-9A5E-63E07DFD66AE.h5 took 13.775506258010864 s
+
+progress: 156/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/1D4AAEE9-DDF3-4DD3-A676-06ED40B6499E.h5 took 5.271866321563721 s
+
+progress: 157/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/12B677AF-2314-490B-BFBF-1577D1D41AD3.h5 took 5.110426425933838 s
+
+progress: 158/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/A88C49D7-8D2E-46F9-B1FB-BA23BA6B0DB9.h5 took 14.586736679077148 s
+
+progress: 159/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/A74FB496-F110-4EDB-A86F-BAD74E505E23.h5 took 13.238837242126465 s
+
+progress: 160/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/91D2B150-23F7-4D84-9D9C-9C7E9132CE3C.h5 took 10.804015398025513 s
+
+progress: 161/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/62E9BF39-9088-411A-BB61-B6054446F00B.h5 took 9.444755554199219 s
+
+progress: 162/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/2BC3F663-FC98-473B-AB36-21AAD15D38E9.h5 took 3.5070650577545166 s
+
+progress: 163/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/A62F52DC-808F-4BDB-A6F4-7D0B0632F4E7.h5 took 10.556107997894287 s
+
+progress: 164/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/5EBAB5AF-6CAC-4A72-AC10-79C1386240A1.h5 took 1.9775636196136475 s
+
+progress: 165/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/5C81E60A-8B99-4DA2-998C-8BC1FAD1CCD9.h5 took 1.602022409439087 s
+
+progress: 166/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/4D37F63A-4689-4AD8-AD6A-473AF9BF0430.h5 took 10.70845890045166 s
+
+progress: 167/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/B5ACA4BC-4B0F-4682-9270-19B816ACEC10.h5 took 10.87220048904419 s
+
+progress: 168/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/9F97E1FA-25CC-40AA-906F-ED9F92DAA6ED.h5 took 16.39716672897339 s
+
+progress: 169/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/4EE431E4-46E9-4FFE-B41B-37B86AE54074.h5 took 12.588457345962524 s
+
+progress: 170/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/E600E6F2-D9B7-4A87-96E3-1D3AE904E4D4.h5 took 1.6089155673980713 s
+
+progress: 171/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/EE8423BD-EC11-4C05-8366-9A03FA48C834.h5 took 16.785288095474243 s
+
+progress: 172/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/C2F16456-C0C0-4280-B646-82F86A535171.h5 took 9.473888158798218 s
+
+progress: 173/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/EF3EF99A-89FE-4972-97B2-1403862C017C.h5 took 6.422694206237793 s
+
+progress: 174/280
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/ABB375C1-3856-416B-83D9-CAF1047E26D7.h5 took 17.08261013031006 s
+
+progress: 175/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/DBA6797B-7E6A-47FA-B981-BF5A0A682091.h5 took 14.34834337234497 s
+
+progress: 176/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/D1A541FD-0143-440D-85E2-F7114D337F01.h5 took 9.771041870117188 s
+
+progress: 177/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/DFA9BE73-72AC-412D-8273-74D668DA6B10.h5 took 11.218763828277588 s
+
+progress: 178/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/5F578D1F-4604-4C2F-9AC9-1A1670785ACD.h5 took 5.38949728012085 s
+
+progress: 179/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/844711BA-C848-484A-B538-F4675F3F0AF8.h5 took 11.190662145614624 s
+
+progress: 180/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/9AF6BBD4-ABA1-4F23-A6E2-C69417402659.h5 took 9.50788688659668 s
+
+progress: 181/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/BBBB1BB3-A1D9-4578-89D8-F796EB65ABF3.h5 took 9.94437050819397 s
+
+progress: 182/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/F1694E95-F746-4BA1-8356-5C56B908471E.h5 took 13.7531156539917 s
+
+progress: 183/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/F3F63530-A0F5-4D0E-8D18-7F4383B6A309.h5 took 12.475025415420532 s
+
+progress: 184/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/76A11527-5436-4862-95EE-7CE07D9774C2.h5 took 10.751815557479858 s
+
+progress: 185/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/F632A5AC-B826-402F-B6C0-458A39516BBF.h5 took 11.830645322799683 s
+
+progress: 186/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/B1C3E0F5-6778-4F1E-AAFE-2EE3B0913145.h5 took 13.679976463317871 s
+
+progress: 187/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/6608BF02-6CFD-4CF6-8722-871A83A351E0.h5 took 11.757649660110474 s
+
+progress: 188/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/8A37CCEC-47DF-460D-88EC-363322D700DC.h5 took 7.368197917938232 s
+
+progress: 189/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/DD2721BE-F1A0-4440-B84D-12B31158B83F.h5 took 14.302130222320557 s
+
+progress: 190/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/42B7064E-E1CA-45DE-A1C3-9D2CF7D35864.h5 took 5.036072015762329 s
+
+progress: 191/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/1FD258FA-567C-47A5-8D93-5FE4516891FB.h5 took 9.471783638000488 s
+
+progress: 192/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/CC3ADE61-30CF-4592-B0D6-23C668D34675.h5 took 13.403034210205078 s
+
+progress: 193/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/932759AE-F2AE-4386-993C-FBF2FA1B8F3E.h5 took 9.220596075057983 s
+
+progress: 194/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/491898C2-EF7E-4A7C-A0D2-0D6C982E6BE6.h5 took 11.140262603759766 s
+
+progress: 195/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/2A88489D-5B58-43DC-A6D5-31D775BDA757.h5 took 9.593801259994507 s
+
+progress: 196/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/CFF2A92E-D4B6-4668-930C-A90CC1D5D1D7.h5 took 16.66360354423523 s
+
+progress: 197/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/A1811E70-8B50-4484-A0AD-1EFFED18352A.h5 took 10.348517417907715 s
+
+progress: 198/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/8F5C35EC-6727-4A67-9CB7-7B9305CC1C28.h5 took 7.080424785614014 s
+
+progress: 199/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/C597834E-CFB8-494F-B1F3-EA7F6D3C23F9.h5 took 10.269962549209595 s
+
+progress: 200/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/C98FAF6D-D8F8-4660-BE09-A267DBB5CE98.h5 took 10.300535678863525 s
+
+progress: 201/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/491AB82D-40D7-4BE0-B2C1-107E8CEE4775.h5 took 8.116444110870361 s
+
+progress: 202/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/73A970C4-7BF9-4653-9482-9221122FCF9D.h5 took 10.659190893173218 s
+
+progress: 203/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/8DFE9696-1755-4779-88DF-3DD494132BCE.h5 took 17.2028968334198 s
+
+progress: 204/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/7A255BDE-5CE9-4C29-89D6-9064E333689F.h5 took 8.705039739608765 s
+
+progress: 205/280
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/871FE29A-4878-4486-AC24-71B3C3028457.h5 took 20.883528232574463 s
+
+progress: 206/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/71F25351-8B57-4D08-838B-94A0C936CD87.h5 took 9.345596551895142 s
+
+progress: 207/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/80FCC79D-599E-4C02-BCDC-B96AE8CF16DE.h5 took 10.529533863067627 s
+
+progress: 208/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/B32CC379-2DD1-4161-8312-79597E0FD7F2.h5 took 7.031019449234009 s
+
+progress: 209/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/BB40DE78-61DE-47B1-9DDE-0D624EC3644E.h5 took 6.25942587852478 s
+
+progress: 210/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/631ECB01-9DD6-424B-B4EA-A7856E7F01FC.h5 took 11.676163911819458 s
+
+progress: 211/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/765E8641-66CE-49E4-9B96-7DF3764DE99E.h5 took 1.6827857494354248 s
+
+progress: 212/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/BE2047ED-257B-4B85-82DB-3B3F20F4C4B9.h5 took 9.088706731796265 s
+
+progress: 213/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/33FF03B0-4CFD-47A0-87FA-CDF4C79F5D8E.h5 took 5.85316276550293 s
+
+progress: 214/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/C0C5E568-2371-4844-B9F8-59F492C60152.h5 took 3.3991212844848633 s
+
+progress: 215/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/99DC99C1-B9B7-4A2E-B561-CC42E72DEAA8.h5 took 9.306281089782715 s
+
+progress: 216/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/0044FA7C-BE66-4CF0-9DA8-DFB9518F74C2.h5 took 11.256211996078491 s
+
+progress: 217/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/0C400E0A-5BD7-4888-B169-062B1E33124C.h5 took 6.403995037078857 s
+
+progress: 218/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/0996B091-20E9-4A6A-8774-5C1FD0C92CB3.h5 took 14.22305178642273 s
+
+progress: 219/280
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/95C8B009-603E-4B3B-AC13-F4E5937EAA14.h5 took 21.721894025802612 s
+
+progress: 220/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/51F2B1CC-E792-4AA1-BDC1-7212724D8C8D.h5 took 11.723317384719849 s
+
+progress: 221/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/2180B799-3B70-41B1-A1C4-D5FC7C6FD207.h5 took 15.24860429763794 s
+
+progress: 222/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/5F29BC16-41DA-4F1B-9362-3A0EA548E180.h5 took 10.630462646484375 s
+
+progress: 223/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/41A26D44-227B-4745-A6A9-56BFB7A2371E.h5 took 7.958561182022095 s
+
+progress: 224/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/642FD4AB-288B-43E9-9556-A332C7B00C9B.h5 took 9.770197629928589 s
+
+progress: 225/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/24F1510E-81F5-407F-AA46-ECF7F3935811.h5 took 17.123198747634888 s
+
+progress: 226/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/04347B24-6732-447A-9540-2067B1538FC7.h5 took 9.491849660873413 s
+
+progress: 227/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/02065575-D8B1-4BF0-8D6B-4FA4C6BD75A9.h5 took 9.286376714706421 s
+
+progress: 228/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/DFFB9FB4-AF82-4AB6-AE36-BCDF242FC1B3.h5 took 13.483339548110962 s
+
+progress: 229/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/D1C64CD0-9E21-486D-85D8-4AE9A1EC1313.h5 took 10.028107404708862 s
+
+progress: 230/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/C89D920F-59CA-4650-9263-92D0CE328C21.h5 took 10.154518842697144 s
+
+progress: 231/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/E0522D1D-64D6-42BF-8E7A-FE0C14B3DD7E.h5 took 11.54300332069397 s
+
+progress: 232/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/BA545210-52B7-4FA3-A118-64EB09EA3762.h5 took 7.809226036071777 s
+
+progress: 233/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/DFC91F17-30B3-4B23-8C50-E63984EF9A12.h5 took 13.475641250610352 s
+
+progress: 234/280
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/272B8658-8219-4954-9EFC-6C37788E3EEE.h5 took 16.053778886795044 s
+
+progress: 235/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/6795455F-67C0-4CBA-9837-B185F0E82B58.h5 took 1.794719934463501 s
+
+progress: 236/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/975F2279-1D3E-44A6-A617-B67E92E37128.h5 took 12.002685070037842 s
+
+progress: 237/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/0A4AA0EB-04DC-4328-AD36-62EB7037B5BA.h5 took 7.722645044326782 s
+
+progress: 238/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/90263E1F-50A6-4F19-BA21-6DF8A01D7348.h5 took 13.863924741744995 s
+
+progress: 239/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/7B98501C-C0C0-4C9D-BE6C-6FBE4B456C8A.h5 took 3.8085851669311523 s
+
+progress: 240/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/08D2B39F-D478-452E-893F-DAB76E65A370.h5 took 13.415967464447021 s
+
+progress: 241/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/EE8144BA-7A47-4991-B757-EAAEEE6EFFD3.h5 took 13.34965181350708 s
+
+progress: 242/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/9A9F4B83-DA1A-4C05-B11A-0752E5F1C422.h5 took 13.798622131347656 s
+
+progress: 243/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/031AFF5A-D4D8-46C4-A2A9-82376B8A11EF.h5 took 13.477734804153442 s
+
+progress: 244/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/0B39739D-02F4-4C1B-BCA1-1F0EF3CD85F0.h5 took 12.77659559249878 s
+
+progress: 245/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/65CF1D6E-6B7A-4F39-A931-448B7D3F8246.h5 took 11.559677839279175 s
+
+progress: 246/280
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/D6545D64-4D7B-4241-977D-C4281B988A67.h5 took 16.64802312850952 s
+
+progress: 247/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/7D460CAD-F834-4D87-8505-11D3E4A63D86.h5 took 7.404201507568359 s
+
+progress: 248/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/1C77DE7E-C2F4-4AEE-9C29-3F4F39ED3FB8.h5 took 17.564850568771362 s
+
+progress: 249/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/E9F957BE-7397-45EF-A0C2-896DA1681510.h5 took 3.9593729972839355 s
+
+progress: 250/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/5CCC735E-FA11-4AAD-80C8-23E365253AC0.h5 took 14.524778604507446 s
+
+progress: 251/280
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/6D91DBEF-DE81-4BFC-8B94-D0B87EFAEF1A.h5 took 15.298123598098755 s
+
+progress: 252/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/BBE869EC-1206-4946-9F8D-D03FB30C8561.h5 took 9.495684385299683 s
+
+progress: 253/280
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/682C1DBE-E20A-448A-89E8-EF47001E31F8.h5 took 14.908380508422852 s
+
+progress: 254/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/4976B4E9-7C7C-49C4-B40D-AAF225262130.h5 took 11.776809930801392 s
+
+progress: 255/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/A662F598-1370-4620-BC5C-4C27D465C582.h5 took 9.913403749465942 s
+
+progress: 256/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/46F4CF58-9CAF-488D-B5A1-33F81D876B43.h5 took 7.551275014877319 s
+
+progress: 257/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/C1F6B520-1FD4-4CF5-BFF6-DBEF0D21C29A.h5 took 2.4929726123809814 s
+
+progress: 258/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/626643DA-5809-4443-B297-8553BA5431E8.h5 took 8.521084547042847 s
+
+progress: 259/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/45D9F521-5749-48F6-8B32-22139D0CDEB9.h5 took 6.186489820480347 s
+
+progress: 260/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/5AB0F734-E649-4443-A0F9-DDD4007A3AF1.h5 took 7.3996312618255615 s
+
+progress: 261/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/41152145-8C13-4909-96CD-C1E2F727B909.h5 took 3.987823724746704 s
+
+progress: 262/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/9D5AA451-9B0A-4629-9F4F-003C033C122B.h5 took 7.321536064147949 s
+
+progress: 263/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/65730A49-42B6-402F-A833-73E050722988.h5 took 6.478221893310547 s
+
+progress: 264/280
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/BE527ABE-047D-48F4-8F68-C9F1FDEC65E2.h5 took 18.011369705200195 s
+
+progress: 265/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/BAA06261-734F-4EAA-97DE-BDBD357B82FC.h5 took 11.687514066696167 s
+
+progress: 266/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/E45E1E75-50B7-4044-9997-2A39F3D53470.h5 took 9.248993396759033 s
+
+progress: 267/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/2EFA1AC0-95A1-4FA1-8019-5C6BA8D8CB33.h5 took 5.208092451095581 s
+
+progress: 268/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/89136DD7-A738-49A1-AB0E-8AA0E4FDD1D9.h5 took 11.04988169670105 s
+
+progress: 269/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/DD9378D5-28E2-44E6-ABB8-36709E942830.h5 took 13.912814855575562 s
+
+progress: 270/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/88EE2BF7-B0BF-44D3-B088-95038F955A63.h5 took 7.709714412689209 s
+
+progress: 271/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/C44E89BA-E5FA-40FA-8EAA-01DCCB2345DD.h5 took 9.400662422180176 s
+
+progress: 272/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/832C814C-9184-48CA-ACEB-90678AFD3FD6.h5 took 6.058752059936523 s
+
+progress: 273/280
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/17826517-CB95-4640-885C-4C7154A8EB1B.h5 took 15.571579933166504 s
+
+progress: 274/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/5D78CB62-F45C-4601-A363-F623E98D7885.h5 took 9.84168815612793 s
+
+progress: 275/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/1F36D11A-0989-4B39-8F64-2C484434436E.h5 took 16.480006456375122 s
+
+progress: 276/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/6F0FA258-0EDC-414E-90B0-F3DAE2595572.h5 took 4.180279016494751 s
+
+progress: 277/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/D37FA970-4E2E-436F-AF94-2F37C10A3B3A.h5 took 2.469700336456299 s
+
+progress: 278/280
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/5C53A913-F5C9-48FA-B377-E9000D1BEA74.h5 took 11.573221206665039 s
+
+progress: 279/280
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/ELSE/h5_files/449DAD36-84B2-4349-91BB-FC94AC5FB9B3.h5 took 5.12556791305542 s
+L858Rbegin!!!
+
+progress: 0/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/3D79A6C2-2184-42D2-BC3C-7230008BCDDC.h5 took 6.749330759048462 s
+
+progress: 1/183
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/4E473871-F1AC-401E-886D-13E71BD1B122.h5 took 17.99721932411194 s
+
+progress: 2/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/A1115979-0C27-4F4C-B704-24C3A1BD1427.h5 took 12.691789627075195 s
+
+progress: 3/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/3CE4A8B6-E2F4-4439-AEF0-935B661EFDAF.h5 took 9.727200508117676 s
+
+progress: 4/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/91847AC6-FABF-4B5F-A7CA-4E0C10C39260.h5 took 8.712437629699707 s
+
+progress: 5/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/0EA03369-97F8-4E0E-AC3E-6B0C758612DC.h5 took 11.168931245803833 s
+
+progress: 6/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/6B071DA2-F387-43C5-9A51-0288A79FBD3B.h5 took 10.077777624130249 s
+
+progress: 7/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/049472BA-6C79-4982-907E-97E3D4AA847D.h5 took 10.504632234573364 s
+
+progress: 8/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/2BC1FCA8-A28E-4270-B918-B3CAA920A603.h5 took 3.6582446098327637 s
+
+progress: 9/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/CF046F13-B220-4E09-981A-4BC7BB944BB7.h5 took 8.26317286491394 s
+
+progress: 10/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/4F8D1BFD-7540-4744-8146-BD14FD563DD4.h5 took 10.030126571655273 s
+
+progress: 11/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/3F1FC06B-215C-48B7-ABD8-999045ED7C73.h5 took 11.8556227684021 s
+
+progress: 12/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/6781A535-7E87-48E2-9880-A4EB71FA7056.h5 took 11.466389656066895 s
+
+progress: 13/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/C3763223-1050-4A8C-A357-B1C561A62089.h5 took 5.8913254737854 s
+
+progress: 14/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/D4D5AE14-4EC0-4A28-AFD3-CF3E0AC1A653.h5 took 5.902450084686279 s
+
+progress: 15/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/609763A7-7AFB-4379-89CA-94152511FED1.h5 took 6.76030158996582 s
+
+progress: 16/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/B9AB0DA6-46E6-498F-A470-3C979523299C.h5 took 4.775348424911499 s
+
+progress: 17/183
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/251EFE50-DFCA-48C1-9BB0-CE00899BFC1B.h5 took 18.74071478843689 s
+
+progress: 18/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/2AEA65B2-CA5B-4D38-81E1-9D481064FA7E.h5 took 12.48195195198059 s
+
+progress: 19/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/BD0A7A3B-788E-4C17-B7DA-97740281F410.h5 took 14.596453428268433 s
+
+progress: 20/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/B53806EB-FB6C-488E-86E2-7AB62596A73D.h5 took 17.530035257339478 s
+
+progress: 21/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/38F8543B-60BA-401A-B156-C79B903CF5B3.h5 took 8.393840551376343 s
+
+progress: 22/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/9FC4E225-2261-4D9E-B585-64D040C74AE5.h5 took 18.700150728225708 s
+
+progress: 23/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/9799A7F5-173B-4410-B7B4-6C0FC3020AAC.h5 took 9.3108389377594 s
+
+progress: 24/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/0FF6CC25-7EF7-4E83-BD57-5C6C75204E85.h5 took 10.186216115951538 s
+
+progress: 25/183
+
+feature extraction settings
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/399A7690-5232-490C-BCB5-EF27AE74D50B.h5 took 38.123863220214844 s
+
+progress: 26/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/E2B20A26-C97B-49E7-A296-451D4B66B826.h5 took 7.430485486984253 s
+
+progress: 27/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/E2431623-5E8D-43DD-834A-9C4D6CC9DBEB.h5 took 10.506872177124023 s
+
+progress: 28/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/5A4518AD-2696-4925-B3C9-74207F745569.h5 took 12.726861000061035 s
+
+progress: 29/183
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/11C8879A-2078-4D07-9369-1A771CEC162C.h5 took 24.3120174407959 s
+
+progress: 30/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/E0ED8FCB-439E-4727-AC36-6FF158861166.h5 took 10.443136930465698 s
+
+progress: 31/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/2A993444-BACA-4D7D-87C1-EB89CC1A6B33.h5 took 9.897356033325195 s
+
+progress: 32/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/12841E65-5321-41EA-A109-EF7FAEB73636.h5 took 10.859407424926758 s
+
+progress: 33/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/DD22B36B-6310-45E5-BFA3-A3FA8B011248.h5 took 6.2826948165893555 s
+
+progress: 34/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/8F02FC9A-6CDF-4BCD-AFF6-453554887BF0.h5 took 15.04440975189209 s
+
+progress: 35/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/4A47644B-791C-4730-A674-BBDF8F1E2572.h5 took 4.770909309387207 s
+
+progress: 36/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/AC870C8D-F731-419A-9C94-20F9C67C7D18.h5 took 11.943739175796509 s
+
+progress: 37/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/4CE1F2E4-2858-4D8D-AC9A-224373E7C989.h5 took 4.773639678955078 s
+
+progress: 38/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/72289F92-7141-4C5B-B605-B65E673B5F24.h5 took 11.286546230316162 s
+
+progress: 39/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/5A60AC94-01A0-447D-BBA0-620ACA720618.h5 took 10.372807025909424 s
+
+progress: 40/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/BE18537E-47DB-4FD3-BFBC-2691C5FF6630.h5 took 12.762537240982056 s
+
+progress: 41/183
+
+feature extraction settings
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/F99FD4CD-0A2E-4521-85FC-BAB1CE9E6590.h5 took 27.663326740264893 s
+
+progress: 42/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/79553E04-CD4A-423E-9B5E-FFA986B49B0B.h5 took 7.978179454803467 s
+
+progress: 43/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/902B539B-5514-494A-AA9D-6E579E6D4B4E.h5 took 14.980721950531006 s
+
+progress: 44/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/AF7669C8-E3BA-4549-9329-9653CB1A82DF.h5 took 18.232831954956055 s
+
+progress: 45/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/9C1F73A0-02E7-4262-B36E-AE056EDD767B.h5 took 14.246251106262207 s
+
+progress: 46/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/104E2070-1922-4CBC-93A8-60ADA598B309.h5 took 4.6304261684417725 s
+
+progress: 47/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/653F141D-74E4-4147-A11B-76765A9BA9F4.h5 took 11.797622919082642 s
+
+progress: 48/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/989EF28E-9798-44BF-BB89-505D6EF1F47C.h5 took 10.558537483215332 s
+
+progress: 49/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/2C64BE56-35EB-48C3-9860-3355122372F5.h5 took 18.139100790023804 s
+
+progress: 50/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/06B83FBB-6AFF-436F-BDAD-CE505019ACFA.h5 took 10.54620885848999 s
+
+progress: 51/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/20AA4F76-9BD6-4139-AC74-7EFCAC559EA9.h5 took 19.041157960891724 s
+
+progress: 52/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/09286880-A087-4AFA-B4AA-F5DEFCE4C9EA.h5 took 7.526650667190552 s
+
+progress: 53/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/60AF8D86-FC8F-4305-AD63-50A980C1D33B.h5 took 10.145216703414917 s
+
+progress: 54/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/0FFDE646-A4BC-4E3C-887E-7D68686F17EB.h5 took 10.389426469802856 s
+
+progress: 55/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/849A27E5-1C3D-47CB-99BD-95458658D579.h5 took 10.739265441894531 s
+
+progress: 56/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/EE716F65-009C-4A0B-96BC-AE41B6A9CAE7.h5 took 12.003257036209106 s
+
+progress: 57/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/0CCFAF9A-21A1-4F9C-A550-AC2B51403C20.h5 took 16.83912944793701 s
+
+progress: 58/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/FF358FD5-76CA-47DF-8EC0-2181F0B5E7F9.h5 took 4.497742414474487 s
+
+progress: 59/183
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/C2E17658-6700-4321-9F5B-A8B8165E694E.h5 took 17.513935565948486 s
+
+progress: 60/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/B4A165A1-C483-4606-8DAD-7BD0CC5D40F4.h5 took 8.433748245239258 s
+
+progress: 61/183
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/92D53376-D4FA-42DD-8706-FA3A173F0FB0.h5 took 19.954281330108643 s
+
+progress: 62/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/4978A872-F86F-4768-8619-50C2214A918B.h5 took 10.21217656135559 s
+
+progress: 63/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/2598B650-FEB7-408D-943C-5802092C81F1.h5 took 19.843498945236206 s
+
+progress: 64/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/5F9BF5C2-4CF7-4F44-A06A-6B1092B236F4.h5 took 11.123620748519897 s
+
+progress: 65/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/99E28B3A-A12E-496E-B106-3AAB7BE90702.h5 took 12.62445878982544 s
+
+progress: 66/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/DA1A9260-6E0A-4A8F-A881-9598A80E38AF.h5 took 13.240285634994507 s
+
+progress: 67/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/060BA854-FA34-4422-880C-48E4B4CCC6B0.h5 took 15.133638858795166 s
+
+progress: 68/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/E5CE5264-9CFE-4392-B4B9-9AC60A1968CF.h5 took 10.733325958251953 s
+
+progress: 69/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/D9A4236C-7C02-4480-8424-F45E82D2CEF9.h5 took 10.527880668640137 s
+
+progress: 70/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/0E222008-B4D6-491A-B932-1BFDCF20EFEF.h5 took 15.683123111724854 s
+
+progress: 71/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/2A9A7006-A0D9-4B19-A069-546633052B1A.h5 took 14.016196489334106 s
+
+progress: 72/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/5239DDD8-1945-41B3-9A9D-A67691EF3360.h5 took 10.595552206039429 s
+
+progress: 73/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/1AC96070-C470-4D25-94F9-3A1C79860272.h5 took 10.162073373794556 s
+
+progress: 74/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/856F895C-F446-48CE-8E24-DCF6882E86C7.h5 took 17.075735569000244 s
+
+progress: 75/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/C583228E-F74C-4E94-A100-4D879381438B.h5 took 10.441487550735474 s
+
+progress: 76/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/2C51B008-64C1-4450-944F-0CCE5FAA171B.h5 took 10.603478193283081 s
+
+progress: 77/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/23A13ABF-EDEE-4B9B-B28D-49985F887BBE.h5 took 3.693635940551758 s
+
+progress: 78/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/EF8E3A9F-03D1-45B7-865B-C74E000A9230.h5 took 10.121751070022583 s
+
+progress: 79/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/98D16ACB-B94B-41CE-A912-482F11F63F4A.h5 took 16.08869957923889 s
+
+progress: 80/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/AF802B07-1F12-402A-9AC6-889170BBF268.h5 took 16.830169439315796 s
+
+progress: 81/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/DCD61B52-3139-4841-B443-2917670481A2.h5 took 10.532733917236328 s
+
+progress: 82/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/D5C2778E-4DC7-4BEA-9F19-3C9D7D841BDB.h5 took 17.908851861953735 s
+
+progress: 83/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/5B7521EF-0A3B-4AC4-BE48-95257613E54E.h5 took 9.195964813232422 s
+
+progress: 84/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/BDD3D39A-345B-4255-83DC-D40B275E8DC4.h5 took 7.799251556396484 s
+
+progress: 85/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/226CBD2D-9FD9-4238-8435-70373023346B.h5 took 6.931430816650391 s
+
+progress: 86/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/93152AB8-C92D-408B-883C-C567E06B8291.h5 took 0.7481694221496582 s
+
+progress: 87/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/14D40146-4F74-4FA2-B9C5-AEF9C3B06D31.h5 took 9.753787279129028 s
+
+progress: 88/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/9C70DEAD-A1CC-40C8-9479-4500ABD2C669.h5 took 8.85877013206482 s
+
+progress: 89/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/E8DE4D9D-34D6-4E06-B07C-9F9EB1A0F2A2.h5 took 9.90523648262024 s
+
+progress: 90/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/EA6EACC9-6D59-4BA1-B35D-033BB338941F.h5 took 3.351132392883301 s
+
+progress: 91/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/992EB23C-28B4-4E71-97AA-135D552AD455.h5 took 12.916699886322021 s
+
+progress: 92/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/D63BADE9-DCEA-4D01-ADD3-277E449545B6.h5 took 6.446495056152344 s
+
+progress: 93/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/39D8F49C-E59D-4F3F-90A8-CE8B761B4C38.h5 took 8.40782356262207 s
+
+progress: 94/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/C7D5FB24-A19E-4D0B-A4D4-FDE8C3404DBD.h5 took 8.08577823638916 s
+
+progress: 95/183
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/95463681-BE72-43D8-854E-14111E9ECFA0.h5 took 18.15584707260132 s
+
+progress: 96/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/F98645B9-3243-4160-B041-241AEE08BD57.h5 took 13.49169135093689 s
+
+progress: 97/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/F361E8A9-E113-40D5-85E5-DD77B1A4DE43.h5 took 17.886857986450195 s
+
+progress: 98/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/0EF25EEA-84F0-46BE-B048-D49CFF94F2F0.h5 took 11.35879135131836 s
+
+progress: 99/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/9501617B-00A3-4E02-B8A5-6B7B615F5007.h5 took 16.778432607650757 s
+
+progress: 100/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/37172252-4525-4DEC-9A18-8C289F55CDE3.h5 took 7.386566638946533 s
+
+progress: 101/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/B7712474-1B33-473B-8AC5-935309BD77E0.h5 took 13.456432819366455 s
+
+progress: 102/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/371D86E0-A00D-4A8D-B3B0-FD02FAC539BB.h5 took 7.941900730133057 s
+
+progress: 103/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/F1D867EF-0BD6-4D72-B25E-BE7340BB5A7F.h5 took 8.84603238105774 s
+
+progress: 104/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/B1BF1AB7-63A7-4CA0-9030-81D406E446A1.h5 took 7.887738943099976 s
+
+progress: 105/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/BEF41E8F-B5FF-45EE-8CAB-B10F1DD62E73.h5 took 11.932574987411499 s
+
+progress: 106/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/A030254B-C962-4C9F-AB31-60D677DC6D67.h5 took 20.58132290840149 s
+
+progress: 107/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/EA1D2450-F611-4A25-8CFB-ADC7D5EACBF7.h5 took 7.749657869338989 s
+
+progress: 108/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/03E69085-4E30-4462-ACEF-6B4FCF799015.h5 took 10.658910274505615 s
+
+progress: 109/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/9635B78E-BC4E-4A0E-88BB-4DF479EEC581.h5 took 4.969289302825928 s
+
+progress: 110/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/341846BF-994C-4CCB-BA25-700A2C889AF0.h5 took 14.308086633682251 s
+
+progress: 111/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/2920000A-5627-4EE4-96A1-97BAE3AB4261.h5 took 11.69729232788086 s
+
+progress: 112/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/0E03FE21-195A-4BAD-BEE0-436471F4C306.h5 took 9.130599737167358 s
+
+progress: 113/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/8134EE8B-1BF7-45DB-A642-549C9EF6D378.h5 took 10.077857732772827 s
+
+progress: 114/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/2B1C9D50-FF0D-4B00-AD4D-2216284C3D4F.h5 took 5.720239162445068 s
+
+progress: 115/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/B57C680E-CD45-4BC9-BBAE-75D3A39EFC2E.h5 took 16.131558656692505 s
+
+progress: 116/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/7E4D1AA1-6B33-4B15-8DD4-119034EAA639.h5 took 10.148837327957153 s
+
+progress: 117/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/46E71360-C899-42E5-B0DF-629CDA01B28B.h5 took 6.016127109527588 s
+
+progress: 118/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/04F18CE9-3AE3-44C4-BCA8-3CE79BFFF2B7.h5 took 9.99594759941101 s
+
+progress: 119/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/3A9E0863-B065-47FB-9292-FB259263AE51.h5 took 12.296382904052734 s
+
+progress: 120/183
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/654465F2-A638-4535-BCEF-9B8937387B95.h5 took 21.643048524856567 s
+
+progress: 121/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/7D3D87CA-9999-4881-AD54-A5BB17AF8C98.h5 took 13.293576955795288 s
+
+progress: 122/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/28ADC6F0-93F4-4499-B3CE-9567A2B1FA86.h5 took 16.139007091522217 s
+
+progress: 123/183
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/51005B7C-F893-41EF-85B8-670F3AF95481.h5 took 24.324697971343994 s
+
+progress: 124/183
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/46DD6AC3-33BD-4AF6-BDF3-BA30948F61BF.h5 took 20.478904247283936 s
+
+progress: 125/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/785AF515-B2CE-48BA-8DCC-7001743B8F00.h5 took 6.438048362731934 s
+
+progress: 126/183
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/2E5AEF78-0AEE-4DB1-BCEB-D06F37CBB80C.h5 took 16.849777698516846 s
+
+progress: 127/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/686460FA-A8C1-4DAA-807A-14A9039E67BC.h5 took 13.631091356277466 s
+
+progress: 128/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/54D44468-ECEA-4EB4-BC45-5D1AA1349EC1.h5 took 11.141968965530396 s
+
+progress: 129/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/17D6CBBE-055F-42CE-A08A-1B23105B17A4.h5 took 15.086504697799683 s
+
+progress: 130/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/0ECCD31B-A08D-4A3A-A064-D331E6B19723.h5 took 2.5991122722625732 s
+
+progress: 131/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/D0B36585-3A7E-48A8-97B6-D10911270530.h5 took 13.013777732849121 s
+
+progress: 132/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/56D38CFE-0372-4B47-9CDB-25D1772D6CD9.h5 took 10.227039813995361 s
+
+progress: 133/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/145ABBD8-1EED-4B16-A032-7DC32699C77D.h5 took 2.847578763961792 s
+
+progress: 134/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/B852A21E-55F4-4FEB-8233-17C89FE7E2F6.h5 took 20.635799169540405 s
+
+progress: 135/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/D81BBEDD-4377-4168-92CD-84D420753BE6.h5 took 9.966735124588013 s
+
+progress: 136/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/274034B5-55BE-4BFF-BDBB-3661BD30050F.h5 took 11.690866947174072 s
+
+progress: 137/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/D75662C9-7600-4A55-9DFA-E1FF4E086587.h5 took 10.860814094543457 s
+
+progress: 138/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/3B766E77-6AC3-48F1-904C-F03C2B51D05A.h5 took 15.046962261199951 s
+
+progress: 139/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/6CACF8C9-1D2E-4E71-95AA-EB407C4E4E48.h5 took 10.571500062942505 s
+
+progress: 140/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/B4574A55-6CC4-4CE8-86F1-19E65C03EB28.h5 took 9.90582537651062 s
+
+progress: 141/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/BF39756B-ECB7-4F56-8691-86F0367E3A9A.h5 took 9.258418560028076 s
+
+progress: 142/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/2456BEC9-1D09-4692-9527-38B2006D3C0E.h5 took 18.02557373046875 s
+
+progress: 143/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/BE461D26-B727-4569-A58B-979AE3122D4C.h5 took 4.669331789016724 s
+
+progress: 144/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/E736C2C2-CA17-4142-ADCF-798EA3FB5B6D.h5 took 10.745814561843872 s
+
+progress: 145/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/20504A0A-E40C-4C33-91D3-C31E170197EC.h5 took 6.529208421707153 s
+
+progress: 146/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/B7C2FD8C-9D12-4D3F-AE47-DD874192373A.h5 took 11.216653823852539 s
+
+progress: 147/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/87E5492D-D5D1-4BF9-99B9-A28C06962F79.h5 took 15.372823715209961 s
+
+progress: 148/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/B49B15A6-364E-46CF-93F9-351781DF3311.h5 took 9.659602403640747 s
+
+progress: 149/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/B9C9F744-D30A-4F30-A366-63FC77B3C759.h5 took 13.592465877532959 s
+
+progress: 150/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/6A13E9A3-9D10-4C99-861E-5BB635D57703.h5 took 10.179187774658203 s
+
+progress: 151/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/194D9CF7-C2D6-4DB4-8805-007B9B6C482A.h5 took 18.98613142967224 s
+
+progress: 152/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/B0A7C0D7-43F7-42E0-9505-D9598232F04F.h5 took 10.265564918518066 s
+
+progress: 153/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/A5274412-5F6D-4EB4-A2E1-19B826F9870F.h5 took 16.130531549453735 s
+
+progress: 154/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/4986F50B-9D77-4859-8E7C-B6D963E9FDA1.h5 took 15.621313333511353 s
+
+progress: 155/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/5F1F4238-6773-4BCC-85F8-AB75301481A6.h5 took 9.863388776779175 s
+
+progress: 156/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/71740A18-319E-41E4-9DED-23412940A620.h5 took 8.163060903549194 s
+
+progress: 157/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/CBF7A9EE-1419-41D8-9E5D-FA8D842E7D3B.h5 took 4.922987222671509 s
+
+progress: 158/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/912A4295-45F1-4BBB-88BD-B0834E449A04.h5 took 11.20889663696289 s
+
+progress: 159/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/7FDB5717-9A24-4626-8146-C4992DECB322.h5 took 10.223265409469604 s
+
+progress: 160/183
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/66D7C0AC-AEAB-4C1B-AD14-2170E7A71225.h5 took 18.53242588043213 s
+
+progress: 161/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/39AB6B93-7509-41C0-8B71-5DE0FD36D20E.h5 took 7.35376501083374 s
+
+progress: 162/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/A8C3F176-1882-48ED-8009-DB6338F97F71.h5 took 12.341979503631592 s
+
+progress: 163/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/B613B9AA-CD0F-4953-AD9D-F9898C5AABA8.h5 took 11.995427131652832 s
+
+progress: 164/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/B94CC9E4-B0AC-48A9-9AA9-AA6C78690D3F.h5 took 2.928098678588867 s
+
+progress: 165/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/C6B71B74-57AB-44FC-AAA1-E381FCB27A31.h5 took 4.636430740356445 s
+
+progress: 166/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/7201861B-D8AC-4E8D-9003-2BE4E3E95CC1.h5 took 7.15166449546814 s
+
+progress: 167/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/0B58C1B8-4AD5-4387-90D8-59377B3563BD.h5 took 12.786892652511597 s
+
+progress: 168/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/60D56FEA-FD1C-4111-8A2F-B792D90F1B85.h5 took 11.72820520401001 s
+
+progress: 169/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/3592BCD6-9952-40B6-922D-9D71F0FF02E4.h5 took 12.791364192962646 s
+
+progress: 170/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/BC09F980-60FA-4F7E-A9BD-AE1AE6DD07CD.h5 took 8.949743509292603 s
+
+progress: 171/183
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/C584E7BB-564C-4985-8167-3B50EEE412D1.h5 took 19.240350246429443 s
+
+progress: 172/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/737B8DF6-73DC-4480-98D3-48B88A7BC6E7.h5 took 14.601315259933472 s
+
+progress: 173/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/481AC713-BBCD-444E-AC82-A619059FA70E.h5 took 10.770411014556885 s
+
+progress: 174/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/BD1BDD93-7636-4D27-9F9A-4E4F9161A5CA.h5 took 9.387258768081665 s
+
+progress: 175/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/F1BB8BAE-26BE-4393-B645-BD57433F23EF.h5 took 9.910479545593262 s
+
+progress: 176/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/6FB7E81A-ADA6-4AC1-B110-F0FB74C448B5.h5 took 17.821012258529663 s
+
+progress: 177/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/6222B41F-EFE0-4A6D-8479-293166D82AD8.h5 took 7.6603474617004395 s
+
+progress: 178/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/570D9CFE-4D4E-44E5-A5A5-A93C920F0033.h5 took 7.556314945220947 s
+
+progress: 179/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/2041CD05-8328-4B44-B6F0-C30E687DD4F7.h5 took 11.684389114379883 s
+
+progress: 180/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/949F5E88-1D9E-4467-AA65-0740BF4B6FD1.h5 took 4.331038475036621 s
+
+progress: 181/183
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/4F93AD26-1B38-4710-BB3E-72AEAAD9606A.h5 took 14.057487964630127 s
+
+progress: 182/183
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/L858R/h5_files/BE92E5CB-9B4F-4AFC-946D-67AAB610799F.h5 took 7.953040838241577 s
+Normalbegin!!!
+
+progress: 0/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/CCFAE25C-1552-4B36-A65E-2729483A3C05.h5 took 1.8342015743255615 s
+
+progress: 1/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/4BBB6260-0B09-4384-BB6B-75F616439324.h5 took 8.34496784210205 s
+
+progress: 2/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/FF4B3DF2-F428-4C47-A170-56B3D26EEEFB.h5 took 9.840743780136108 s
+
+progress: 3/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/C20A02CA-2D06-4F23-AEC7-97D0FCAC34C4.h5 took 5.0902228355407715 s
+
+progress: 4/164
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/6BDB00EB-E072-40CE-B30A-55320015021E.h5 took 9.942674398422241 s
+
+progress: 5/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/7E1CD0F5-1C25-4D23-8468-327873095BE5.h5 took 7.3705055713653564 s
+
+progress: 6/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/E9025DC4-9CC1-4292-A1F0-E8A10BAEDB42.h5 took 3.743946075439453 s
+
+progress: 7/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/38B58C04-B17D-4FA7-B275-6C266ECCB327.h5 took 2.6025445461273193 s
+
+progress: 8/164
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/9D59A0B7-56B2-480E-AD51-6D4D137BE005.h5 took 10.347466707229614 s
+
+progress: 9/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/7391DECF-521D-4257-8FEF-FFFB5F77E063.h5 took 4.461947679519653 s
+
+progress: 10/164
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/5BA5B953-7C9D-41E8-B49A-467AD93511D6.h5 took 16.84482502937317 s
+
+progress: 11/164
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/D89E753A-346A-4660-9FCB-E67D0C096630.h5 took 9.466150045394897 s
+
+progress: 12/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/327CA9E5-64A3-4CE2-83CF-4556510B1355.h5 took 4.8739848136901855 s
+
+progress: 13/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/8F81C494-8B74-4EEE-98C8-0BF1057D390A.h5 took 11.287122011184692 s
+
+progress: 14/164
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/A5FD793F-B750-44AF-8230-00122572C6FF.h5 took 11.83142900466919 s
+
+progress: 15/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/A1BB4207-D643-43EE-9459-C2128B8F36CB.h5 took 1.5867021083831787 s
+
+progress: 16/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/175DF508-EEE8-4B0D-B7BF-03237C177CE9.h5 took 3.8754355907440186 s
+
+progress: 17/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/9DAEE833-7601-4250-8A42-39B4DD64DA27.h5 took 11.943193674087524 s
+
+progress: 18/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/86D73F62-82A7-452F-AC99-18A4C8ADD7CB.h5 took 7.522073030471802 s
+
+progress: 19/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/223733CB-8797-4792-97F6-AA7DAA3F69A3.h5 took 4.270291566848755 s
+
+progress: 20/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/CE0403C1-739C-4E58-83DB-606D96BF5993.h5 took 4.7345476150512695 s
+
+progress: 21/164
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/ADA1A8CD-5BD2-4C16-B4F5-217300F65CCD.h5 took 10.644636631011963 s
+
+progress: 22/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/A29A5D80-097B-4565-896E-00B1C4F20A21.h5 took 3.594092845916748 s
+
+progress: 23/164
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/7EBE7F0D-4FF9-4AEA-B247-84B9F2B3ADE9.h5 took 19.59713649749756 s
+
+progress: 24/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/39B18AFA-A5F2-4EAD-A4EB-42B0055D819A.h5 took 7.06919264793396 s
+
+progress: 25/164
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/86861524-F4C5-4A62-B254-420A89CC43D7.h5 took 10.67884349822998 s
+
+progress: 26/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/D003E2E1-1D28-4DC4-90A5-A112B09EB31F.h5 took 7.737240552902222 s
+
+progress: 27/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/F27BB9F7-50CB-40D9-83FB-D0D46C23570E.h5 took 12.140862703323364 s
+
+progress: 28/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/2A756683-B3A0-4444-ABFD-4CB518B4E24B.h5 took 1.8626363277435303 s
+
+progress: 29/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/3C3ECFC3-7D43-4FB2-8ABB-52BBAC86A369.h5 took 6.470149278640747 s
+
+progress: 30/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/28130182-25B6-48B4-B49D-4588C762B243.h5 took 8.801899433135986 s
+
+progress: 31/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/E3E91D57-3FB7-4D0B-82F1-56109D65B218.h5 took 1.6331772804260254 s
+
+progress: 32/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/64E8B24E-1FEB-4DEB-9D03-82E9F1995954.h5 took 2.0692806243896484 s
+
+progress: 33/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/328C2C84-26F8-4044-A6E8-6B7D1FDD3DA4.h5 took 9.875349998474121 s
+
+progress: 34/164
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/C25B2C16-79D7-4D38-838C-5A23CEA7B975.h5 took 12.83053970336914 s
+
+progress: 35/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/A89E596C-51BA-4350-9D18-1F8DD830106B.h5 took 10.319437026977539 s
+
+progress: 36/164
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/773B2C75-8322-4AEF-AB99-2C1820202C02.h5 took 10.798646211624146 s
+
+progress: 37/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/EF51ACD6-2916-46C9-82B1-322FE6479E6F.h5 took 3.82049560546875 s
+
+progress: 38/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/C0BA2F62-A84F-4B87-A992-545734C51D02.h5 took 1.3783526420593262 s
+
+progress: 39/164
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/371E2512-61DC-401E-9340-3FCF046A79F3.h5 took 13.099642276763916 s
+
+progress: 40/164
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/33B69B72-383E-459A-8A86-97C1A31D2579.h5 took 11.548235177993774 s
+
+progress: 41/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/D4E2E229-F6CB-4EAB-911C-326481014FFA.h5 took 5.20182204246521 s
+
+progress: 42/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/8229F42F-F12B-4416-96E9-4AC6B8CACC1B.h5 took 5.6972949504852295 s
+
+progress: 43/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/CBF43FDE-FD84-4867-8E78-35DDF4FF10F7.h5 took 1.762328863143921 s
+
+progress: 44/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/432D5D67-B689-4CBF-A5AD-8CBD2900851F.h5 took 1.3413584232330322 s
+
+progress: 45/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/51AF5680-18AB-498E-BB3A-9DC442F32DC9.h5 took 7.309954643249512 s
+
+progress: 46/164
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/D128A7E5-5D60-4A7C-A0E5-3A50C5A48D8A.h5 took 18.357845544815063 s
+
+progress: 47/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/CEFD1888-874E-41CC-9587-587F1462DA98.h5 took 6.770707607269287 s
+
+progress: 48/164
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/16ABB3B1-4289-4A33-B4E2-0776D410B739.h5 took 9.591639757156372 s
+
+progress: 49/164
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/CC70B0ED-4B3D-4C6B-89D7-27EEEA45EC95.h5 took 10.312007904052734 s
+
+progress: 50/164
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/6C90CA28-1E99-4914-82FC-454D922E992C.h5 took 12.029051542282104 s
+
+progress: 51/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/D6E2BBA4-7318-4800-BD4E-14450AAE64D3.h5 took 5.493850231170654 s
+
+progress: 52/164
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/1CAE456E-0709-4C95-8BDB-0B52239A3EA0.h5 took 10.312522888183594 s
+
+progress: 53/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/8337174C-A225-4A7F-B4EE-9DE283A1E6E5.h5 took 7.170005798339844 s
+
+progress: 54/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/7FA5FEDF-81E7-4FBF-859A-A588388F00C3.h5 took 8.266450881958008 s
+
+progress: 55/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/1307BE45-963F-41F1-9BD7-FF4113619FD4.h5 took 1.4608831405639648 s
+
+progress: 56/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/9B56B6D6-791F-4F44-BBDF-37CC37BD1B49.h5 took 6.720583915710449 s
+
+progress: 57/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/9D61650F-25B0-45A0-A0B8-1E93F7596CA3.h5 took 4.556795597076416 s
+
+progress: 58/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/1AF963D5-013D-4110-8215-4BF6582BDCFA.h5 took 8.56000018119812 s
+
+progress: 59/164
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/9F1979FD-D18B-4CC1-BD2B-864B1D5CDF18.h5 took 17.09363889694214 s
+
+progress: 60/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/A3E2EF7C-75C7-4E27-B6A9-671DC93573AB.h5 took 7.303092956542969 s
+
+progress: 61/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/AB8F0576-E7BA-4B42-BFAB-FB3EA5449ED1.h5 took 3.917330741882324 s
+
+progress: 62/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/44969550-C510-4072-8581-C67867905364.h5 took 5.106287956237793 s
+
+progress: 63/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/EA8C1B90-20CC-4DF5-8E38-49236E4BD277.h5 took 10.349125623703003 s
+
+progress: 64/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/C9121957-D668-442D-8FC6-43F18EC98C55.h5 took 1.6300201416015625 s
+
+progress: 65/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/91D44AD0-1554-4B01-A790-E82F22825608.h5 took 8.150229692459106 s
+
+progress: 66/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/A6CE4A88-C3B7-4510-92DB-78CA0A739DE5.h5 took 1.624955177307129 s
+
+progress: 67/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/AAD99383-BFF5-4071-8488-F600FBCDE06C.h5 took 2.458775281906128 s
+
+progress: 68/164
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/322E0443-5025-4177-A645-D6C00F035F62.h5 took 16.77341604232788 s
+
+progress: 69/164
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/2B679E95-03D5-49EC-9FF9-8150554C6084.h5 took 24.229764938354492 s
+
+progress: 70/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/30906F4F-4827-43ED-B809-28CF74186506.h5 took 7.203202247619629 s
+
+progress: 71/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/A3E6ED81-41DD-4447-80BB-CDFE467BDB4B.h5 took 5.655563831329346 s
+
+progress: 72/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/7B879699-9A02-46F7-A557-DE2B85FFEB89.h5 took 3.7562198638916016 s
+
+progress: 73/164
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/81FA25AB-3C4D-4F2D-A25E-3906753E4CA6.h5 took 11.621798276901245 s
+
+progress: 74/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/807A147A-9D34-467C-ACCF-8B17EE7D7C73.h5 took 10.89529800415039 s
+
+progress: 75/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/DFC6E288-FB46-4289-938E-D65B7EFF652B.h5 took 4.058096170425415 s
+
+progress: 76/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/C6E37B13-9DA0-4CB7-8259-328FCB181EFB.h5 took 2.013758659362793 s
+
+progress: 77/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/CD30AF9F-9C07-4AAA-A3CB-E41701BD0F6C.h5 took 4.2486655712127686 s
+
+progress: 78/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/E270491E-6023-4246-8FEC-1F0EF4F685FD.h5 took 4.862367630004883 s
+
+progress: 79/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/9BE775E0-9FE8-420E-B286-BB201D48C39C.h5 took 10.034791231155396 s
+
+progress: 80/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/418560C8-467B-4932-9DF6-0E3B61F55958.h5 took 10.010026454925537 s
+
+progress: 81/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/EB07E768-6F98-46D0-9092-74F97300F49C.h5 took 1.3589792251586914 s
+
+progress: 82/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/B268032F-85A5-4690-AE66-C3E308FC67A9.h5 took 7.60443902015686 s
+
+progress: 83/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/654ED03B-C4AD-425B-9552-6E2FE01D2E09.h5 took 8.14166522026062 s
+
+progress: 84/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/8F917958-48EB-4537-A9A7-2BC9FF743377.h5 took 5.181823015213013 s
+
+progress: 85/164
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/EBDCB806-A724-42CE-8FAC-74F643A6F6CD.h5 took 13.690340042114258 s
+
+progress: 86/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/A6B02B71-DCE7-4979-AAF6-4F1B3A70E5F6.h5 took 2.4872114658355713 s
+
+progress: 87/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/25DC6BA9-A0C9-4A5F-9558-24E04D2F553F.h5 took 1.9845356941223145 s
+
+progress: 88/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/D9A24790-E846-45DD-80E2-80A94056F847.h5 took 4.289569616317749 s
+
+progress: 89/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/17BEAEAC-5096-4C2F-BFED-8A64551B5CC2.h5 took 7.06846022605896 s
+
+progress: 90/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/CD5E3F15-B78B-44F2-9E62-D683613109A2.h5 took 10.387662410736084 s
+
+progress: 91/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/BDA71B29-A4CE-48D3-94A9-D0F5F6043077.h5 took 7.861360549926758 s
+
+progress: 92/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/B40F3960-78F6-43D6-BD53-608698D254EC.h5 took 4.0692291259765625 s
+
+progress: 93/164
+
+feature extraction settings
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/7E1FFBE4-D362-4318-8827-E5F552D080D8.h5 took 25.76270079612732 s
+
+progress: 94/164
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/78F39AEC-EAB7-48D0-9C7F-EAB72F515113.h5 took 12.61264967918396 s
+
+progress: 95/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/B873809C-A489-403E-ADDC-C8D5CB1F8698.h5 took 1.697340965270996 s
+
+progress: 96/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/A1806441-AC47-464E-AE3F-83779F5E3CC5.h5 took 5.3375771045684814 s
+
+progress: 97/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/C64F38CA-30FF-4813-99B8-87987A7FFA7A.h5 took 10.970643043518066 s
+
+progress: 98/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/6928FC65-BD60-4A66-9F66-B225008BAAD8.h5 took 9.157762050628662 s
+
+progress: 99/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/D520C086-55D9-4ABB-9597-21B6C966A669.h5 took 2.3530519008636475 s
+
+progress: 100/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/21B8BC80-DA89-4897-A30E-7526F717B49E.h5 took 1.6476075649261475 s
+
+progress: 101/164
+
+feature extraction settings
+processing a total of 0 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/B0B9837D-2093-49EC-875E-A568B50B30D8.h5 took 0.17840027809143066 s
+
+progress: 102/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/AA0FD20B-9F3F-4B6A-AD65-6E97EAB1DEC2.h5 took 7.922566890716553 s
+
+progress: 103/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/59306C00-D6DC-44BD-AA60-087A1843EEAB.h5 took 8.249196767807007 s
+
+progress: 104/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/13F9113C-FC2E-4EE6-B3F1-63738BDADD6E.h5 took 8.492966890335083 s
+
+progress: 105/164
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/9D88F20C-1498-4363-A38C-1F079829066D.h5 took 9.686616659164429 s
+
+progress: 106/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/2B6B3063-1D6F-481E-84FA-99BF2B32D019.h5 took 11.34964108467102 s
+
+progress: 107/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/E5A8FFE8-A831-41B0-BEEC-CC2BBDB1CD76.h5 took 10.899040222167969 s
+
+progress: 108/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/BEFDE2A1-3D33-4C38-9867-5CE5A9864531.h5 took 5.108156681060791 s
+
+progress: 109/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/F2CA71F8-5D7B-4E47-BAC4-872DA3A73F1A.h5 took 7.818589210510254 s
+
+progress: 110/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/D26EB975-5C2D-4DC7-A218-EC07B1D60BEC.h5 took 8.02164340019226 s
+
+progress: 111/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/AD2AFFB4-AA16-4BB1-96C4-F7973595BC56.h5 took 2.426163911819458 s
+
+progress: 112/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/0E547921-2724-4464-8525-B18A4EBA7D0B.h5 took 2.770787239074707 s
+
+progress: 113/164
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/4487C246-168B-4C91-BAC7-DD18BDB0FE69.h5 took 9.320756912231445 s
+
+progress: 114/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/355F8423-E34E-4062-A935-B7DDC9BF4CC2.h5 took 10.703648805618286 s
+
+progress: 115/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/7415C2DE-2BE4-457B-B5B7-30EBEECA4BB5.h5 took 3.632227897644043 s
+
+progress: 116/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/4B91460F-89EB-41E0-B87C-D4BADFDA56F3.h5 took 8.14058518409729 s
+
+progress: 117/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/0C42C1AA-DD2E-4512-85E5-54CE076612BA.h5 took 1.6151609420776367 s
+
+progress: 118/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/2CD234CC-8A61-49B8-96A5-033DC47B2116.h5 took 4.44478178024292 s
+
+progress: 119/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/DC11EDD6-8A0B-44D2-9EAB-EE7D133790FA.h5 took 1.9966323375701904 s
+
+progress: 120/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/D66FB680-7CD2-4C3F-8D9E-2E931B573D25.h5 took 3.5940732955932617 s
+
+progress: 121/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/316DD427-38E5-4B6B-A4D8-7DBEAA0D9408.h5 took 4.087165832519531 s
+
+progress: 122/164
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/231089FB-8DD0-45E7-8E07-577EB35F7E11.h5 took 9.31803560256958 s
+
+progress: 123/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/52656BBB-3E27-43B7-8163-1A8EB5F824A8.h5 took 6.701997518539429 s
+
+progress: 124/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/C31D086E-01CC-4201-BAF7-E0E403372375.h5 took 4.511172294616699 s
+
+progress: 125/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/B8AD09F6-9ADE-4C38-AF7C-20E9EBA83DFF.h5 took 8.610310316085815 s
+
+progress: 126/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/2B429AC0-AAD1-46A2-8500-FF36AC23FC9C.h5 took 6.194445371627808 s
+
+progress: 127/164
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/78BD27D8-41EE-442E-87F3-BD449752A0A2.h5 took 11.267629861831665 s
+
+progress: 128/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/83E48A89-175C-4D0A-BDEC-00FCEBB28753.h5 took 10.625670909881592 s
+
+progress: 129/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/1463DF13-1438-49A9-B25F-A73421A658EC.h5 took 5.14569616317749 s
+
+progress: 130/164
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/12B58B3C-9C0C-4D20-8E3C-78BDA4F8AFB3.h5 took 17.836674213409424 s
+
+progress: 131/164
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/AEECFA30-DD10-4A85-AB81-3A2FDD094DE3.h5 took 9.928160905838013 s
+
+progress: 132/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/62D571C0-45F2-474C-A9C9-6437ED4666F1.h5 took 2.370279550552368 s
+
+progress: 133/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/5A660361-D8B9-4FDF-864F-896F0A01148C.h5 took 9.746081113815308 s
+
+progress: 134/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/56174223-8DEB-41C8-B705-5CBF399DC7E7.h5 took 5.479377508163452 s
+
+progress: 135/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/3789D8FE-E864-46F9-99B3-2B554D296B5F.h5 took 5.801249027252197 s
+
+progress: 136/164
+
+feature extraction settings
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/532D5AB3-7F95-4A32-BC95-547F9675FC05.h5 took 18.02150821685791 s
+
+progress: 137/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/7297890F-DCD4-4B5F-93B7-C744A0F580E5.h5 took 8.243555545806885 s
+
+progress: 138/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/5D1F833E-51BF-403A-A21A-FC13DD617BB2.h5 took 4.372085332870483 s
+
+progress: 139/164
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/EE8237B7-D026-43FF-A373-1D7F159D6ABB.h5 took 10.501860857009888 s
+
+progress: 140/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/2D293FFC-36EC-4A21-9973-82035B1C96D8.h5 took 7.422665119171143 s
+
+progress: 141/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/3458F34F-A3B8-421B-90B3-ED8305A7A1B2.h5 took 1.9260926246643066 s
+
+progress: 142/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/DE360110-59CE-4881-B083-6E88009FB671.h5 took 11.304489374160767 s
+
+progress: 143/164
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/0EBA08F4-CE64-486B-B366-85C3B92F9A5E.h5 took 10.934573411941528 s
+
+progress: 144/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/8D70A1E2-EC13-41E0-8978-F52B71FD13AE.h5 took 0.47264909744262695 s
+
+progress: 145/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/8DC5EBB3-432C-4E49-9F58-43B04B0C6D4C.h5 took 5.12041449546814 s
+
+progress: 146/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/81D39D32-6A57-49AA-B72A-C7E0900B88B6.h5 took 7.762877702713013 s
+
+progress: 147/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/EED2BF6E-9C39-42CD-8112-55D5F1A5E2A1.h5 took 7.438323020935059 s
+
+progress: 148/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/4D2326E3-FBB5-4539-9271-6549EF8E98CC.h5 took 1.85029935836792 s
+
+progress: 149/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/7BB9F822-8C0D-4A0B-B077-AE55700E1790.h5 took 1.5826258659362793 s
+
+progress: 150/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/FE863160-EB44-4D15-B4FC-C2521F2A1BD7.h5 took 0.9296927452087402 s
+
+progress: 151/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/FE83B53A-4E2D-4CC2-9078-CFA26A0484A3.h5 took 11.53760027885437 s
+
+progress: 152/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/4FFB4E01-0481-4FFB-BF2E-F2E1C7D41F0B.h5 took 2.5522892475128174 s
+
+progress: 153/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/6E614FCF-747F-4E85-AF46-41E4753D408B.h5 took 12.056398630142212 s
+
+progress: 154/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/D53B0242-4C29-46E3-9FA6-747D6F4A45CD.h5 took 1.0125339031219482 s
+
+progress: 155/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/65229D69-BC8C-41AD-86EF-6451B4840BED.h5 took 6.6863579750061035 s
+
+progress: 156/164
+
+feature extraction settings
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/7438EC80-BE3B-4BF8-86CF-3A00A8131A0B.h5 took 11.533891439437866 s
+
+progress: 157/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/FF36FC08-C989-4EB2-9541-EAE8A5B65D8B.h5 took 7.379910707473755 s
+
+progress: 158/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/FEA24823-853F-4A3E-87B9-D7EBA38A8506.h5 took 1.726822853088379 s
+
+progress: 159/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/DF59DD35-77EE-4CCD-8487-7E5283C4414F.h5 took 3.5081231594085693 s
+
+progress: 160/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/D6F8B9A6-FD94-47D6-BD99-80F04B74D7F9.h5 took 6.646632671356201 s
+
+progress: 161/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/42597D71-B97D-4384-91C4-A39EC66C136C.h5 took 7.081241130828857 s
+
+progress: 162/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/9B27D51D-F628-4687-9E7E-02D21B028958.h5 took 6.909580707550049 s
+
+progress: 163/164
+
+feature extraction settings
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/Extracted_Features_fengru/Normal/h5_files/C48CD261-FE2C-430E-BA88-80C73F6D310A.h5 took 7.613434314727783 s

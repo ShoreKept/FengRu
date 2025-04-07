@@ -1,0 +1,11 @@
+usage: eval_new_fengru.py [-h] [--data_root_dir DATA_ROOT_DIR]
+                          [--results_dir RESULTS_DIR]
+                          [--save_exp_code SAVE_EXP_CODE]
+                          [--models_exp_code MODELS_EXP_CODE]
+                          [--splits_dir SPLITS_DIR] [--model_size {small,big}]
+                          [--model_type {clam_sb,clam_mb,mil}] [--k K]
+                          [--k_start K_START] [--k_end K_END] [--fold FOLD]
+                          [--micro_average] [--split {train,val,test,all}]
+                          [--task {task_1_tumor_vs_normal,task_2_tumor_subtyping,EGFR_subtyping}]
+                          [--drop_out DROP_OUT] [--embed_dim EMBED_DIM]
+eval_new_fengru.py: error: argument --task: invalid choice: 'EGFR_Four_subtyping_fengru' (choose from 'task_1_tumor_vs_normal', 'task_2_tumor_subtyping', 'EGFR_subtyping')

@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "/home/graduate2024/code/zxb/CLAM-master/Extract_Features_fengru_Pos.py", line 32, in <module>
+    indices = returnIdx(coords, neighbor)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/graduate2024/code/zxb/CLAM-master/Extract_Features_fengru_Pos.py", line 14, in returnIdx
+    return np.where((source == target).all(axis=1))[0]
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/graduate2024/miniconda3/lib/python3.12/site-packages/numpy/core/_methods.py", line 61, in _all
+    def _all(a, axis=None, dtype=None, out=None, keepdims=False, *, where=True):
+    
+KeyboardInterrupt
+
+features：[]0  []1  []2
+coords:
+pos:[-1 1 2 3]

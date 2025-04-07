@@ -1,0 +1,352 @@
+{'task': 'EGFR_subtyping', 'split': 'test', 'save_dir': './eval_results/EVAL_EGFR_subtyping_CLAM_new_cv', 'models_dir': 'results/EGFR_subtyping_CLAM_new_s1', 'model_type': 'clam_mb', 'drop_out': 0.25, 'model_size': 'small'}
+label column: label
+label dictionary: {'Normal': 0, 'L858R': 1, 'Other': 2, '19DEL': 3, 'Wild': 4}
+number of classes: 5
+slide-level counts:  
+ label
+0    163
+1    182
+2    138
+3    116
+4    142
+Name: count, dtype: int64
+Patient-LVL; Number of samples registered in class 0: 163
+Slide-LVL; Number of samples registered in class 0: 163
+Patient-LVL; Number of samples registered in class 1: 182
+Slide-LVL; Number of samples registered in class 1: 182
+Patient-LVL; Number of samples registered in class 2: 138
+Slide-LVL; Number of samples registered in class 2: 138
+Patient-LVL; Number of samples registered in class 3: 116
+Slide-LVL; Number of samples registered in class 3: 116
+Patient-LVL; Number of samples registered in class 4: 142
+Slide-LVL; Number of samples registered in class 4: 142
+Init Model
+CLAM_MB(
+  (attention_net): Sequential(
+    (0): Linear(in_features=512, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.25, inplace=False)
+    (3): Attn_Net_Gated(
+      (attention_a): Sequential(
+        (0): Linear(in_features=512, out_features=256, bias=True)
+        (1): Tanh()
+        (2): Dropout(p=0.25, inplace=False)
+      )
+      (attention_b): Sequential(
+        (0): Linear(in_features=512, out_features=256, bias=True)
+        (1): Sigmoid()
+        (2): Dropout(p=0.25, inplace=False)
+      )
+      (attention_c): Linear(in_features=256, out_features=5, bias=True)
+    )
+  )
+  (classifiers): ModuleList(
+    (0-4): 5 x Linear(in_features=512, out_features=1, bias=True)
+  )
+  (instance_classifiers): ModuleList(
+    (0-4): 5 x Linear(in_features=512, out_features=2, bias=True)
+  )
+  (instance_loss_fn): CrossEntropyLoss()
+)
+Total number of parameters: 534292
+Total number of trainable parameters: 534292
+Init Loaders
+test_error:  0.4189189189189189
+auc:  0.8438981363772798
+Init Model
+CLAM_MB(
+  (attention_net): Sequential(
+    (0): Linear(in_features=512, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.25, inplace=False)
+    (3): Attn_Net_Gated(
+      (attention_a): Sequential(
+        (0): Linear(in_features=512, out_features=256, bias=True)
+        (1): Tanh()
+        (2): Dropout(p=0.25, inplace=False)
+      )
+      (attention_b): Sequential(
+        (0): Linear(in_features=512, out_features=256, bias=True)
+        (1): Sigmoid()
+        (2): Dropout(p=0.25, inplace=False)
+      )
+      (attention_c): Linear(in_features=256, out_features=5, bias=True)
+    )
+  )
+  (classifiers): ModuleList(
+    (0-4): 5 x Linear(in_features=512, out_features=1, bias=True)
+  )
+  (instance_classifiers): ModuleList(
+    (0-4): 5 x Linear(in_features=512, out_features=2, bias=True)
+  )
+  (instance_loss_fn): CrossEntropyLoss()
+)
+Total number of parameters: 534292
+Total number of trainable parameters: 534292
+Init Loaders
+test_error:  0.43243243243243246
+auc:  0.8403883503716651
+Init Model
+CLAM_MB(
+  (attention_net): Sequential(
+    (0): Linear(in_features=512, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.25, inplace=False)
+    (3): Attn_Net_Gated(
+      (attention_a): Sequential(
+        (0): Linear(in_features=512, out_features=256, bias=True)
+        (1): Tanh()
+        (2): Dropout(p=0.25, inplace=False)
+      )
+      (attention_b): Sequential(
+        (0): Linear(in_features=512, out_features=256, bias=True)
+        (1): Sigmoid()
+        (2): Dropout(p=0.25, inplace=False)
+      )
+      (attention_c): Linear(in_features=256, out_features=5, bias=True)
+    )
+  )
+  (classifiers): ModuleList(
+    (0-4): 5 x Linear(in_features=512, out_features=1, bias=True)
+  )
+  (instance_classifiers): ModuleList(
+    (0-4): 5 x Linear(in_features=512, out_features=2, bias=True)
+  )
+  (instance_loss_fn): CrossEntropyLoss()
+)
+Total number of parameters: 534292
+Total number of trainable parameters: 534292
+Init Loaders
+test_error:  0.3918918918918919
+auc:  0.8858706984833237
+Init Model
+CLAM_MB(
+  (attention_net): Sequential(
+    (0): Linear(in_features=512, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.25, inplace=False)
+    (3): Attn_Net_Gated(
+      (attention_a): Sequential(
+        (0): Linear(in_features=512, out_features=256, bias=True)
+        (1): Tanh()
+        (2): Dropout(p=0.25, inplace=False)
+      )
+      (attention_b): Sequential(
+        (0): Linear(in_features=512, out_features=256, bias=True)
+        (1): Sigmoid()
+        (2): Dropout(p=0.25, inplace=False)
+      )
+      (attention_c): Linear(in_features=256, out_features=5, bias=True)
+    )
+  )
+  (classifiers): ModuleList(
+    (0-4): 5 x Linear(in_features=512, out_features=1, bias=True)
+  )
+  (instance_classifiers): ModuleList(
+    (0-4): 5 x Linear(in_features=512, out_features=2, bias=True)
+  )
+  (instance_loss_fn): CrossEntropyLoss()
+)
+Total number of parameters: 534292
+Total number of trainable parameters: 534292
+Init Loaders
+test_error:  0.40540540540540543
+auc:  0.8697583072902872
+Init Model
+CLAM_MB(
+  (attention_net): Sequential(
+    (0): Linear(in_features=512, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.25, inplace=False)
+    (3): Attn_Net_Gated(
+      (attention_a): Sequential(
+        (0): Linear(in_features=512, out_features=256, bias=True)
+        (1): Tanh()
+        (2): Dropout(p=0.25, inplace=False)
+      )
+      (attention_b): Sequential(
+        (0): Linear(in_features=512, out_features=256, bias=True)
+        (1): Sigmoid()
+        (2): Dropout(p=0.25, inplace=False)
+      )
+      (attention_c): Linear(in_features=256, out_features=5, bias=True)
+    )
+  )
+  (classifiers): ModuleList(
+    (0-4): 5 x Linear(in_features=512, out_features=1, bias=True)
+  )
+  (instance_classifiers): ModuleList(
+    (0-4): 5 x Linear(in_features=512, out_features=2, bias=True)
+  )
+  (instance_loss_fn): CrossEntropyLoss()
+)
+Total number of parameters: 534292
+Total number of trainable parameters: 534292
+Init Loaders
+test_error:  0.4594594594594595
+auc:  0.8722670913007399
+Init Model
+CLAM_MB(
+  (attention_net): Sequential(
+    (0): Linear(in_features=512, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.25, inplace=False)
+    (3): Attn_Net_Gated(
+      (attention_a): Sequential(
+        (0): Linear(in_features=512, out_features=256, bias=True)
+        (1): Tanh()
+        (2): Dropout(p=0.25, inplace=False)
+      )
+      (attention_b): Sequential(
+        (0): Linear(in_features=512, out_features=256, bias=True)
+        (1): Sigmoid()
+        (2): Dropout(p=0.25, inplace=False)
+      )
+      (attention_c): Linear(in_features=256, out_features=5, bias=True)
+    )
+  )
+  (classifiers): ModuleList(
+    (0-4): 5 x Linear(in_features=512, out_features=1, bias=True)
+  )
+  (instance_classifiers): ModuleList(
+    (0-4): 5 x Linear(in_features=512, out_features=2, bias=True)
+  )
+  (instance_loss_fn): CrossEntropyLoss()
+)
+Total number of parameters: 534292
+Total number of trainable parameters: 534292
+Init Loaders
+test_error:  0.43243243243243246
+auc:  0.8727041509966984
+Init Model
+CLAM_MB(
+  (attention_net): Sequential(
+    (0): Linear(in_features=512, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.25, inplace=False)
+    (3): Attn_Net_Gated(
+      (attention_a): Sequential(
+        (0): Linear(in_features=512, out_features=256, bias=True)
+        (1): Tanh()
+        (2): Dropout(p=0.25, inplace=False)
+      )
+      (attention_b): Sequential(
+        (0): Linear(in_features=512, out_features=256, bias=True)
+        (1): Sigmoid()
+        (2): Dropout(p=0.25, inplace=False)
+      )
+      (attention_c): Linear(in_features=256, out_features=5, bias=True)
+    )
+  )
+  (classifiers): ModuleList(
+    (0-4): 5 x Linear(in_features=512, out_features=1, bias=True)
+  )
+  (instance_classifiers): ModuleList(
+    (0-4): 5 x Linear(in_features=512, out_features=2, bias=True)
+  )
+  (instance_loss_fn): CrossEntropyLoss()
+)
+Total number of parameters: 534292
+Total number of trainable parameters: 534292
+Init Loaders
+test_error:  0.3783783783783784
+auc:  0.8671463442625844
+Init Model
+CLAM_MB(
+  (attention_net): Sequential(
+    (0): Linear(in_features=512, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.25, inplace=False)
+    (3): Attn_Net_Gated(
+      (attention_a): Sequential(
+        (0): Linear(in_features=512, out_features=256, bias=True)
+        (1): Tanh()
+        (2): Dropout(p=0.25, inplace=False)
+      )
+      (attention_b): Sequential(
+        (0): Linear(in_features=512, out_features=256, bias=True)
+        (1): Sigmoid()
+        (2): Dropout(p=0.25, inplace=False)
+      )
+      (attention_c): Linear(in_features=256, out_features=5, bias=True)
+    )
+  )
+  (classifiers): ModuleList(
+    (0-4): 5 x Linear(in_features=512, out_features=1, bias=True)
+  )
+  (instance_classifiers): ModuleList(
+    (0-4): 5 x Linear(in_features=512, out_features=2, bias=True)
+  )
+  (instance_loss_fn): CrossEntropyLoss()
+)
+Total number of parameters: 534292
+Total number of trainable parameters: 534292
+Init Loaders
+test_error:  0.36486486486486486
+auc:  0.8871987834807633
+Init Model
+CLAM_MB(
+  (attention_net): Sequential(
+    (0): Linear(in_features=512, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.25, inplace=False)
+    (3): Attn_Net_Gated(
+      (attention_a): Sequential(
+        (0): Linear(in_features=512, out_features=256, bias=True)
+        (1): Tanh()
+        (2): Dropout(p=0.25, inplace=False)
+      )
+      (attention_b): Sequential(
+        (0): Linear(in_features=512, out_features=256, bias=True)
+        (1): Sigmoid()
+        (2): Dropout(p=0.25, inplace=False)
+      )
+      (attention_c): Linear(in_features=256, out_features=5, bias=True)
+    )
+  )
+  (classifiers): ModuleList(
+    (0-4): 5 x Linear(in_features=512, out_features=1, bias=True)
+  )
+  (instance_classifiers): ModuleList(
+    (0-4): 5 x Linear(in_features=512, out_features=2, bias=True)
+  )
+  (instance_loss_fn): CrossEntropyLoss()
+)
+Total number of parameters: 534292
+Total number of trainable parameters: 534292
+Init Loaders
+test_error:  0.3918918918918919
+auc:  0.9048140349947914
+Init Model
+CLAM_MB(
+  (attention_net): Sequential(
+    (0): Linear(in_features=512, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.25, inplace=False)
+    (3): Attn_Net_Gated(
+      (attention_a): Sequential(
+        (0): Linear(in_features=512, out_features=256, bias=True)
+        (1): Tanh()
+        (2): Dropout(p=0.25, inplace=False)
+      )
+      (attention_b): Sequential(
+        (0): Linear(in_features=512, out_features=256, bias=True)
+        (1): Sigmoid()
+        (2): Dropout(p=0.25, inplace=False)
+      )
+      (attention_c): Linear(in_features=256, out_features=5, bias=True)
+    )
+  )
+  (classifiers): ModuleList(
+    (0-4): 5 x Linear(in_features=512, out_features=1, bias=True)
+  )
+  (instance_classifiers): ModuleList(
+    (0-4): 5 x Linear(in_features=512, out_features=2, bias=True)
+  )
+  (instance_loss_fn): CrossEntropyLoss()
+)
+Total number of parameters: 534292
+Total number of trainable parameters: 534292
+Init Loaders
+test_error:  0.4864864864864865
+auc:  0.860964850715963

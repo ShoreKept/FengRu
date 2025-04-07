@@ -1,0 +1,84 @@
+# CUDA_VISIBLE_DEVICES=0,1 python heatmap_FengRu.py --config config_L858R.yaml
+--- 
+exp_arguments:
+  # 类别数
+  n_classes: 5  # 五分类？
+  # 用于保存生成的图像和资产的名称标签
+  save_exp_code: HEATMAP_OUTPUT_L858R 
+  # 保存原始资产文件的路径
+  raw_save_dir: heatmaps/heatmap_raw_results_L858R  #新地址
+  # 保存最终热图的路径
+  production_save_dir: heatmaps/heatmap_production_results_L858R
+  batch_size: 256
+data_arguments: 
+  # 数据存储位置；可以是单个字符串路径或键值对的数据目录映射
+  data_dir: /home/graduate2024/data/EGFR/EGFR/L858R #??目前只有Normal成功了。改成L858R试一下
+  # 如果使用字典映射，data_dir 中键的列名
+  data_dir_key: source
+  # 包含 slide_ids 的 CSV 列表（可以额外包含分割/补丁参数、类别标签等）
+  process_list: /home/graduate2024/data/CLAM_csv/EGFR_CLAM.csv  #五分类的
+  # 用于分割/补丁的预设文件
+  preset: presets/bwh_biopsy.csv  #我没有很懂这个是什么东西
+  # 切片文件的扩展名
+  slide_ext: .jpg
+  # 类别字典，用于字符串到整数的映射（可选）
+  label_dict:
+    19DEL: 0
+    L858R: 1
+    Other: 2
+    Wild: 3
+    Normal: 4
+                        
+patching_arguments:
+  # 用于补丁的参数
+  patch_size: 256
+  overlap: 0.5
+  patch_level: 0
+  custom_downsample: 1
+encoder_arguments:
+  # 用于预训练编码器模型的参数
+  model_name: conch_v1 # 当前支持：resnet50_trunc, uni_v1, conch_v1
+  target_img_size: 224 # 在输入编码器之前，调整图像到该大小
+model_arguments: 
+  # 用于从检查点初始化模型的参数
+  ckpt_path: /home/graduate2024/code/zxb/CLAM-master/results/EGFR_subtyping_CLAM_new_s1/s_0_checkpoint.pt
+  model_type: clam_mb # 见 utils/eval_utils/
+  initiate_fn: initiate_model # 见 utils/eval_utils/
+  model_size: small
+  drop_out: 0.2
+  embed_dim: 512
+heatmap_arguments:
+  # 用于可视化热图的下采样级别（-1 表示下采样到最接近 32 倍下采样的级别）
+  vis_level: -1   #改成-1试试呢？
+  # 在背景上叠加热图的透明度（0：仅背景，1：仅前景）
+  alpha: 0.4
+  # 是否使用空白画布，而不是原始切片
+  blank_canvas: false
+  # 是否同时保存原始 H&E 图像  #不保存了吧
+  save_orig: false
+  # 保存热图/原始图像的文件扩展名
+  save_ext: jpg
+  # 是否计算相对于非重叠补丁集的百分位得分
+  use_ref_scores: true
+  # 是否使用高斯模糊进行进一步平滑
+  blur: false
+  # 是否移动默认的 4 个角点，用于检查补丁是否位于前景轮廓内
+  use_center_shift: true
+  # 是否仅计算指定区域 x1, x2, y1, y2 内的热图
+  use_roi: false 
+  # 是否使用指定的重叠计算热图（默认情况下，始终计算没有重叠的粗热图）
+  calc_heatmap: true
+  # 是否对注意力得分进行二值化处理
+  binarize: false
+  # 二值化的阈值： (0, 1)
+  binary_thresh: -1
+  # 在最终显示前，热图的下采样因子
+  custom_downsample: 1
+  cmap: jet
+sample_arguments:
+  samples:
+    - name: "topk_high_attention"
+      sample: true
+      seed: 1
+      k: 15 # 保存前 k 个补丁
+      mode: topk

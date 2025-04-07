@@ -1,0 +1,4157 @@
+initializing dataset
+loading model checkpoint
+VisionTransformer(
+  (patch_embed): PatchEmbed(
+    (proj): Conv2d(3, 1024, kernel_size=(16, 16), stride=(16, 16))
+    (norm): Identity()
+  )
+  (pos_drop): Dropout(p=0.0, inplace=False)
+  (patch_drop): Identity()
+  (norm_pre): Identity()
+  (blocks): Sequential(
+    (0): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (1): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (2): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (3): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (4): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (5): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (6): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (7): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (8): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (9): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (10): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (11): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (12): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (13): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (14): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (15): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (16): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (17): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (18): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (19): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (20): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (21): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (22): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+    (23): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+        (q_norm): Identity()
+        (k_norm): Identity()
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (ls1): LayerScale()
+      (drop_path1): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (drop1): Dropout(p=0.0, inplace=False)
+        (norm): Identity()
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+      (ls2): LayerScale()
+      (drop_path2): Identity()
+    )
+  )
+  (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+  (fc_norm): Identity()
+  (head_drop): Dropout(p=0.0, inplace=False)
+  (head): Identity()
+)
+model successfully loading!!
+
+progress: 0/3148
+processing a total of 11 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-49-4505-11A-01-BS1.e019788b-29ba-4469-bda7-c39824386c12.h5 took 224.9074683189392 s
+
+progress: 1/3148
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-2655-11A-01-TS1.1f824b99-5455-4bab-b491-e993d9f370af.h5 took 21.29278039932251 s
+
+progress: 2/3148
+processing a total of 16 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-86-8674-01A-01-BS1.c44d998a-4341-4348-8813-c2b94ffba848.h5 took 340.3002622127533 s
+
+progress: 3/3148
+processing a total of 22 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-6777-01Z-00-DX1.aca7b23d-a601-4476-8bfd-eb46f0b6a96e.h5 took 475.5079777240753 s
+
+progress: 4/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-75-5146-01A-01-TS1.8da9013b-65b3-4378-b6f8-b8dfe123ce28.h5 took 39.75263452529907 s
+
+progress: 5/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-2655-01Z-00-DX1.ee255271-780c-461c-ab23-5cd3504b5e4a.h5 took 71.04938220977783 s
+
+progress: 6/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-7570-11A-01-TS1.859acd19-8c97-47e7-a235-1452a920b877.h5 took 112.83460927009583 s
+
+progress: 7/3148
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-4112-11A-01-TS1.573e21b7-6d32-4c24-a09e-97fcbc5f2eaa.h5 took 182.2823851108551 s
+
+progress: 8/3148
+processing a total of 29 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-97-A4M6-01Z-00-DX1.01D83621-3D8E-4339-9F9B-CBD3083D5AE0.h5 took 645.9466500282288 s
+
+progress: 9/3148
+processing a total of 18 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-86-6562-01A-01-TS1.32c1f4ac-ae87-45c1-a29a-3a1d408727ed.h5 took 400.135689496994 s
+
+progress: 10/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-6984-11A-01-TS1.51dc520b-6357-4cf7-b282-48ceeba02be7.h5 took 58.425920724868774 s
+
+progress: 11/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-78-8655-01A-01-TS1.5a514f0a-6e90-4ddb-9623-d053c48906c4.h5 took 82.87004613876343 s
+
+progress: 12/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-50-5072-01A-02-BS2.37dae380-2992-4773-8396-73ee1fc59547.h5 took 69.02423739433289 s
+
+progress: 13/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-64-1677-01A-01-BS1.5ac1dc67-40e3-43aa-87ed-29348d5de2c3.h5 took 137.01702213287354 s
+
+progress: 14/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-05-4395-01A-01-TS1.5765cb40-0523-4969-ae42-54e3f18b27a6.h5 took 56.4744188785553 s
+
+progress: 15/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-05-4405-01A-01-BS1.d22826d5-3b2a-4b41-8c46-855b87dd4e6d.h5 took 98.6554205417633 s
+
+progress: 16/3148
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-8620-01Z-00-DX1.6591EEC4-D696-4826-80BD-99BE1D99EBB8.h5 took 170.43544006347656 s
+
+progress: 17/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-A47B-01Z-00-DX1.177D0531-E037-435B-BFD4-382B2150B10D.h5 took 100.01196432113647 s
+
+progress: 18/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-3917-11A-01-BS1.f7097e3f-4b6d-48e5-b06e-c0cd4e9fcc56.h5 took 77.1207447052002 s
+
+progress: 19/3148
+processing a total of 26 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-86-8672-01A-01-BS1.228338a2-10cb-499c-9f8d-8a3e287a2ea4.h5 took 574.4296491146088 s
+
+progress: 20/3148
+processing a total of 36 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-50-6594-01Z-00-DX1.43b2005a-4245-4025-ad85-4a957f308a5c.h5 took 789.7354989051819 s
+
+progress: 21/3148
+processing a total of 38 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-49-4488-01Z-00-DX5.6380c697-c81b-48c8-863c-ea1cdd097464.h5 took 829.3462293148041 s
+
+progress: 22/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-78-7163-11A-01-TS1.1ce6c71a-1466-48d2-89d5-bef4c04ed733.h5 took 76.4122371673584 s
+
+progress: 23/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-8514-01A-01-TS1.0e0f5cf3-96e9-4a35-aaed-4340df78d389.h5 took 95.26713633537292 s
+
+progress: 24/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-05-4434-01A-01-TS1.3c35bf16-9ae7-48c3-8ed2-98ac1cacd7d8.h5 took 126.14695334434509 s
+
+progress: 25/3148
+processing a total of 10 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-86-8281-01Z-00-DX1.02237263-003b-4de1-8a2f-0f3ad14768c7.h5 took 221.63932132720947 s
+
+progress: 26/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-69-7763-01A-01-BS1.357e610f-fd28-46a2-9f80-ae8a9d4e7b02.h5 took 50.43096470832825 s
+
+progress: 27/3148
+processing a total of 25 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-6980-01Z-00-DX1.2f1d1858-42b9-4e3b-966d-2f3f429570a6.h5 took 554.7104599475861 s
+
+progress: 28/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-8206-01A-01-TS1.4188b107-092e-405f-b035-50b55ebd53c5.h5 took 93.84991431236267 s
+
+progress: 29/3148
+processing a total of 29 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-49-4512-01Z-00-DX1.ced0bda8-f2d6-4bcb-b2d6-b122846a3079.h5 took 626.2474663257599 s
+
+progress: 30/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-56-8307-01A-01-TS1.7537de75-53be-4ace-aec7-0a6119eb5144.h5 took 103.7016065120697 s
+
+progress: 31/3148
+processing a total of 13 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-21-1080-01A-01-BS1.07776f13-668c-44a8-ad9e-1d967efc1c76.h5 took 295.3379280567169 s
+
+progress: 32/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-85-A4JB-01A-05-TSE.9AF21BB3-E3E2-47CE-8BF6-025A1BC6FD96.h5 took 48.67541790008545 s
+
+progress: 33/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-63-A5MJ-01Z-00-DX1.4F060025-3A21-4FEB-8A63-F55A95BFBA30.h5 took 141.93748116493225 s
+
+progress: 34/3148
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2771-01Z-00-DX1.b84a28ec-2726-4386-9445-0f5ca351d985.h5 took 190.21661591529846 s
+
+progress: 35/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-60-2726-11A-01-TS1.cae5172e-ceca-4939-bc3f-e48657e371fb.h5 took 86.52927017211914 s
+
+progress: 36/3148
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-37-4129-01A-01-TS1.0eb9f716-7dc1-4547-b32c-744a64babe40.h5 took 164.38792896270752 s
+
+progress: 37/3148
+processing a total of 25 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-68-7757-01Z-00-DX1.4eece254-a119-436a-af3c-fad8e8b7f74b.h5 took 549.8511621952057 s
+
+progress: 38/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-22-4609-11A-01-TS1.4be570db-64af-47db-9e36-dd81172b28cc.h5 took 90.36744093894958 s
+
+progress: 39/3148
+processing a total of 10 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-43-6773-11A-01-TS1.6e328690-6ad9-4d61-a421-96f08aa09424.h5 took 212.33414006233215 s
+
+progress: 40/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-22-4591-11A-01-TS1.d594ecb3-1da7-48ed-922a-4082399a640a.h5 took 153.19029474258423 s
+
+progress: 41/3148
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-94-8035-01Z-00-DX1.6962cc61-cb5f-44c9-95fe-1f382efec77a.h5 took 179.09000062942505 s
+
+progress: 42/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-67-3773-01A-01-BS1.2e8279d9-57a3-4343-8e8b-0fa7e500a531.h5 took 35.27900505065918 s
+
+progress: 43/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-78-7540-01A-01-TS1.aa2d97a4-60a1-496f-b7c3-58b887d174ce.h5 took 37.62324070930481 s
+
+progress: 44/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-91-6847-11A-01-TS1.bed7fd2b-0ae1-4903-8da2-437a0a827b0b.h5 took 89.91877603530884 s
+
+progress: 45/3148
+processing a total of 51 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-33-4538-01Z-00-DX2.62dcecc8-576b-406b-81db-1651e5ea589e.h5 took 1103.5887334346771 s
+
+progress: 46/3148
+processing a total of 17 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-05-4390-01A-01-BS1.38f2a7ef-442a-4fa6-acad-6e5d567bdcfd.h5 took 362.9769151210785 s
+
+progress: 47/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-38-4629-11A-01-BS1.5e8dbc1c-f126-4b60-9980-05847ec36fce.h5 took 41.46951627731323 s
+
+progress: 48/3148
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-91-6835-01A-01-TS1.eaee91a3-e27c-4479-906d-4f07d8017895.h5 took 176.14826607704163 s
+
+progress: 49/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-05-4422-01A-01-TS1.5d361e7b-9988-4e61-80c3-268933a3f4be.h5 took 86.46915745735168 s
+
+progress: 50/3148
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-2661-11A-01-TS1.99f72eea-cf88-4648-ab51-347919e4125e.h5 took 23.666500568389893 s
+
+progress: 51/3148
+processing a total of 57 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-49-4512-01Z-00-DX5.7198ce36-1fae-4da1-9f26-b7f43cf01133.h5 took 1233.0670421123505 s
+
+progress: 52/3148
+processing a total of 42 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-34-2600-01Z-00-DX1.CDCAAE91-3056-4952-B988-00F3722B520B.h5 took 924.494038105011 s
+
+progress: 53/3148
+processing a total of 11 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-39-5011-11A-01-TS1.879f780f-d44c-4e88-a4a0-6bfb015b1e3d.h5 took 239.77211833000183 s
+
+progress: 54/3148
+processing a total of 19 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-39-5036-11A-01-TS1.b532e366-2634-43f0-8a77-6a51a80dfd2d.h5 took 406.3378212451935 s
+
+progress: 55/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-78-7540-11A-01-TS1.92595ecb-3d54-496c-acef-6206f69fa2a5.h5 took 72.72972249984741 s
+
+progress: 56/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-7727-01A-01-TS1.c03d5347-fa79-4260-978c-283a41313a4b.h5 took 74.18051552772522 s
+
+progress: 57/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-MN-A4N5-01A-01-TS1.A4B7035B-2419-404A-A13B-AA19CCAAB74D.h5 took 33.92370057106018 s
+
+progress: 58/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-43-2576-01A-01-BS1.ca9329ac-7b96-4eff-8564-34e14ffe72cd.h5 took 115.51385521888733 s
+
+progress: 59/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-05-4398-01A-01-TS1.061af2c7-1143-430d-8286-1996405ab057.h5 took 100.8436427116394 s
+
+progress: 60/3148
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-MF-A522-01Z-00-DX1.4934A011-8C04-43B7-A358-16AA64BB6B0C.h5 took 190.94289541244507 s
+
+progress: 61/3148
+processing a total of 17 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-73-4675-01A-01-BS1.9d69c4fc-6be7-46ef-897c-e5fce0597839.h5 took 372.81518173217773 s
+
+progress: 62/3148
+processing a total of 14 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-34-8455-01A-01-TS1.32c0c07d-c9b4-4947-be77-3a49fd73216a.h5 took 306.1378800868988 s
+
+progress: 63/3148
+processing a total of 11 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-50-5939-01A-01-BS1.947c5ed1-ea28-4100-b3c6-3d7c06b856ff.h5 took 237.54720854759216 s
+
+progress: 64/3148
+processing a total of 54 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-77-8009-01Z-00-DX1.54adaaba-ddce-4480-9b22-af8e8a85d1d9.h5 took 1184.2562861442566 s
+
+progress: 65/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-38-4632-11A-01-BS1.3f8d061d-9f93-4af1-96ac-beda6c048129.h5 took 142.6159131526947 s
+
+progress: 66/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-38-4631-01A-01-BS1.ac8b063c-37ee-4080-aa5e-d13a605dc3bd.h5 took 57.65367293357849 s
+
+progress: 67/3148
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-50-5946-02A-01-TS1.b1f4fdd5-0b5c-4e47-a7f9-4ac2e62dcbd2.h5 took 198.4360237121582 s
+
+progress: 68/3148
+processing a total of 19 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-67-6217-01Z-00-DX1.3fa5c69b-60d1-41fb-a86f-48f77d81285f.h5 took 420.779913187027 s
+
+progress: 69/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2757-01Z-00-DX1.fa182184-fbf1-46ab-bdae-6f383441fd85.h5 took 95.10137820243835 s
+
+progress: 70/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-95-7039-01A-01-TS1.e11bc968-6fff-4889-8062-6a8c73a2e7c6.h5 took 118.02775549888611 s
+
+progress: 71/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-NC-A5HQ-01A-01-TSA.BFFFDBDD-572F-4832-8B0D-1FDE7A7F71F8.h5 took 165.01335763931274 s
+
+progress: 72/3148
+processing a total of 20 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-A492-01Z-00-DX1.31B23842-7F8B-4311-88DF-C51CB4F54AED.h5 took 440.1989164352417 s
+
+progress: 73/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-77-7139-11A-01-TS1.317cc95d-dcad-4608-8f79-4541aa1b20a7.h5 took 46.66529703140259 s
+
+progress: 74/3148
+processing a total of 20 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2782-01A-01-TS1.87ca26b3-ff31-414d-afa8-4d992870128b.h5 took 429.61333084106445 s
+
+progress: 75/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-56-8622-11A-01-TS1.47057b2f-3b19-4f6d-bff1-33e772da9f46.h5 took 37.27380394935608 s
+
+progress: 76/3148
+processing a total of 34 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-85-8666-01A-01-BS1.58c37682-fd2b-4e4f-a636-62b81f61d6ff.h5 took 741.4138357639313 s
+
+progress: 77/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-64-1676-01A-01-TS1.21bb0241-8048-4c6a-b8cf-65725523ae05.h5 took 96.97717928886414 s
+
+progress: 78/3148
+processing a total of 10 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-8616-01Z-00-DX1.4F53B2AB-8221-4E67-80D2-7A8E3815B730.h5 took 236.2621762752533 s
+
+progress: 79/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-95-A4VK-01A-01-TSA.29579482-F5BF-4A43-A763-D66BD51FE01C.h5 took 80.17751097679138 s
+
+progress: 80/3148
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-L9-A444-01A-02-TS2.C284BE25-0367-4B78-A70A-B4B22A73E835.h5 took 24.94306254386902 s
+
+progress: 81/3148
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2783-01Z-00-DX1.34df2ea9-f8d8-448e-bd54-02364f434355.h5 took 188.44190621376038 s
+
+progress: 82/3148
+processing a total of 10 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-64-1679-01Z-00-DX1.f9fd24ef-d51c-4530-9fb5-e8a8f09dba73.h5 took 214.1404492855072 s
+
+progress: 83/3148
+processing a total of 45 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-50-5946-01Z-00-DX1.5076CACA-E3C0-4114-BA69-5B4896FF0C4B.h5 took 981.8356475830078 s
+
+progress: 84/3148
+processing a total of 18 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-39-5031-01A-01-BS1.ffef9df6-4ddc-4aef-b84b-8db49cbc5fff.h5 took 384.5129599571228 s
+
+progress: 85/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-43-6143-11A-01-TS1.53f383d0-177d-464c-9c5e-f32bfa811025.h5 took 157.24983763694763 s
+
+progress: 86/3148
+processing a total of 12 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-63-A5MI-01Z-00-DX1.D9A91E42-FF46-4A88-90A0-2A0214634EB4.h5 took 260.38324332237244 s
+
+progress: 87/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-05-5429-01A-01-BS1.23171dd0-7445-4341-b0ad-a67554cdaf48.h5 took 104.81323647499084 s
+
+progress: 88/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-75-6206-01Z-00-DX1.63230D94-7015-4247-936D-E7ACD6692AB3.h5 took 117.05620074272156 s
+
+progress: 89/3148
+processing a total of 66 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-60-2698-01Z-00-DX1.738ae69e-5170-46d6-b691-9f761f9a794b.h5 took 1429.1042540073395 s
+
+progress: 90/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-2666-01A-01-TS1.115c75b4-eded-4865-ac27-eac3e9a4230c.h5 took 145.805034160614 s
+
+progress: 91/3148
+processing a total of 47 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-S2-AA1A-01Z-00-DX1.4B5D5FAE-8305-4D2D-B245-584589352886.h5 took 1034.0047357082367 s
+
+progress: 92/3148
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-64-5778-01Z-00-DX1.96C39819-8A65-4651-BE83-39959F6FAD05.h5 took 187.6868977546692 s
+
+progress: 93/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-38-4632-01A-01-BS1.f804f64d-a2b6-4756-bf3c-4b77d1e68a76.h5 took 138.08904933929443 s
+
+progress: 94/3148
+processing a total of 44 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-O2-A52S-01Z-00-DX1.65C217A1-6757-433D-AF35-7F0923023095.h5 took 957.8593327999115 s
+
+progress: 95/3148
+processing a total of 24 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-1594-01Z-00-DX1.bd90c500-7c0b-4c45-a3f7-2d9177384b1d.h5 took 525.1200354099274 s
+
+progress: 96/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-99-AA5R-01A-01-TS1.90D70A0A-EFCE-4305-9C72-A702CBBF6E83.h5 took 81.34092497825623 s
+
+progress: 97/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-22-5479-11A-01-TS1.0009929c-e965-4fcd-9f94-9d7842c33140.h5 took 105.63583755493164 s
+
+progress: 98/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2754-11A-01-TS1.5c2bbe9f-5e0f-421a-a920-2060e4f5479a.h5 took 33.697575092315674 s
+
+progress: 99/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-22-4591-01A-01-TS1.b221f536-6066-45c3-b483-f88200b71fc8.h5 took 154.1547667980194 s
+
+progress: 100/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-49-6743-01A-01-TS1.20d09427-4fbb-462f-b4ff-1e9860d2dbf9.h5 took 113.78905606269836 s
+
+progress: 101/3148
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-O2-A5IB-01A-01-TS1.C35BA437-7DF7-4C5C-8D45-47A84E627B32.h5 took 204.6774663925171 s
+
+progress: 102/3148
+processing a total of 22 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-97-7552-01Z-00-DX1.a5ab8959-ff7a-4287-b014-87439957fb67.h5 took 480.44956851005554 s
+
+progress: 103/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2742-01A-01-TS1.5b98a391-c236-44e2-86cb-3413a3a01c5b.h5 took 68.71277475357056 s
+
+progress: 104/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-58-8390-01A-01-TS1.362c9ebd-b84b-4ed5-a33d-76214ca05021.h5 took 48.21444225311279 s
+
+progress: 105/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-43-7658-01Z-00-DX1.db69fbb6-59d7-49f5-adbf-f9c030b85b73.h5 took 125.20257353782654 s
+
+progress: 106/3148
+processing a total of 23 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-43-6773-01Z-00-DX1.a05f9597-51b5-4a5a-9936-c61535b115bb.h5 took 494.60582661628723 s
+
+progress: 107/3148
+processing a total of 41 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-49-4510-01Z-00-DX2.e0552b15-6bd7-4660-8a60-9edd0d638e7e.h5 took 899.6362948417664 s
+
+progress: 108/3148
+processing a total of 48 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-85-8582-01A-01-BS1.76e6e03d-39f2-4675-be9d-c566b266aee4.h5 took 1033.2881355285645 s
+
+progress: 109/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-05-5425-01A-01-BS1.259004dc-6769-4f66-afa3-57a4d8e0edb5.h5 took 116.50609421730042 s
+
+progress: 110/3148
+processing a total of 13 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-91-6848-11A-01-TS1.0bb06db2-7b3e-4d0a-bb3f-6c03aa315387.h5 took 280.8331699371338 s
+
+progress: 111/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-77-A5GH-01A-01-TS1.E13EBA23-B0C4-497C-A938-58CB87E508AF.h5 took 156.53319764137268 s
+
+progress: 112/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-53-7813-01A-01-BS1.4eeaa489-12c2-4b42-8304-0307e4389a42.h5 took 53.094645500183105 s
+
+progress: 113/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-6147-11A-05-TS5.41088AE2-F335-4BA2-B096-F9135208100D.h5 took 56.177876710891724 s
+
+progress: 114/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-34-2600-11A-01-TS1.b2dba38a-363b-46fb-a94b-24e958cb2375.h5 took 73.6422655582428 s
+
+progress: 115/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-62-8395-01A-01-BS1.0f1436e6-0065-4dd7-a132-b6a21a097e48.h5 took 86.97657823562622 s
+
+progress: 116/3148
+processing a total of 25 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-39-5021-01A-01-TS1.fe4fbe2b-0f24-45f7-a5a5-494370e35764.h5 took 545.3974680900574 s
+
+progress: 117/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-99-8033-11A-01-TS1.7f8c4309-6693-477f-967d-a322e688ecf5.h5 took 41.14402937889099 s
+
+progress: 118/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-4112-11A-02-TSB.273D61E4-3585-4EF2-96E3-C854E2D231C1.h5 took 50.947309494018555 s
+
+progress: 119/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-2668-01A-01-TS1.d4db0c2b-9247-458b-a931-62ff45e4f859.h5 took 58.94868183135986 s
+
+progress: 120/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-62-8398-01A-01-BS1.55b3186a-ceda-4e8c-8376-f78e67b6cfb2.h5 took 103.86886930465698 s
+
+progress: 121/3148
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-6145-01Z-00-DX1.175ad655-b054-407d-bb22-3a4f85849488.h5 took 193.28118538856506 s
+
+progress: 122/3148
+processing a total of 76 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-NK-A5CR-01Z-00-DX1.A7C57B30-E2C6-4A23-AE71-7E4D7714F8EA.h5 took 1645.405847787857 s
+
+progress: 123/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-05-4244-01A-01-BS1.90f043f6-e8d5-4cfd-b4e7-84207bc499a6.h5 took 154.0419843196869 s
+
+progress: 124/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-05-4417-01A-01-BS1.77504096-c1dd-4bbf-ab1a-c12fde152fc1.h5 took 148.80857062339783 s
+
+progress: 125/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-75-5122-01Z-00-DX1.627FD712-3881-44CC-83E0-6C4DFC6C88C1.h5 took 121.44251275062561 s
+
+progress: 126/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-50-8457-11A-01-TS1.d2bec354-b20d-48ba-a81a-8f4b6ac7141f.h5 took 55.89666700363159 s
+
+progress: 127/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-78-7220-01A-01-BS1.7bc16cc3-2d90-418a-b6f8-d45012b2b082.h5 took 87.23320770263672 s
+
+progress: 128/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-6981-11A-01-TS1.55d649ab-33f0-4e7f-b4f9-df478a6c6d5b.h5 took 33.745503187179565 s
+
+progress: 129/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-7573-01Z-00-DX1.43a4bbd2-6a3b-4910-9356-2d750a736817.h5 took 110.46885323524475 s
+
+progress: 130/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-4112-01B-05-BS5.21F5BBD4-EE97-4093-875A-47EC7ABB9FBE.h5 took 151.65366411209106 s
+
+progress: 131/3148
+processing a total of 14 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-63-A5MG-01A-01-TSA.E9B3FE4D-F77E-4FE7-8D23-2ED6578CF622.h5 took 301.5635504722595 s
+
+progress: 132/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-78-7147-01A-01-BS1.b738d057-6694-4453-bb15-14dcd90f5775.h5 took 150.74270176887512 s
+
+progress: 133/3148
+processing a total of 12 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-64-5815-01Z-00-DX1.1E3600B5-7E83-47BE-AC70-E0C2D623740B.h5 took 252.72869110107422 s
+
+progress: 134/3148
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-37-4135-01A-01-TS1.fd901f17-fe66-4709-b282-12ee85dff287.h5 took 164.88122057914734 s
+
+progress: 135/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-21-5786-01A-01-BS1.33f0c810-b58e-4cc4-b1ed-bc3722010c48.h5 took 131.67219758033752 s
+
+progress: 136/3148
+processing a total of 19 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-05-4395-01Z-00-DX1.20205276-ca16-46b2-914a-fe5e576a5cf9.h5 took 413.95474433898926 s
+
+progress: 137/3148
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-NC-A5HL-01A-01-TS1.8DA84917-702D-4F4B-83C9-1808D31CD682.h5 took 15.622658252716064 s
+
+progress: 138/3148
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-56-8625-11A-01-TS1.bf174b41-a032-4567-a956-21d0b6d99b84.h5 took 24.653165102005005 s
+
+progress: 139/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-60-2715-11A-01-TS1.267cb129-3ce8-440b-bf92-6453da213785.h5 took 36.41305160522461 s
+
+progress: 140/3148
+processing a total of 10 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-37-3783-01Z-00-DX1.08a2c536-e48d-416c-bcad-9db7b2c04c1a.h5 took 228.72231674194336 s
+
+progress: 141/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-50-8457-01A-01-TS1.62cfbeba-f202-452b-bc0c-6b2c2749f72f.h5 took 144.10497212409973 s
+
+progress: 142/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-7995-01Z-00-DX1.fef24d04-35a0-4f57-8f51-7ad602a78871.h5 took 121.32922530174255 s
+
+progress: 143/3148
+processing a total of 42 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-39-5024-01Z-00-DX1.b159135e-c9d5-4768-83a6-1de9961d20ad.h5 took 908.751838684082 s
+
+progress: 144/3148
+processing a total of 22 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-49-4488-01Z-00-DX1.c9beef33-2d53-4fcb-8293-f083d9fedddc.h5 took 486.6341943740845 s
+
+progress: 145/3148
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-77-6844-11A-01-TS1.54ffb26e-d883-4535-be6c-915d8290e3b7.h5 took 26.86482858657837 s
+
+progress: 146/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2768-01Z-00-DX1.02fadcc4-9d05-4b37-9114-d8e80c09ef1a.h5 took 163.15342545509338 s
+
+progress: 147/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-64-1681-01A-01-BS1.05d188f2-df75-47b5-bb6c-5536d7520efd.h5 took 155.79430890083313 s
+
+progress: 148/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2737-01A-01-BS1.1dcdeedb-f315-41da-b658-b4947e2e4cbf.h5 took 142.47938013076782 s
+
+progress: 149/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-2668-01B-02-BS2.7C0C441E-E968-471D-9E4A-77673F67250D.h5 took 30.8126003742218 s
+
+progress: 150/3148
+processing a total of 13 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-6979-01Z-00-DX1.9238436e-3886-4a10-86fe-26658967dff2.h5 took 280.47501969337463 s
+
+progress: 151/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-43-A475-01Z-00-DX1.48694B33-6070-4D6E-9CE4-BDEF072500A1.h5 took 143.52165484428406 s
+
+progress: 152/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-60-2726-01A-01-BS1.eb7bfa8a-59ba-4d87-b2c7-a88c593cae68.h5 took 87.68171620368958 s
+
+progress: 153/3148
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-85-8479-01Z-00-DX1.28fef288-9691-47dd-ad51-b2dc0cd84832.h5 took 188.10325741767883 s
+
+progress: 154/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-05-4382-01A-01-BS1.ac519a18-8590-4fab-8af6-bb43fbe65310.h5 took 119.14090275764465 s
+
+progress: 155/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2793-11A-01-TS1.3857da43-96cd-4449-abdd-d7cecaf07c90.h5 took 34.872745990753174 s
+
+progress: 156/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2758-11A-01-BS1.f3206d23-d1b6-4352-b574-cd8842ea7db4.h5 took 97.84207367897034 s
+
+progress: 157/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-6980-11A-01-TS1.7d9af225-8aea-4609-9e58-fb190f63f13f.h5 took 73.85093140602112 s
+
+progress: 158/3148
+processing a total of 35 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-77-8156-01Z-00-DX1.9ed8c07d-61f3-4f6b-9c8b-312917c64e04.h5 took 773.567920923233 s
+
+progress: 159/3148
+processing a total of 26 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-49-4514-01Z-00-DX2.f1565a36-257d-432e-a84d-47c1d7a0185f.h5 took 568.320104598999 s
+
+progress: 160/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-49-4501-01A-01-BS1.e6368c49-3cce-4f10-9cbf-d3c940ee867a.h5 took 79.26189279556274 s
+
+progress: 161/3148
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-56-6545-01Z-00-DX1.24a6678b-2dbf-4539-844e-1e3786c3fac3.h5 took 198.07121920585632 s
+
+progress: 162/3148
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-75-6207-01Z-00-DX1.837B7B0F-424C-423B-9045-A905E7C1C54C.h5 took 179.597718000412 s
+
+progress: 163/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-58-A46L-01A-01-TSA.2CA15BE6-752B-4E68-B52E-0BB1465690B9.h5 took 98.7128221988678 s
+
+progress: 164/3148
+processing a total of 11 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-1592-01A-01-BS1.bf9e8623-c9ae-443d-b777-5ce0a609f48e.h5 took 241.80500864982605 s
+
+progress: 165/3148
+processing a total of 20 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-70-6723-01A-01-BS1.e73f0fe7-fa5e-4aab-aa4e-cdf425554512.h5 took 452.2259774208069 s
+
+progress: 166/3148
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-38-6178-01A-01-BS1.45e6381d-637a-4b27-aae9-1bbee2c14944.h5 took 167.1894781589508 s
+
+progress: 167/3148
+processing a total of 11 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-35-3615-01A-01-TS1.fc686af4-5da7-4baa-bda0-2d33b3445212.h5 took 231.74417686462402 s
+
+progress: 168/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-33-4532-01A-01-BS1.c0075942-9df4-4db4-bad1-0e0c58f7178b.h5 took 133.56896328926086 s
+
+progress: 169/3148
+processing a total of 40 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-49-4488-01Z-00-DX3.341ea7ac-ee5f-4ad2-9d01-d81a4d2e9b13.h5 took 869.9241001605988 s
+
+progress: 170/3148
+processing a total of 31 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-22-4595-01Z-00-DX1.42F28D1E-7AC2-4113-B4EC-F1E7850EA14D.h5 took 682.6601011753082 s
+
+progress: 171/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-18-3421-01A-01-TS1.de5fc45f-2235-460b-8c7f-d5dd9accb257.h5 took 130.6064648628235 s
+
+progress: 172/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-97-7938-01A-01-TS1.b8ccb4a5-0bdc-4a7c-92ef-a41bcec791a1.h5 took 120.2785587310791 s
+
+progress: 173/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-56-7222-11A-01-TS1.7eb88da3-6431-4d51-969a-6b23a2cd009d.h5 took 34.58897113800049 s
+
+progress: 174/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-78-7155-01A-01-BS1.a0a668be-4f07-4a5d-8fb2-6e97006fa1da.h5 took 98.08142733573914 s
+
+progress: 175/3148
+processing a total of 17 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-NC-A5HJ-01Z-00-DX1.0BC0D0C7-F3D3-463E-BA94-C4289D97F1D9.h5 took 375.37000608444214 s
+
+progress: 176/3148
+processing a total of 14 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-4112-01Z-00-DX1.5380b3b4-0e24-4c6c-aa8c-298c5fbe068f.h5 took 299.0335428714752 s
+
+progress: 177/3148
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-60-2698-01A-01-BS1.8048126a-673c-412a-b37a-c8869a6857e9.h5 took 199.31138944625854 s
+
+progress: 178/3148
+processing a total of 10 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-50-5055-01A-01-BS1.23899b53-43e5-40b3-801f-928d6dc3dd1b.h5 took 218.16295409202576 s
+
+progress: 179/3148
+processing a total of 41 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-60-2704-01Z-00-DX1.e904afb3-7935-4df5-90dc-f7151e15b31b.h5 took 895.9687955379486 s
+
+progress: 180/3148
+processing a total of 28 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-49-4490-01Z-00-DX2.1b491bd7-60d2-40a6-96cd-01385bce2b0f.h5 took 604.5332283973694 s
+
+progress: 181/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-43-8115-11A-01-TS1.9768f841-76f0-43d3-b549-8ca39ace00b6.h5 took 86.39658117294312 s
+
+progress: 182/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-75-7031-01Z-00-DX1.B058D81B-E869-4AEA-8CAC-4B6264FB86A8.h5 took 134.23272109031677 s
+
+progress: 183/3148
+processing a total of 48 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-78-7153-01Z-00-DX1.5190321a-f1aa-4c6e-b4b9-6767b779682b.h5 took 1043.9445657730103 s
+
+progress: 184/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2765-11A-01-TS1.62510a9b-56f5-4261-8ec6-393287906ab0.h5 took 61.269458055496216 s
+
+progress: 185/3148
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-34-2604-01A-01-BS1.ad0f671c-5a60-48ab-a073-92183331e6db.h5 took 195.7724540233612 s
+
+progress: 186/3148
+processing a total of 24 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-85-8288-01Z-00-DX1.0e68535f-a1f3-450c-b8fa-a859f2269da8.h5 took 517.4911296367645 s
+
+progress: 187/3148
+processing a total of 19 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-63-A5MP-01Z-00-DX1.BBA62567-2E99-4AE4-83DB-DCF044F21C5E.h5 took 420.13819766044617 s
+
+progress: 188/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-49-AAR9-01Z-00-DX1.B6A9966E-89B8-404B-8ABC-1F8F8553D4DA.h5 took 84.70056104660034 s
+
+progress: 189/3148
+processing a total of 37 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-49-4490-01Z-00-DX4.4e94aeb6-f616-4bdd-82bc-2ca2f2b5a5c4.h5 took 797.3415908813477 s
+
+progress: 190/3148
+processing a total of 36 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-18-3409-01Z-00-DX1.3E32CC78-B066-4F85-A781-EDAF39DE0704.h5 took 772.6068031787872 s
+
+progress: 191/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-51-4081-01A-01-TS1.03ddb0fe-10d4-49fa-a079-3fb5f5be73b5.h5 took 44.960688829422 s
+
+progress: 192/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-60-2713-11A-01-TS1.042e77e5-483b-4412-b5b4-2f04af057ef8.h5 took 152.53278064727783 s
+
+progress: 193/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-8616-01A-01-TS1.7a848b5b-1460-490b-8586-7084f535fb57.h5 took 91.3232090473175 s
+
+progress: 194/3148
+processing a total of 22 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-33-AASJ-01Z-00-DX1.0201CE2A-4DE6-4B4E-A010-37D773207F52.h5 took 487.5993273258209 s
+
+progress: 195/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-86-A4JF-01A-01-TSA.E1DCED94-3236-4C39-8DC3-A20A2471DDA5.h5 took 134.41965198516846 s
+
+progress: 196/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-MP-A4SW-01A-02-TSB.B6EEFE44-2E1E-4EAD-8791-C1C7217BF25C.h5 took 118.57965898513794 s
+
+progress: 197/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-49-4501-11A-01-BS1.fcce0738-ce9f-44ef-891e-f711bc43d345.h5 took 73.47043323516846 s
+
+progress: 198/3148
+processing a total of 51 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-78-7536-01Z-00-DX1.6b066140-8b82-40a5-bd48-430eeb4463fe.h5 took 1109.2920112609863 s
+
+progress: 199/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-22-5485-11A-01-TS1.2fe956bc-42b8-48c3-8a9d-2fefa9a42417.h5 took 107.6870665550232 s
+
+progress: 200/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-77-7338-11A-01-TS1.653a48d6-f999-4a15-a4e9-b816a3e83bdb.h5 took 50.31151342391968 s
+
+progress: 201/3148
+processing a total of 11 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-34-2605-01A-01-BS1.541d3170-e38d-44f8-addb-27966405c7e1.h5 took 247.06511545181274 s
+
+progress: 202/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-63-5131-01A-01-TS1.93fe90a7-97ec-47ab-9671-5734e941d838.h5 took 87.56507706642151 s
+
+progress: 203/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-43-7656-01A-01-BS1.e727d82a-2d93-42da-8732-baaa2adbec4f.h5 took 112.65153336524963 s
+
+progress: 204/3148
+processing a total of 35 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-22-5491-01Z-00-DX1.19908BEC-3DDA-4BCD-9EB1-0D2C4A1E5110.h5 took 768.4828708171844 s
+
+progress: 205/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-21-5787-01A-01-TS1.2920e24c-a22a-4a24-af55-a05f046093f2.h5 took 159.95886635780334 s
+
+progress: 206/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-53-7624-01A-01-BS1.e4df80c6-2d78-47ce-9e40-12e5fbe657cf.h5 took 46.69236350059509 s
+
+progress: 207/3148
+processing a total of 14 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-33-4547-01A-01-TS1.b3974828-bd5f-4b70-979f-741c08a114bb.h5 took 311.62634682655334 s
+
+progress: 208/3148
+processing a total of 15 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-2666-01Z-00-DX1.f81a89cf-6033-47ea-9a43-290a5d6a28c1.h5 took 323.6630871295929 s
+
+progress: 209/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-21-1083-01A-01-TS1.3badda7d-d569-4e48-8a2c-65085399e24a.h5 took 164.06325006484985 s
+
+progress: 210/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-98-A53J-01A-01-TS1.D933B043-EEFA-476F-AF14-518994280A5C.h5 took 101.1268699169159 s
+
+progress: 211/3148
+processing a total of 22 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-22-1002-01Z-00-DX1.A41CF987-B2E7-4ADE-8580-735631EEE963.h5 took 504.1234722137451 s
+
+progress: 212/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-38-4626-01A-01-BS1.57181f5e-1b4d-415a-8acc-9dc40dd03f7b.h5 took 80.21480822563171 s
+
+progress: 213/3148
+processing a total of 51 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-85-6561-01A-01-TS1.383cd3d0-b2b7-4bd6-a0ce-063ec989d724.h5 took 1117.6618394851685 s
+
+progress: 214/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-38-4630-11A-01-TS1.00ed18d6-acf8-4950-bb49-6a8dc011ef6e.h5 took 57.117290019989014 s
+
+progress: 215/3148
+processing a total of 39 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-MN-A4N4-01Z-00-DX1.7D8352EF-7A4B-4084-9612-CF92D9D16041.h5 took 834.2961730957031 s
+
+progress: 216/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-L9-A8F4-01A-01-TS1.045CA12F-09B3-4135-9CCB-CD3252F1D71A.h5 took 61.935112953186035 s
+
+progress: 217/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-6642-01Z-00-DX1.0487cfc6-8216-4da3-aae1-a35452e9e4f6.h5 took 127.00001049041748 s
+
+progress: 218/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2781-01A-01-BS1.dc6170a3-8c58-4164-8ab5-b88c13c91fa1.h5 took 73.60221743583679 s
+
+progress: 219/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-34-2609-01A-01-TS1.06d6ebb6-5f05-40d4-a122-b0197543771b.h5 took 103.09051942825317 s
+
+progress: 220/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-49-AARO-11A-01-TS1.C26224AD-B3EC-47B8-9EA8-480A0D4F12F1.h5 took 142.35295009613037 s
+
+progress: 221/3148
+processing a total of 29 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-68-A59I-01Z-00-DX1.6EE9E466-AE08-449D-A830-98667E6D48C7.h5 took 634.9047951698303 s
+
+progress: 222/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-6981-01A-01-TS1.55bea1ae-e14c-4110-b913-719b19225f5b.h5 took 74.21710920333862 s
+
+progress: 223/3148
+processing a total of 15 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-05-4390-01A-02-BS2.a85d2b2a-2e47-475f-8c98-318ae02e16c4.h5 took 326.4771752357483 s
+
+progress: 224/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-60-2722-11A-01-TS1.be3b8aaf-62e2-4d0a-b8e8-696279f34c5a.h5 took 40.20617890357971 s
+
+progress: 225/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-56-A5DS-01A-01-TS1.C391035D-8A38-4042-95BA-AD6D76FDFF1E.h5 took 67.83476853370667 s
+
+progress: 226/3148
+processing a total of 56 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-78-7147-01Z-00-DX1.a9fd2c5d-b8f3-4524-bd64-6c3362ce373b.h5 took 1214.564766407013 s
+
+progress: 227/3148
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-21-1081-01A-01-TS1.af84773d-dc7b-4072-9c90-7bbeb0424e0e.h5 took 192.41012144088745 s
+
+progress: 228/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-68-8250-01A-01-TS1.d6347fc6-c657-4d0f-bba9-09efde4991f3.h5 took 49.40793013572693 s
+
+progress: 229/3148
+processing a total of 13 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-85-7844-01A-01-BS1.64e1a162-d980-471f-9f4e-7e37848ac519.h5 took 286.68809509277344 s
+
+progress: 230/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-77-7335-01A-01-TS1.9c0ce6a0-6765-4c35-b52e-c414adb491c5.h5 took 82.40931439399719 s
+
+progress: 231/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-85-A4QQ-01A-04-TSD.89A63FFC-A081-47AD-93EC-AE418182A33D.h5 took 39.400328636169434 s
+
+progress: 232/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-60-2725-11A-01-TS1.dbd0dc72-ea63-47e2-ada6-557ba3fe250b.h5 took 73.96895480155945 s
+
+progress: 233/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-60-2711-11A-01-BS1.37aaebd7-1711-428d-a326-ee7910b57022.h5 took 151.58946919441223 s
+
+progress: 234/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-33-AASD-11A-01-TSA.0E7E7F53-C415-437C-B388-2566CDFE8D4E.h5 took 130.67533707618713 s
+
+progress: 235/3148
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-34-2608-11A-01-BS1.61e20d35-16eb-46a8-8531-5d9b0b676af7.h5 took 172.58168005943298 s
+
+progress: 236/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2800-01Z-00-DX1.19a7cec8-8894-4755-aa2c-ae5266800355.h5 took 61.580599546432495 s
+
+progress: 237/3148
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2785-01Z-00-DX1.b9439ee1-d22b-4ccd-b53b-ce7717a37a17.h5 took 177.98491263389587 s
+
+progress: 238/3148
+processing a total of 45 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-86-8673-01A-01-TS1.07b1fc57-7059-42ef-87d8-f4c2002bf012.h5 took 972.9117512702942 s
+
+progress: 239/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-60-2714-01A-01-BS1.c92b1121-6825-4588-9f5e-a89f1e40cc50.h5 took 93.52246618270874 s
+
+progress: 240/3148
+processing a total of 19 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-85-8287-01A-01-BS1.730a979f-7e48-4af4-8191-aa49a13054b7.h5 took 416.4321312904358 s
+
+progress: 241/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-22-4609-01A-01-BS1.57024670-5257-47d4-b230-a7b19742f226.h5 took 132.3680386543274 s
+
+progress: 242/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-56-8503-01A-01-TS1.6c8bd01a-3b8b-4f09-b98b-70878cab424a.h5 took 102.51920557022095 s
+
+progress: 243/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2727-11A-01-TS1.989dd4b0-1229-4c0a-ae23-19aee9483f81.h5 took 62.631364822387695 s
+
+progress: 244/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-7573-01A-01-BS1.67eb9c3b-996a-4c70-9ee4-0283413fbc2f.h5 took 50.331952810287476 s
+
+progress: 245/3148
+processing a total of 11 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-50-6673-01A-01-BS1.24f3a5ac-0f1d-4977-8347-45e409338b46.h5 took 237.99061632156372 s
+
+progress: 246/3148
+processing a total of 38 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-77-7141-01Z-00-DX1.3263490a-cfba-43a8-8198-5139dbf00bf9.h5 took 816.3350179195404 s
+
+progress: 247/3148
+processing a total of 24 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-05-4420-01Z-00-DX1.2df0552e-87dc-491e-9be2-be8fbce2660d.h5 took 515.2084536552429 s
+
+progress: 248/3148
+processing a total of 41 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-MN-A4N4-01Z-00-DX2.9550732D-8FB1-43D9-B094-7C0CD310E9C0.h5 took 893.7458591461182 s
+
+progress: 249/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-43-2578-01A-01-BS1.ef552206-494e-4aab-81d9-6b241085ae2d.h5 took 79.67315292358398 s
+
+progress: 250/3148
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-56-5898-01A-01-TS1.a4de8671-d8c8-473e-a396-003f478f1850.h5 took 26.43980312347412 s
+
+progress: 251/3148
+processing a total of 14 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-56-7730-01Z-00-DX1.6f127663-c517-4b5d-99a6-a3cd314304b1.h5 took 300.9138994216919 s
+
+progress: 252/3148
+processing a total of 57 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-39-5016-01Z-00-DX1.b568cdcd-f8bf-4917-ae40-dbd505c36d1e.h5 took 1227.4127202033997 s
+
+progress: 253/3148
+processing a total of 19 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-86-8073-01Z-00-DX1.33c016fc-5c9e-4ad6-8de2-a7f8521d205c.h5 took 408.15123534202576 s
+
+progress: 254/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-7671-01A-01-TS1.1d326f9a-ff45-4873-be18-8f0e1e466537.h5 took 131.482524394989 s
+
+progress: 255/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-75-7030-01A-01-TS1.e88ab8b9-6272-46e8-8433-d6a8843c9c07.h5 took 91.48028802871704 s
+
+progress: 256/3148
+processing a total of 48 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-78-8648-01Z-00-DX1.D3EAEF8E-E739-490F-BF48-A4796B0C0E7A.h5 took 1038.3627152442932 s
+
+progress: 257/3148
+processing a total of 25 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-J1-A4AH-01Z-00-DX1.702A5CC6-0BFA-42F4-995B-8567A1DE0D09.h5 took 560.4967200756073 s
+
+progress: 258/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-J2-8192-01A-01-TS1.c1e02088-1b30-40ce-b1b9-fce70d54b73c.h5 took 81.41935539245605 s
+
+progress: 259/3148
+processing a total of 23 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-38-4627-01Z-00-DX1.fe406eb9-b38b-410d-aa1a-84ab8ac091c7.h5 took 513.9458994865417 s
+
+progress: 260/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2753-01A-01-TS1.bcd556e9-43e4-40bf-a647-82ae8999fa80.h5 took 88.5967333316803 s
+
+progress: 261/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-43-8115-01Z-00-DX1.1CFF45F8-6155-498C-AA52-269E6547FE0D.h5 took 97.70137882232666 s
+
+progress: 262/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-96-8170-01A-01-TS1.1ad24fe9-758d-4a9d-8510-c1c73368b672.h5 took 96.82001209259033 s
+
+progress: 263/3148
+processing a total of 11 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-63-5131-01Z-00-DX1.C1C3724A-D9FC-46D6-9D7B-9357A58ACAEF.h5 took 245.10536694526672 s
+
+progress: 264/3148
+processing a total of 12 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-70-6723-01Z-00-DX1.1e6468e8-0d39-48a9-af32-9968f9207810.h5 took 275.2495000362396 s
+
+progress: 265/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-A47B-01A-01-TS1.2AC93301-1252-4255-9EA9-B49CBEB72975.h5 took 89.68012762069702 s
+
+progress: 266/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2770-01A-01-TS1.71ccfb52-169d-4176-94d6-fff5b75f853d.h5 took 159.52653622627258 s
+
+progress: 267/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-2656-11A-01-TS1.24d5e405-fb65-4cf7-b58b-d98739644c10.h5 took 96.56395769119263 s
+
+progress: 268/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-85-A511-01A-02-TSB.0FA45307-7E1F-41C0-BF94-181F562BAECB.h5 took 128.25420880317688 s
+
+progress: 269/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-75-6211-01A-01-TS1.0b57076e-86c6-4eca-96a6-9210bdff863f.h5 took 43.9799530506134 s
+
+progress: 270/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-78-7159-01A-01-BS1.a248a614-881b-471b-a683-a9ede5b3ec1e.h5 took 77.32961297035217 s
+
+progress: 271/3148
+processing a total of 14 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-A48Z-01Z-00-DX1.0867DC6A-2A51-4CF1-AE3F-0526CE2DD740.h5 took 306.2389860153198 s
+
+progress: 272/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-22-1012-01A-01-TS1.00053cac-2fef-4839-866f-25e15e61f568.h5 took 151.4089274406433 s
+
+progress: 273/3148
+processing a total of 32 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-O2-A52W-01Z-00-DX1.3D388EB0-8402-4540-9E50-7C3757FA5D83.h5 took 711.3587870597839 s
+
+progress: 274/3148
+processing a total of 18 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-49-4488-01Z-00-DX7.a04b36c3-9cfd-4195-92c0-70046cd49d9a.h5 took 390.45142126083374 s
+
+progress: 275/3148
+processing a total of 45 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-18-4086-01Z-00-DX1.1D06B771-F978-4763-8D4E-7B540E02C55A.h5 took 980.0962574481964 s
+
+progress: 276/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-5899-01Z-00-DX1.faa65b08-150c-4c74-95aa-1e8743f0152c.h5 took 110.01171207427979 s
+
+progress: 277/3148
+processing a total of 27 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-69-8255-01Z-00-DX1.75d1666c-c088-405c-80da-52d84b990361.h5 took 591.6437857151031 s
+
+progress: 278/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-22-4595-01A-01-BS1.f187df54-c822-4089-84dc-2bdbf3a4c157.h5 took 47.926122188568115 s
+
+progress: 279/3148
+processing a total of 63 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-77-8143-01Z-00-DX1.e844a7e1-ebba-4acb-8fe2-08aee2102848.h5 took 1367.4499402046204 s
+
+progress: 280/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-05-4250-01A-01-BS1.7e972936-987c-4e66-b640-b889837337e9.h5 took 131.0242040157318 s
+
+progress: 281/3148
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-A47F-01A-01-TSA.6398BFA2-F977-456D-812F-E9666B0A1C18.h5 took 17.20219922065735 s
+
+progress: 282/3148
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-99-7458-01A-01-BS1.d96cc75b-eccd-403b-8c5e-7eaa1bf6326a.h5 took 180.36084127426147 s
+
+progress: 283/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-2664-01A-01-BS1.cff0aaf4-2960-4812-a11d-27ae942e6742.h5 took 149.48818588256836 s
+
+progress: 284/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-3917-11A-01-TS1.00b8ad90-0c01-4613-8347-7e476263fdfe.h5 took 107.84249567985535 s
+
+progress: 285/3148
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-MP-A4TH-01A-03-TSC.57AD0C24-9D71-4914-9776-1B93A3A6044D.h5 took 171.2968521118164 s
+
+progress: 286/3148
+processing a total of 11 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-97-A4M1-01A-01-TS1.88CE11B3-CE2E-427A-A5F3-53BA0BB5D0A8.h5 took 247.4917929172516 s
+
+progress: 287/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-21-5786-01A-01-TS1.7de2df75-55ce-417a-823e-cf273923239f.h5 took 154.8884618282318 s
+
+progress: 288/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2757-01A-01-BS1.c72f39c3-5adc-4af1-a79c-1ddc701992b8.h5 took 54.06676745414734 s
+
+progress: 289/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-63-7021-01A-01-TS1.12050d46-96b7-4083-949c-e56e4bca3ccc.h5 took 35.56450390815735 s
+
+progress: 290/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-33-4583-01A-01-TS1.830e38ec-cc85-411b-8675-74a6214f8735.h5 took 137.58442664146423 s
+
+progress: 291/3148
+processing a total of 25 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-NJ-A4YP-01Z-00-DX1.148BFF66-4DC7-468C-8783-97F27C2E1245.h5 took 560.5535821914673 s
+
+progress: 292/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-18-5592-01A-01-BS1.3c16b76c-4eb1-4494-8d52-308106914c44.h5 took 52.86545515060425 s
+
+progress: 293/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-46-6026-01A-01-BS1.3f028b07-8cb4-4bcc-ab4a-1a916e91866b.h5 took 45.47470545768738 s
+
+progress: 294/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-34-2609-11A-01-TS1.f028f6fe-ebd0-4663-9385-6791147ad6eb.h5 took 83.250483751297 s
+
+progress: 295/3148
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-NC-A5HO-01A-01-TS1.62FF3313-6DFC-4F64-9E69-9D1C852A57D4.h5 took 185.8532407283783 s
+
+progress: 296/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-90-7769-01A-01-BS1.b37713a4-0a29-4bb5-b610-f1dbb6c26699.h5 took 102.68829083442688 s
+
+progress: 297/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-78-7143-01A-01-TS1.083d369f-9333-4fe9-99f2-115eb5db3a3c.h5 took 53.572847843170166 s
+
+progress: 298/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-95-7043-01A-01-TS1.7cd5ffdf-7138-49e2-98b3-1cf58e3de980.h5 took 82.19067001342773 s
+
+progress: 299/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-56-8304-01A-01-TS1.03b2299b-0390-4d79-9fa7-829e462bb22b.h5 took 124.39869093894958 s
+
+progress: 300/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-6779-01A-01-BS1.e55cc68b-4f36-4d22-a4b7-9af0417a4171.h5 took 159.81076192855835 s
+
+progress: 301/3148
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-60-2697-01A-01-BS1.00d8a8b9-6874-48f6-bf69-2fda5a7333bf.h5 took 177.3165271282196 s
+
+progress: 302/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-22-5478-01A-01-TS1.2f35a1f4-b958-4427-a74e-b9e6a78bb48e.h5 took 147.26523542404175 s
+
+progress: 303/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-6642-01A-01-BS1.0bb8918b-b267-4a16-994c-91274398ae61.h5 took 84.60330557823181 s
+
+progress: 304/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-34-2605-11A-01-TS1.9865db50-6814-4d16-9141-e4804b8814c5.h5 took 49.98727798461914 s
+
+progress: 305/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-56-8625-01A-01-TS1.e2029f26-f024-4aa7-9696-4f804ecde2a0.h5 took 104.50992012023926 s
+
+progress: 306/3148
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-MP-A4SV-01A-01-TSA.7992EFFD-ADE1-434B-86E2-918AFE46C7AE.h5 took 169.3687653541565 s
+
+progress: 307/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2790-01A-01-TS1.85fe0bcc-5f4f-41c0-b174-9dadcf7af76e.h5 took 109.24639296531677 s
+
+progress: 308/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2768-01A-01-BS1.123d72ad-faec-484b-8821-49414b1efecf.h5 took 119.57707667350769 s
+
+progress: 309/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-8302-01A-01-TS1.c884cdee-3a6d-4ce3-8b7a-d200a41d5ff1.h5 took 144.71602845191956 s
+
+progress: 310/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2786-01A-01-BS1.2ae7880a-d54e-4079-8abc-d345ee7312ec.h5 took 72.39495086669922 s
+
+progress: 311/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-63-A5MW-01A-01-TS1.542EB7C6-3001-4376-8F1A-A07FB457E252.h5 took 63.790674924850464 s
+
+progress: 312/3148
+processing a total of 10 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-6986-01Z-00-DX1.ae52d41e-3cd6-4d36-b04b-2ea7d29bd8da.h5 took 254.85077929496765 s
+
+progress: 313/3148
+processing a total of 16 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-85-7696-01Z-00-DX1.d8756b4c-819f-4a5c-b148-125b8c6b3c27.h5 took 406.2665991783142 s
+
+progress: 314/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-7662-01A-01-TS1.4c625270-d26c-40ba-abb4-bec3f3543b2f.h5 took 37.5276517868042 s
+
+progress: 315/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-L9-A50W-01A-01-TS1.9D074435-CE6B-49C9-A777-03915F6E0132.h5 took 143.22975873947144 s
+
+progress: 316/3148
+processing a total of 24 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-8208-01Z-00-DX1.6eccb7e2-16e4-4d25-9a1e-b370e016020f.h5 took 525.0662887096405 s
+
+progress: 317/3148
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-60-2712-01A-01-TS1.c5829f1c-421a-4498-b8ca-65cf461f95c4.h5 took 188.16792273521423 s
+
+progress: 318/3148
+processing a total of 12 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-21-1079-01A-01-BS1.6ba16858-9140-403f-ab71-44ce797e7c7f.h5 took 273.8852982521057 s
+
+progress: 319/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2780-01A-01-TS1.ad2233ef-ee9c-40bf-9db1-81497412a025.h5 took 84.08613204956055 s
+
+progress: 320/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-6642-01A-01-TS1.7451219e-0c43-4268-8c42-15f186f66fa3.h5 took 63.7854266166687 s
+
+progress: 321/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-60-2707-01A-01-TS1.73a64b28-6417-4d88-9660-278a5009ac49.h5 took 116.48882389068604 s
+
+progress: 322/3148
+processing a total of 28 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-7816-01Z-00-DX1.A58C6196-E1A0-48B3-9B77-2EDCD7A43CBA.h5 took 629.7262794971466 s
+
+progress: 323/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-58-8391-01A-01-BS1.2bbe6395-5405-415b-83d4-e2d9cc973c9a.h5 took 51.699559688568115 s
+
+progress: 324/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-37-3792-01A-01-TS1.22515688-374f-4bc9-9cfa-c8e71afe1e4e.h5 took 162.12802386283875 s
+
+progress: 325/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-85-A53L-01A-02-TSB.D0091C11-7B88-469C-8825-039A6E94FB5B.h5 took 149.1812117099762 s
+
+progress: 326/3148
+processing a total of 10 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-85-7843-01A-01-TS1.67c89376-e1ec-4ebd-b96b-68994b952462.h5 took 218.27648496627808 s
+
+progress: 327/3148
+processing a total of 34 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-33-A4WN-01Z-00-DX1.438D0EF6-C329-41E5-A7D5-7F037DE34106.h5 took 738.9895598888397 s
+
+progress: 328/3148
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-49-6767-01A-01-BS1.cf0fa204-1f31-4935-beab-ab91204ea89f.h5 took 189.51440286636353 s
+
+progress: 329/3148
+processing a total of 16 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-73-7499-01A-01-BS1.6bb1fb89-929d-49e3-9c2f-8741797abddc.h5 took 359.6397235393524 s
+
+progress: 330/3148
+processing a total of 40 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-33-4532-01Z-00-DX1.32ab8c26-7cdc-4e55-8c70-5a35d83f81a2.h5 took 881.5679302215576 s
+
+progress: 331/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-A4DF-01A-01-TS1.2FFEFF28-381E-4855-8FF0-6EFBC055DBBE.h5 took 88.59739470481873 s
+
+progress: 332/3148
+processing a total of 39 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-78-8662-01Z-00-DX1.754A4C57-B5FA-4077-99E4-F6EFA6459410.h5 took 859.9747412204742 s
+
+progress: 333/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-60-2724-01A-01-TS1.cf8c4519-4394-49f0-8887-0b9df5234656.h5 took 70.95681238174438 s
+
+progress: 334/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-56-1622-11A-01-TS1.267fb2d0-ef06-402a-9dfd-9151b4da908c.h5 took 117.8314299583435 s
+
+progress: 335/3148
+processing a total of 25 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-34-5232-01Z-00-DX1.7483c36b-8473-439b-a726-2821ec834fc2.h5 took 560.6845092773438 s
+
+progress: 336/3148
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-64-5775-01A-01-TS1.3ae343ff-7148-480e-aaa6-9b3b32097479.h5 took 181.07033014297485 s
+
+progress: 337/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-62-A46U-01A-01-TS1.2A8C9636-86E7-4D76-9192-707AF25DF229.h5 took 111.72427034378052 s
+
+progress: 338/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-78-7158-01A-01-BS1.3b9b6712-5409-45b1-8f2f-1d868d09be14.h5 took 144.70494079589844 s
+
+progress: 339/3148
+processing a total of 20 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-38-4630-01Z-00-DX1.d08d0193-c5ed-4db8-b236-1a4c3c3177b8.h5 took 453.39461517333984 s
+
+progress: 340/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-90-A59Q-01Z-00-DX1.9F4ABA20-E9F7-4524-874E-E8C42D84AFFE.h5 took 88.4819507598877 s
+
+progress: 341/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-56-8629-01A-01-TS1.23884c3c-6c60-43bc-bf5a-6eff6f7491e3.h5 took 80.23097944259644 s
+
+progress: 342/3148
+processing a total of 10 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-85-7844-01A-01-TS1.4b71b3ec-9ce3-4010-bb43-6051fdc94594.h5 took 231.50696516036987 s
+
+progress: 343/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-5645-01A-01-TS1.16170220-fc14-4f39-80be-ef98d46dc3c8.h5 took 40.708179235458374 s
+
+progress: 344/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-8092-01Z-00-DX1.04e44341-c4bb-4b0b-965c-7ec83f3877a6.h5 took 60.88282799720764 s
+
+progress: 345/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-94-7033-01A-01-TS1.d38f20aa-3a65-4af3-a58d-5837a5a4a631.h5 took 139.82826566696167 s
+
+progress: 346/3148
+processing a total of 41 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-49-4488-01Z-00-DX8.b9fb358a-9618-4956-9544-c2ffe2678095.h5 took 890.6002686023712 s
+
+progress: 347/3148
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-63-A5MR-01Z-00-DX1.CCF83112-AEEA-4F76-A43F-2AADE321CE68.h5 took 239.2996084690094 s
+
+progress: 348/3148
+processing a total of 11 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-63-A5MN-01Z-00-DX1.34F9BFA5-847A-456B-8159-7993A0F78543.h5 took 281.1471371650696 s
+
+progress: 349/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2792-11A-01-BS1.a02c52e2-3942-490e-86df-513949c26b15.h5 took 64.23453283309937 s
+
+progress: 350/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-51-4080-11A-01-BS1.db7ac745-4aeb-4041-af48-f14361858f25.h5 took 70.1614158153534 s
+
+progress: 351/3148
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-60-2710-11A-01-TS1.4f7b911e-5f72-4d83-a849-d56402dcc9a4.h5 took 215.33927583694458 s
+
+progress: 352/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-77-8145-01A-01-TS1.26598c1c-cf70-48a6-b738-ace901a0032a.h5 took 85.21176743507385 s
+
+progress: 353/3148
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-50-6592-01A-01-BS1.144bd638-42dc-412e-bf45-8c7860137eb6.h5 took 257.6563386917114 s
+
+progress: 354/3148
+processing a total of 11 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-39-5036-01A-01-TS1.e9596e31-d551-4130-971a-feaaf8b188ad.h5 took 305.50420022010803 s
+
+progress: 355/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-22-5478-11A-01-TS1.54e2631d-fabf-415e-acbb-6ea030728579.h5 took 119.51379489898682 s
+
+progress: 356/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-75-5126-01A-01-TS1.b2047eda-6fae-454d-a971-16e3cf8b0177.h5 took 68.75370144844055 s
+
+progress: 357/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2786-11A-01-TS1.c99d2754-1d25-4cb4-833b-9e51056a8669.h5 took 69.24650120735168 s
+
+progress: 358/3148
+processing a total of 19 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-L9-A5IP-01Z-00-DX1.E699D989-8BB8-41DF-9B95-A880858653E6.h5 took 532.0438499450684 s
+
+progress: 359/3148
+processing a total of 34 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-22-4605-01Z-00-DX1.5B725941-80CE-497B-8A1E-856D16DD2870.h5 took 968.3116102218628 s
+
+progress: 360/3148
+processing a total of 36 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-MP-A4TK-01Z-00-DX1.57494698-D9D9-4C04-AAB2-16616CCFDCC9.h5 took 934.3923416137695 s
+
+progress: 361/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-60-2715-01A-01-BS1.c2e978f3-61c5-4176-8446-f347a941f96c.h5 took 103.55490493774414 s
+
+progress: 362/3148
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-39-5016-01A-01-TS1.d2919568-4db2-4676-bb29-ea31af18a23e.h5 took 286.34278416633606 s
+
+progress: 363/3148
+processing a total of 16 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-22-5485-01Z-00-DX1.952DBCF0-08DA-49BD-B020-DEC1A77A1D81.h5 took 434.0652403831482 s
+
+progress: 364/3148
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-7659-01Z-00-DX1.818bf5b3-b4c1-4d23-a6ae-98d5015eb8c1.h5 took 224.1299216747284 s
+
+progress: 365/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-60-2697-01A-01-TS1.7c1ab1f2-fb80-4d23-a31a-d183895a5d28.h5 took 153.64752006530762 s
+
+progress: 366/3148
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-37-A5EL-01Z-00-DX1.DFD49A5B-27F6-407E-8ADA-54EDACAA0788.h5 took 262.06316018104553 s
+
+progress: 367/3148
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-33-4582-01Z-00-DX1.629AEDB6-E9AA-4615-92E8-5DDAAFF6103E.h5 took 262.14625811576843 s
+
+progress: 368/3148
+processing a total of 29 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-MP-A4TD-01Z-00-DX1.937DEBC9-F5D5-4682-AA9A-13D8226EE06C.h5 took 817.9018092155457 s
+
+progress: 369/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-77-8153-01A-01-TS1.f808f5c4-36d7-4ef7-ac80-a82b1f8f2ecf.h5 took 128.7992880344391 s
+
+progress: 370/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-43-A56U-01Z-00-DX1.B60C921A-4EE4-4CAE-9E55-311C7D2DA9E4.h5 took 129.8658537864685 s
+
+progress: 371/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-05-4395-01A-01-BS1.c45b7695-9070-497c-9bd9-fd6d1324e478.h5 took 93.80115938186646 s
+
+progress: 372/3148
+processing a total of 39 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-95-8494-01Z-00-DX1.716299EF-71BB-4095-8F4D-F0C2252CE594.h5 took 1086.952884197235 s
+
+progress: 373/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-22-0940-11A-01-TS01.dcecaae9-b4a0-4bf7-986a-36ade45009b0.h5 took 63.338677644729614 s
+
+progress: 374/3148
+processing a total of 26 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-NC-A5HH-01Z-00-DX1.4138DC62-3487-4F4B-8D5C-D7693B303387.h5 took 736.4661347866058 s
+
+progress: 375/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-56-A4ZJ-01Z-00-DX1.6BB25D9D-75E7-4B44-8560-8A3C3EC9F118.h5 took 55.48117733001709 s
+
+progress: 376/3148
+processing a total of 11 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-56-8622-01Z-00-DX1.62B552C4-5CBE-4469-8DBB-E27497FF95F4.h5 took 326.9104914665222 s
+
+progress: 377/3148
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-49-4510-11A-01-BS1.b925943d-b9ff-4a12-bbc8-84131c6fffa3.h5 took 210.84776258468628 s
+
+progress: 378/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-22-4609-11A-01-BS1.1200b127-643a-4d45-94da-5df76b1383d7.h5 took 76.39370346069336 s
+
+progress: 379/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-7995-01A-01-BS1.8a52053b-1c6b-428d-936f-197ca2753290.h5 took 182.99205827713013 s
+
+progress: 380/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-56-A5DR-01Z-00-DX1.F8F196F2-9380-490E-9D77-ABAC1E58BC5C.h5 took 71.11450242996216 s
+
+progress: 381/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-60-2704-11A-01-TS1.59365723-411d-4314-b552-ab0a8d230805.h5 took 78.57244324684143 s
+
+progress: 382/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-86-7714-01A-01-BS1.96ae5077-ba6a-47e1-893d-63e0bcea734d.h5 took 128.59762811660767 s
+
+progress: 383/3148
+processing a total of 11 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-60-2697-11A-01-BS1.02903ab5-8286-4a0d-a3ea-c028af4dfbfb.h5 took 340.33390760421753 s
+
+progress: 384/3148
+processing a total of 38 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-95-A4VK-01Z-00-DX1.D09778E0-285E-4593-84C8-B6009DDF4E41.h5 took 1143.4318890571594 s
+
+progress: 385/3148
+processing a total of 21 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-98-7454-01A-01-BS1.24ed6781-c8b4-40d7-95b4-afc046b5427c.h5 took 655.7259774208069 s
+
+progress: 386/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-22-1002-01A-01-BS1.4e21cbad-199a-469d-8440-4b60aa7d57fd.h5 took 59.98436093330383 s
+
+progress: 387/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-43-2581-11A-01-TS1.25f93ebd-de83-4954-814d-96047b98f70f.h5 took 140.88905119895935 s
+
+progress: 388/3148
+processing a total of 26 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-NK-A7XE-01Z-00-DX1.47D9E488-0BB8-4611-A6BA-A6ABC32FA4C9.h5 took 820.3017337322235 s
+
+progress: 389/3148
+processing a total of 38 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-78-7161-01Z-00-DX1.646cf15a-5961-4728-b9fe-fe3fff11831f.h5 took 1147.0847828388214 s
+
+progress: 390/3148
+processing a total of 52 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-NC-A5HK-01Z-00-DX1.9CC2445A-D1EA-4E6E-96CF-710D2CDA073B.h5 took 1583.784886598587 s
+
+progress: 391/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-6775-01A-01-BS1.dd1594a9-8973-490a-9c5c-c9a676a71f5f.h5 took 211.5821213722229 s
+
+progress: 392/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-38-4628-11A-01-BS1.66c2d530-a326-443b-bdc2-9d487e991eb6.h5 took 65.8166229724884 s
+
+progress: 393/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2770-01Z-00-DX2.58f25170-ac3a-471a-80a0-0586f2ae1669.h5 took 187.78196358680725 s
+
+progress: 394/3148
+processing a total of 26 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-49-4505-01Z-00-DX1.d49d603e-1f76-43a1-a803-9f2d6a6df715.h5 took 803.9496006965637 s
+
+progress: 395/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-60-2711-01A-01-BS1.2591160e-4240-41ba-a7ef-38f7b135313e.h5 took 145.22181582450867 s
+
+progress: 396/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-60-2696-11A-01-BS1.c2ab8b14-6061-4264-8988-fd7611d6cba3.h5 took 68.12811017036438 s
+
+progress: 397/3148
+processing a total of 11 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-85-7843-01A-01-BS1.8741366f-04cb-45ed-8275-65e1ddc58e0c.h5 took 325.48143458366394 s
+
+progress: 398/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-63-A5MI-01A-01-TS1.04192D45-1EDB-4F5B-AC0D-2177317D73AE.h5 took 43.371527671813965 s
+
+progress: 399/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-60-2706-01A-01-BS1.cdd8795d-0085-4077-a031-b568a0b2e8e4.h5 took 151.23232436180115 s
+
+progress: 400/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-90-7767-01A-01-BS1.f41d5094-e34b-494f-9403-cdd89f92e834.h5 took 72.02249884605408 s
+
+progress: 401/3148
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-85-8479-01A-01-BS1.d7ac53c4-e7ff-430b-941c-bae1bddab669.h5 took 252.35847687721252 s
+
+progress: 402/3148
+processing a total of 40 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-7727-01Z-00-DX1.0c7a4953-16dc-41e0-845b-b89167ec17d7.h5 took 1227.3557305335999 s
+
+progress: 403/3148
+processing a total of 35 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-18-3417-01Z-00-DX1.B424DA03-9007-4FD0-9A92-BCB40319711C.h5 took 1025.1973416805267 s
+
+progress: 404/3148
+processing a total of 40 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-85-8276-01Z-00-DX1.6306624d-e197-4744-a872-0a20413bd9fa.h5 took 1156.9423563480377 s
+
+progress: 405/3148
+processing a total of 45 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-05-4418-01Z-00-DX1.f3863ea5-564f-482f-9878-cc104cf69401.h5 took 1302.4425008296967 s
+
+progress: 406/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-34-2609-01A-01-BS1.64861be6-796d-4033-915c-b4ef4c844661.h5 took 120.57079410552979 s
+
+progress: 407/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-60-2711-01A-01-TS1.d672187f-7412-4780-a2b2-909ef5f0685a.h5 took 203.95299434661865 s
+
+progress: 408/3148
+processing a total of 37 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-96-8169-01Z-00-DX1.d2e29d5e-abd4-4f36-958c-d9d22b836a34.h5 took 1085.2457387447357 s
+
+progress: 409/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-63-7022-01A-01-BS1.b7eeb711-cd00-4172-ba09-a7f5c5eed805.h5 took 114.70189309120178 s
+
+progress: 410/3148
+processing a total of 22 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-21-5783-01Z-00-DX1.3FAB28DF-5748-42D5-8257-3D440C4FB5FB.h5 took 643.38099360466 s
+
+progress: 411/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-3919-01A-02-BS2.89f5632a-fd56-43a7-9aa3-82596731f6da.h5 took 82.17528748512268 s
+
+progress: 412/3148
+processing a total of 23 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-8507-01Z-00-DX1.3C6198CF-3E13-4C4C-B851-5BDFF8552621.h5 took 666.8720462322235 s
+
+progress: 413/3148
+processing a total of 25 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-22-4599-01Z-00-DX1.2178D5C0-A444-44F5-B878-F5D1FB2943C9.h5 took 739.2150213718414 s
+
+progress: 414/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-78-7162-11A-01-TS1.6424a5c5-af2a-493c-a05a-e8d839599a17.h5 took 88.00383687019348 s
+
+progress: 415/3148
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-34-5240-01A-01-TS1.c96dbfd1-7adc-476f-ab6d-da0c98dbde8d.h5 took 216.51803588867188 s
+
+progress: 416/3148
+processing a total of 39 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-78-7167-01Z-00-DX1.f79e1a9b-a3eb-4c91-a1fd-7bb58b1620b1.h5 took 1133.0628519058228 s
+
+progress: 417/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-18-3411-11A-01-BS1.b9f8d2b9-6e15-4e85-807c-3b3b12584111.h5 took 126.37918448448181 s
+
+progress: 418/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-60-2714-11A-01-BS1.77c2d42d-31ed-4c75-9b36-849aa5156713.h5 took 86.63666772842407 s
+
+progress: 419/3148
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-56-8307-01Z-00-DX1.20EE4B4C-403F-44AA-8B0E-711003E60B8F.h5 took 219.87261962890625 s
+
+progress: 420/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-56-A62T-01A-01-TS1.E3B64735-90EE-436F-901E-6F2582F17D69.h5 took 95.59997940063477 s
+
+progress: 421/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-77-7140-11A-01-TS1.6d05ba7c-532d-4453-9a46-4d4c089196f4.h5 took 84.52819561958313 s
+
+progress: 422/3148
+processing a total of 26 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-68-7755-01Z-00-DX1.62BC3770-5E81-4006-8F60-47BC66150AB3.h5 took 760.7112250328064 s
+
+progress: 423/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-78-7166-11A-01-TS1.bb97df24-da32-4cf5-964b-21d98b860422.h5 took 42.48562955856323 s
+
+progress: 424/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-5644-01A-01-BS1.316090cb-4b49-44bf-8617-248644724ebc.h5 took 117.37045216560364 s
+
+progress: 425/3148
+processing a total of 17 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-77-8133-01Z-00-DX1.fcc117be-cc86-437a-8500-edb045d4195a.h5 took 504.2949528694153 s
+
+progress: 426/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-6774-01A-01-BS1.1d074a9a-fd4f-4079-bf01-30c26cceaec4.h5 took 144.23443412780762 s
+
+progress: 427/3148
+processing a total of 35 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-50-6591-01Z-00-DX1.12e1050b-75e9-4059-b945-291995b3e93c.h5 took 992.138023853302 s
+
+progress: 428/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-60-2716-11A-01-BS1.d37e9248-f723-4bfb-b04c-8a21a5aa0cc6.h5 took 123.55357074737549 s
+
+progress: 429/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-98-A53H-01A-01-TS1.C1FC4446-AA1B-485D-BCBB-C6861A557E0F.h5 took 116.4225218296051 s
+
+progress: 430/3148
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2734-01Z-00-DX1.2c23bc49-e2be-480a-b6a8-d3259a584930.h5 took 246.79504871368408 s
+
+progress: 431/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-60-2720-01A-01-TS1.a2cf91d0-2fc0-4f28-99ef-61dbd604c05b.h5 took 179.69443106651306 s
+
+progress: 432/3148
+processing a total of 14 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-70-6723-01A-01-TS1.a0e4ddeb-8616-4c51-97f9-367477132bcf.h5 took 410.0775463581085 s
+
+progress: 433/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-7670-01A-01-BS1.d58c6b0b-24a0-4a79-a7f6-fb0c99dcc7d3.h5 took 73.01931500434875 s
+
+progress: 434/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-8621-01Z-00-DX1.7C519007-D59D-432A-BF4D-23D14A1C8BB6.h5 took 147.86899971961975 s
+
+progress: 435/3148
+processing a total of 35 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-33-4586-01Z-00-DX2.a9798fe4-8db9-41d7-8d00-eb2a9eef1bc0.h5 took 998.3180196285248 s
+
+progress: 436/3148
+processing a total of 10 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-2661-01A-01-BS1.454ae128-140c-4bc3-98d6-529a9e0808f4.h5 took 289.0880181789398 s
+
+progress: 437/3148
+processing a total of 19 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-MP-A4SW-01Z-00-DX1.A6651B25-A35A-4BDE-9EBF-D264A02003C8.h5 took 518.0859580039978 s
+
+progress: 438/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-6775-01A-03-TS3.DE1214F1-C47F-4710-BD72-3AFAF3D920E3.h5 took 181.2014515399933 s
+
+progress: 439/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-99-8032-01A-01-TS1.47647db3-4ef4-4570-bf7f-1985b2fe0696.h5 took 124.74282431602478 s
+
+progress: 440/3148
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-6145-11A-01-TS1.1ce37c11-0439-4903-be45-68cd55baf942.h5 took 246.41511368751526 s
+
+progress: 441/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-56-8624-01Z-00-DX1.18DFDAB8-1701-4E15-9321-7D99CD15E4B0.h5 took 194.69390606880188 s
+
+progress: 442/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-64-1681-01A-01-TS1.95ef9027-459a-4796-97a2-773e7cfed3ee.h5 took 83.1249589920044 s
+
+progress: 443/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-60-2726-01A-01-TS1.51202570-8777-49de-876f-93d7abf7b248.h5 took 87.74016237258911 s
+
+progress: 444/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-35-4123-01A-01-TS1.7b556f70-4c5b-4506-9aa2-16e59aa50086.h5 took 152.22997951507568 s
+
+progress: 445/3148
+processing a total of 35 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-60-2725-01Z-00-DX1.b9d038d6-c2fb-4e46-a4ef-80fdbfb56d0a.h5 took 984.6482012271881 s
+
+progress: 446/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-50-7109-11A-01-TS1.053905a5-d74c-4a61-95b0-ec6af8587038.h5 took 80.069655418396 s
+
+progress: 447/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-8510-01Z-00-DX1.BB1EAC72-6215-400B-BCBF-E3D51A60182D.h5 took 145.57940363883972 s
+
+progress: 448/3148
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-2662-01B-02-BS2.D6BB9158-7665-4C92-AA8D-98ECC9DCE550.h5 took 229.33611392974854 s
+
+progress: 449/3148
+processing a total of 14 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-73-4675-01A-01-TS1.0f95d892-f6da-42cf-8674-884d88145c10.h5 took 394.1250171661377 s
+
+progress: 450/3148
+processing a total of 15 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-50-5933-01A-01-BS1.5e86d54b-426d-404b-98c3-b705203d4f76.h5 took 440.15161299705505 s
+
+progress: 451/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-NC-A5HR-01A-02-TS2.1B2A21A9-E685-461D-A3FF-42A0D9D7FC23.h5 took 149.81659483909607 s
+
+progress: 452/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2757-11A-01-BS1.ed46412c-3772-408a-a5ea-40367552766a.h5 took 101.70019960403442 s
+
+progress: 453/3148
+processing a total of 36 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-78-7220-01Z-00-DX1.3df84ce0-4395-4c9e-ba62-76b55676a440.h5 took 1062.3943576812744 s
+
+progress: 454/3148
+processing a total of 11 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-43-6771-01Z-00-DX1.445d4d3f-6a28-4ea7-b7ab-612366c7bb4b.h5 took 311.88357758522034 s
+
+progress: 455/3148
+processing a total of 33 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-18-3419-01Z-00-DX1.69597BCF-2D4E-4D9B-B4E8-C03137445AF4.h5 took 955.3242084980011 s
+
+progress: 456/3148
+processing a total of 10 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-38-4632-01Z-00-DX1.5E05F85C-53BC-4280-8E7F-8B9DECEF849F.h5 took 283.29005575180054 s
+
+progress: 457/3148
+processing a total of 10 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-3918-01A-01-TS1.92b19e7c-b1d8-4a7c-a555-7759be21014e.h5 took 265.82707166671753 s
+
+progress: 458/3148
+processing a total of 33 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-68-7756-01Z-00-DX1.15BEAECF-8C36-4761-85A8-EC9E54B61A0C.h5 took 975.3872649669647 s
+
+progress: 459/3148
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-6145-01A-01-BS1.13a0cd77-3c3d-44d3-8985-d1272b84e5bd.h5 took 251.05072927474976 s
+
+progress: 460/3148
+processing a total of 27 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-38-4626-01Z-00-DX1.142bc018-bd79-4db9-84e2-f83a617ea92a.h5 took 801.0818588733673 s
+
+progress: 461/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-33-4586-11A-01-BS1.7d3037a1-d709-4757-93ae-9b825999f465.h5 took 107.35345959663391 s
+
+progress: 462/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-18-3411-01A-01-BS1.45372e19-1f8e-4d40-8df1-76ed5e0d8bae.h5 took 104.28803730010986 s
+
+progress: 463/3148
+processing a total of 36 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-O2-A52N-01Z-00-DX1.FF1DD149-4DBE-44C7-872D-FA7E8FE770A8.h5 took 1067.2511394023895 s
+
+progress: 464/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-7913-01Z-00-DX1.2295fcc5-70b0-412e-a1fd-b5366fce0739.h5 took 70.36755228042603 s
+
+progress: 465/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-60-2726-11A-01-BS1.24cb2c57-67bc-454d-b362-c261264b84dc.h5 took 165.74932289123535 s
+
+progress: 466/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-05-5420-01A-01-TS1.cf054ea6-a297-4661-be27-f353c50950f3.h5 took 83.04175782203674 s
+
+progress: 467/3148
+processing a total of 10 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2755-01Z-00-DX1.ccc904f0-4cd3-44a5-8b68-7272f2a7558f.h5 took 296.39723944664 s
+
+progress: 468/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-2666-01A-04-TS4.F553FEE4-8C86-411A-B014-8DF612224CCA.h5 took 134.36374425888062 s
+
+progress: 469/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-60-2721-11A-01-BS1.17958338-5ebf-47fe-a078-ff673e9c3ee1.h5 took 61.39846467971802 s
+
+progress: 470/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-7671-01Z-00-DX1.00297baa-00e7-4894-a7b8-c9ac2a9d42d8.h5 took 145.3242290019989 s
+
+progress: 471/3148
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-22-4594-01A-01-TS1.df90d074-745c-4c19-b97c-d96ebc0f4c1a.h5 took 246.63933897018433 s
+
+progress: 472/3148
+processing a total of 23 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-85-8584-01Z-00-DX1.859bb615-578f-4aad-b1e3-8c92b7e3ef2d.h5 took 695.5526921749115 s
+
+progress: 473/3148
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-MP-A4TE-01A-02-TS2.A7C25CC2-22F2-45B7-BD62-9DEFD67B2244.h5 took 220.41939663887024 s
+
+progress: 474/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-49-AAR4-01A-01-TSA.78907165-F00E-4BA2-AC29-E1F3CFDAD9C7.h5 took 164.51528906822205 s
+
+progress: 475/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-8507-01A-01-TS1.f6baa937-6390-4b2f-916b-705be1bb8926.h5 took 101.1532564163208 s
+
+progress: 476/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-75-5122-01A-01-BS1.3d8974bb-ca4f-4125-8ac5-5a0a7031ba11.h5 took 111.62431716918945 s
+
+progress: 477/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-3919-11A-01-BS1.b4977dfd-c3ac-41b3-b913-f14ab9180c2c.h5 took 75.39179110527039 s
+
+progress: 478/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-56-A4ZK-01A-01-TS1.E1A6517C-A391-4EA4-83D4-84CD8BA6D7C8.h5 took 33.22408986091614 s
+
+progress: 479/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-77-8136-01A-01-TS1.5e8b4ebb-cbf3-4ce3-ae4b-3c32fa71407b.h5 took 72.88769173622131 s
+
+progress: 480/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-50-6590-01A-01-TS1.bc20120d-3461-4d17-9746-275812d0fbb9.h5 took 209.8025665283203 s
+
+progress: 481/3148
+processing a total of 29 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-22-1000-01Z-00-DX1.D2ACF3D3-6187-49A1-ABBC-8D8E611EEE55.h5 took 859.8521003723145 s
+
+progress: 482/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-7726-11A-01-TS1.e55bcf9f-bc93-4a0c-bdae-e770414bb32e.h5 took 108.95083785057068 s
+
+progress: 483/3148
+processing a total of 47 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-50-5044-01Z-00-DX1.7E0E651F-411B-4784-B0FA-6EB612527430.h5 took 1391.4845938682556 s
+
+progress: 484/3148
+processing a total of 20 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-85-7696-01A-01-TS1.864d5510-8423-42a8-87fe-51f90a3ce556.h5 took 589.0488221645355 s
+
+progress: 485/3148
+processing a total of 14 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-63-A5MU-01Z-00-DX1.C80B700E-D924-4A6F-AC8E-D9C91D452A57.h5 took 397.08386063575745 s
+
+progress: 486/3148
+processing a total of 35 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-77-8128-01Z-00-DX1.5831331a-8c82-4817-977e-1842250d9c7b.h5 took 987.9814465045929 s
+
+progress: 487/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-2659-01Z-00-DX1.b33f40e6-bc18-48b0-8dad-bdb0a6a200b5.h5 took 114.81175494194031 s
+
+progress: 488/3148
+processing a total of 33 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-73-4666-01Z-00-DX1.dd9c8922-ddd1-4674-8124-9e334532e47e.h5 took 963.6657638549805 s
+
+progress: 489/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-96-A4JK-01A-01-TSA.E513EF69-3CB7-4EE8-A31D-4DC9839FBBAC.h5 took 100.44960308074951 s
+
+progress: 490/3148
+processing a total of 17 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-85-6175-01Z-00-DX1.102f9bad-4084-4e3a-99e9-91e026ad9a62.h5 took 513.3245570659637 s
+
+progress: 491/3148
+processing a total of 10 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-67-6217-01A-01-TS1.4365ca98-0e86-4898-bec9-9792657990d4.h5 took 285.1708257198334 s
+
+progress: 492/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-7573-11A-01-TS1.efb9eb21-c1f8-4abf-be2e-3ecfee65c153.h5 took 86.68688178062439 s
+
+progress: 493/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-91-6840-01A-01-BS1.c5444bb0-e7e1-4fc5-a15d-0b477c2a8526.h5 took 60.81851148605347 s
+
+progress: 494/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-67-6216-01A-01-BS1.58bf3fa6-f1ca-468e-a262-a64aa8c0c6ce.h5 took 101.60974264144897 s
+
+progress: 495/3148
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-34-7107-01Z-00-DX1.c72202e6-740d-4891-945c-f360f7c56bc9.h5 took 243.52587509155273 s
+
+progress: 496/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-6975-01Z-00-DX1.2762a872-b1c3-47fd-8ed5-b715a5b20163.h5 took 115.14803528785706 s
+
+progress: 497/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-75-6211-01A-01-BS1.492679da-f116-4d36-8e0b-3c78fd192768.h5 took 107.33050489425659 s
+
+progress: 498/3148
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-77-6842-01A-01-BS1.5c6f9081-015d-4d10-ad56-b0e3a52ce257.h5 took 252.9631953239441 s
+
+progress: 499/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-2657-01A-01-BS1.76c73b34-7b9c-4daf-9a8f-e74e7734489d.h5 took 116.01390886306763 s
+
+progress: 500/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-L9-A743-01A-04-TS4.873E50BA-0B07-4174-9FBE-7A830A85F83E.h5 took 165.04302620887756 s
+
+progress: 501/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-NC-A5HH-01A-01-TS1.DD0360BB-775E-46B2-9BF7-F86F2A181CA6.h5 took 68.96296572685242 s
+
+progress: 502/3148
+processing a total of 37 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-60-2697-01Z-00-DX1.e11a5b5b-c4be-4fe1-b7db-08879e55d552.h5 took 1096.4061720371246 s
+
+progress: 503/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-6712-01Z-00-DX1.8cd4b879-294e-4da0-8636-704f61b510dc.h5 took 116.05388355255127 s
+
+progress: 504/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-99-8025-01A-01-TS1.c94ae7e9-42a9-4a34-a676-7397b5b48c82.h5 took 116.49841594696045 s
+
+progress: 505/3148
+processing a total of 14 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-6968-01Z-00-DX1.810e0fee-99ab-465b-8ae9-fb416e4dca3c.h5 took 390.62172746658325 s
+
+progress: 506/3148
+processing a total of 26 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-49-4512-01Z-00-DX8.c54237a3-93f4-432f-90f1-b930b7341741.h5 took 759.7333652973175 s
+
+progress: 507/3148
+processing a total of 11 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2742-01Z-00-DX1.8fdd6990-a08c-457b-80e4-586c619a784e.h5 took 325.1869294643402 s
+
+progress: 508/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-33-AASL-11A-01-TS1.76BCC6D0-D4E3-4FB6-BC4E-920E16E8D5A5.h5 took 164.69855427742004 s
+
+progress: 509/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-05-4384-01A-01-BS1.dae26cb5-1554-4ff8-997d-2f1c70101051.h5 took 213.60065031051636 s
+
+progress: 510/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-56-7822-11A-01-TS1.3d860365-36fd-46d5-a47d-e2f823c30653.h5 took 140.1812596321106 s
+
+progress: 511/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-18-3412-11A-01-TS1.605378ad-7396-47b3-b41b-7fef77d32a42.h5 took 45.37087941169739 s
+
+progress: 512/3148
+processing a total of 21 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-86-7714-01Z-00-DX1.8ee03c3b-013e-4dd5-aa0e-9c1a771cbdc5.h5 took 628.5926938056946 s
+
+progress: 513/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-NC-A5HJ-01A-01-TS1.424512B8-431A-461E-864B-1B145988E950.h5 took 37.06351399421692 s
+
+progress: 514/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2795-01A-01-BS1.f6e18a0a-854e-4f9c-86ed-db5748f559a1.h5 took 189.86735224723816 s
+
+progress: 515/3148
+processing a total of 18 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-39-5029-01A-01-TS1.6391a5ed-26cb-48aa-acb6-fa70d796b008.h5 took 533.3811619281769 s
+
+progress: 516/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-50-5935-01A-01-BS1.b3e47bcb-70a9-4177-86a9-f0dac5aa0a07.h5 took 179.34994220733643 s
+
+progress: 517/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2800-01A-01-TS1.18e98576-19e7-407c-9fdf-cc6491b8062a.h5 took 189.73278832435608 s
+
+progress: 518/3148
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-60-2724-11A-01-BS1.6070e820-d7f4-4119-8577-eabb07192b5b.h5 took 256.945672750473 s
+
+progress: 519/3148
+processing a total of 23 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-J2-A4AE-01Z-00-DX1.42C5DE4A-7787-4E59-8969-D12503262C96.h5 took 704.856897354126 s
+
+progress: 520/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-33-4582-11A-01-BS1.6ff3d9f8-298e-441a-a4e5-cffc19ce1b4c.h5 took 104.38846325874329 s
+
+progress: 521/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-58-8386-01A-01-BS1.9bddd017-05d5-412f-a745-2c2532ff47ad.h5 took 160.12790846824646 s
+
+progress: 522/3148
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-96-A4JL-01A-01-TSA.3FA7182D-09EC-469A-92E2-EFFDC286913C.h5 took 268.68745970726013 s
+
+progress: 523/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-8119-01Z-00-DX1.1EBEBFA7-22DB-4365-9DF8-C4E679C11312.h5 took 51.671189069747925 s
+
+progress: 524/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-58-A46J-01A-01-TSA.8F085211-936F-40F7-87A9-53E1545C5A62.h5 took 140.01055264472961 s
+
+progress: 525/3148
+processing a total of 29 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-86-8669-01Z-00-DX1.845b8b4e-6445-4da1-8275-42b765c024cc.h5 took 852.5480337142944 s
+
+progress: 526/3148
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-21-5782-01A-01-BS1.13cb3e31-9795-44a0-8f76-ea35aaefc9fc.h5 took 215.7562026977539 s
+
+progress: 527/3148
+processing a total of 36 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-52-7810-01Z-00-DX1.54fcdfff-c1ac-4427-bb33-54959695134f.h5 took 1047.4447741508484 s
+
+progress: 528/3148
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-7995-11A-01-TS1.53d3e69d-1d80-47f4-86bd-ea368ca1eb03.h5 took 29.40100383758545 s
+
+progress: 529/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-05-5428-01A-01-TS1.e65a4519-45c7-45b7-a85f-8e8c9a440cfe.h5 took 148.7247769832611 s
+
+progress: 530/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-49-6745-01A-01-BS1.a41e5347-9c8d-4003-a48a-43cd9bfb9dcc.h5 took 53.99515771865845 s
+
+progress: 531/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-6712-01A-01-BS1.7c7664b9-8268-4d99-82ca-92f57ef1ad84.h5 took 155.1012966632843 s
+
+progress: 532/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-97-7937-01A-01-TS1.52bec102-5ea6-4f89-b3c4-2fa2e5c0ef20.h5 took 159.11790800094604 s
+
+progress: 533/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-8208-01A-01-TS1.53223698-3f49-460c-b3c7-6f4b5e492f5b.h5 took 141.8080530166626 s
+
+progress: 534/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-94-8035-01A-01-TS1.467ae59e-5a5c-428f-a3b0-843ab58c7cd5.h5 took 128.1050682067871 s
+
+progress: 535/3148
+processing a total of 44 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-93-8067-01Z-00-DX1.325d0cd5-9bb5-4f51-a197-75d3c3d19aaf.h5 took 1306.6508166790009 s
+
+progress: 536/3148
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-21-1082-01Z-00-DX1.cae5bbaa-76f5-416d-b532-16cf773e017e.h5 took 236.01994156837463 s
+
+progress: 537/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2773-11A-01-TS1.96711635-832c-4d50-9736-0e5ba33d7cf8.h5 took 81.33575057983398 s
+
+progress: 538/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2778-01A-02-BS2.8065d383-a69c-4d80-a764-40caad1cab88.h5 took 50.452664375305176 s
+
+progress: 539/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-43-3394-01A-01-TS1.8b31bea0-df9b-43ed-a3f8-f904ffb726f8.h5 took 86.99920988082886 s
+
+progress: 540/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-90-7767-01A-01-TS1.968e88e2-91d2-4422-a4db-108f65e12a53.h5 took 159.4353256225586 s
+
+progress: 541/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-77-8138-01A-01-TS1.2d223e63-a2f4-4dcc-9f56-345eab30c75e.h5 took 61.10300827026367 s
+
+progress: 542/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-O2-A52S-01A-01-TS1.5A03BB86-B773-4E93-8644-F9FD14DCF805.h5 took 191.13299894332886 s
+
+progress: 543/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2756-11A-01-BS1.7cd446aa-c39f-4aed-9a22-9c95233b2361.h5 took 163.71454215049744 s
+
+progress: 544/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-34-2604-11A-01-TS1.4c2e3e94-0b46-4c19-a4bb-578981ce8e0c.h5 took 127.74946427345276 s
+
+progress: 545/3148
+processing a total of 24 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-39-5028-01A-01-BS1.1efe24df-681b-475b-a7ea-e6b198330844.h5 took 716.4502732753754 s
+
+progress: 546/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-97-7547-01A-01-TS1.85e09741-a86c-46b2-b73d-d04f54df0019.h5 took 41.74962329864502 s
+
+progress: 547/3148
+processing a total of 37 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-J2-A4AD-01Z-00-DX1.C3C3B0C6-0666-4CCF-8422-345560B237DA.h5 took 1155.1466965675354 s
+
+progress: 548/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-90-6837-01A-01-BS1.a3f3bdc9-8115-4648-8024-94650f214799.h5 took 62.41723918914795 s
+
+progress: 549/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-33-4532-11A-01-BS1.f78aa46c-7019-49f9-a7df-09f671557ea4.h5 took 187.21739649772644 s
+
+progress: 550/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-18-4083-01A-01-BS1.4843bd2a-7f8d-41d7-98dc-f8d7bcbc0843.h5 took 74.97199511528015 s
+
+progress: 551/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2794-01A-01-TS1.017a3383-b912-4701-9f9c-dbed66d18deb.h5 took 150.95532703399658 s
+
+progress: 552/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2778-11A-01-TS1.0624e46e-05d8-4865-a610-f2a7f6b1b463.h5 took 66.54958128929138 s
+
+progress: 553/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-43-A56U-01A-01-TS1.191FA556-CCD2-48A1-925E-7B2A78BC4E0F.h5 took 94.54098224639893 s
+
+progress: 554/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-8205-01Z-00-DX1.6df6d499-f325-409d-acb1-9e13172f2bb4.h5 took 226.42275071144104 s
+
+progress: 555/3148
+processing a total of 28 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-56-A4BW-01Z-00-DX1.8ED20788-092B-4C21-9D83-5423D853422F.h5 took 860.4589574337006 s
+
+progress: 556/3148
+processing a total of 34 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-49-4506-01Z-00-DX1.b13b8ef2-fd06-4309-a767-696a9afeaedd.h5 took 1056.9075298309326 s
+
+progress: 557/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-33-AASI-01A-02-TSB.CAD2C928-706A-4FB5-86FB-B6E367735575.h5 took 55.752591371536255 s
+
+progress: 558/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2763-11A-01-TS1.9b2dceec-2f8e-4375-971d-faa0f3d8fc85.h5 took 108.63279247283936 s
+
+progress: 559/3148
+processing a total of 39 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-85-8580-01Z-00-DX1.1b942bbe-2c6e-4411-8609-1725e5cb93da.h5 took 1281.1107082366943 s
+
+progress: 560/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-05-4410-01A-02-BS2.358046d0-94e0-4576-8a3a-17028da63b42.h5 took 124.97823548316956 s
+
+progress: 561/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-49-4512-11A-01-BS1.2623b02d-6b00-4af3-b56a-6bfdcbfe9d5b.h5 took 134.81478643417358 s
+
+progress: 562/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-7914-11A-01-TS1.7f4923c1-e4de-47b2-a184-afd5b7cbaeee.h5 took 77.61575365066528 s
+
+progress: 563/3148
+processing a total of 10 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-7661-11A-01-TS1.7b6a855b-bf74-4b90-8df8-4932557a4f5c.h5 took 311.32145833969116 s
+
+progress: 564/3148
+processing a total of 31 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-73-4658-01Z-00-DX1.d5beb44f-9d76-485a-8af4-407b0f1a610e.h5 took 944.4550578594208 s
+
+progress: 565/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-21-1075-01Z-00-DX1.937872ae-4d6f-4d7a-b54f-b7e797cb84b0.h5 took 129.2284333705902 s
+
+progress: 566/3148
+processing a total of 27 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-94-A4VJ-01Z-00-DX1.FBC6E75E-80D8-42EA-9292-181EC4D5D170.h5 took 863.172073841095 s
+
+progress: 567/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-91-6836-01A-01-BS1.c79514db-1baa-4969-8549-272cde47ff75.h5 took 72.64117932319641 s
+
+progress: 568/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-05-4245-01A-01-BS1.41d3cf23-4e36-4e42-9e08-adfea139f37e.h5 took 151.67817044258118 s
+
+progress: 569/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-49-AARR-01Z-00-DX1.9BCAFE3D-447C-40D6-85DD-AFABF6978376.h5 took 247.494713306427 s
+
+progress: 570/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-58-8388-01A-01-TS1.a415f23f-981e-480d-b36e-89274a2fabfe.h5 took 161.44475936889648 s
+
+progress: 571/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-77-6844-01A-01-TS1.7df391ad-2ca1-4942-b56d-b2644835c363.h5 took 45.55120849609375 s
+
+progress: 572/3148
+processing a total of 28 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-85-8049-01A-01-TS1.14dc5ccc-7d7f-4530-85e0-60efcfcfab66.h5 took 852.2452166080475 s
+
+progress: 573/3148
+processing a total of 13 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-49-AAR4-01Z-00-DX1.EDB32358-AF23-4F81-A99F-15574A2DE28E.h5 took 437.8994617462158 s
+
+progress: 574/3148
+processing a total of 15 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-50-5933-11A-01-TS1.275999f6-0103-41a8-a5e3-27958fe28430.h5 took 502.39125394821167 s
+
+progress: 575/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-51-4080-01A-01-BS1.2a5e8548-9612-4d5b-b309-01388d06f2fa.h5 took 107.83466720581055 s
+
+progress: 576/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-43-5670-11A-01-TS1.38c37d7f-1b19-4774-b325-7868a855b861.h5 took 95.51930022239685 s
+
+progress: 577/3148
+processing a total of 19 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-MP-A4T7-01Z-00-DX1.C74D7A5B-1D1A-423B-85CA-C11E0CCF5873.h5 took 587.3205103874207 s
+
+progress: 578/3148
+processing a total of 52 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-58-A46N-01Z-00-DX1.5D51252C-5294-4E40-ABB2-31C3BE1039F8.h5 took 1637.2684721946716 s
+
+progress: 579/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-MP-A4T8-01A-01-TSA.07230EEB-5976-4395-9AD4-2D02B3D9E91A.h5 took 116.9273407459259 s
+
+progress: 580/3148
+processing a total of 42 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-78-7539-01Z-00-DX1.b838d859-2fb7-48d1-a442-d366ac404099.h5 took 1111.4354021549225 s
+
+progress: 581/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2793-01A-01-BS1.c9f8e284-ccc3-4b3d-97cc-41a3876be5e1.h5 took 71.89478778839111 s
+
+progress: 582/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-43-A474-01A-01-TS1.5F9E04AE-51EE-49B5-A3A9-C5DA0391FBC1.h5 took 172.71746039390564 s
+
+progress: 583/3148
+processing a total of 16 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-85-8350-01Z-00-DX1.F9A32453-2E24-4874-A1FA-67B4173ABF03.h5 took 460.04798197746277 s
+
+progress: 584/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-43-7656-01A-01-TS1.9d4ce12f-d331-4fbd-b8e5-219be7263466.h5 took 152.71144652366638 s
+
+progress: 585/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-33-6737-01A-01-TS1.78d73c52-0ef8-449c-9823-66a0a2f8df4b.h5 took 181.28368592262268 s
+
+progress: 586/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-49-4507-11A-01-BS1.4e88a2c1-7418-4a03-af23-7e82908a5d5a.h5 took 85.42651677131653 s
+
+progress: 587/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-49-4487-11A-01-BS1.09557d99-a340-4986-ab41-f6a6d2db0b1b.h5 took 139.11039447784424 s
+
+progress: 588/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2771-11A-01-TS1.daf0945c-6afc-4efd-8925-821dc05b9f71.h5 took 39.32987332344055 s
+
+progress: 589/3148
+processing a total of 39 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-77-7463-01Z-00-DX1.c255e325-1ba7-4108-b8b8-22c02241c83f.h5 took 1164.826191663742 s
+
+progress: 590/3148
+processing a total of 10 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-6776-11A-01-TS1.699a84f4-0579-43e3-b3cd-434e6fd27071.h5 took 275.73928666114807 s
+
+progress: 591/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-8299-01Z-00-DX1.6F652EC5-EBB8-499C-A66D-E0951FBFCAA2.h5 took 138.83648300170898 s
+
+progress: 592/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-93-8067-01A-01-TS1.be831fc5-8d86-4bfd-af78-8d04ebfcf2fc.h5 took 129.19049429893494 s
+
+progress: 593/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-91-6849-01A-01-BS1.bf1eff88-1e15-443a-a9b3-188c896ef8f5.h5 took 58.09755897521973 s
+
+progress: 594/3148
+processing a total of 25 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-50-6597-01Z-00-DX1.ec7fc0b2-78a1-4384-bddd-e89f02ee5eb6.h5 took 737.2648255825043 s
+
+progress: 595/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-18-3415-11A-01-BS1.5a0604b5-2862-491a-b19c-5e4ecda90292.h5 took 62.12475061416626 s
+
+progress: 596/3148
+processing a total of 36 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-77-8144-01Z-00-DX1.5194d537-c942-45f3-967b-eb213646ff24.h5 took 1055.7398302555084 s
+
+progress: 597/3148
+processing a total of 48 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-86-8280-01Z-00-DX1.52627b97-1cfa-4382-819b-949b58c0f995.h5 took 1417.7500195503235 s
+
+progress: 598/3148
+processing a total of 13 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-63-A5MW-01Z-00-DX1.DEDF1D36-BBFA-4B25-BE54-262025F9F571.h5 took 378.0416855812073 s
+
+progress: 599/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-51-4079-11A-01-BS1.d7448610-4a7c-4dc6-8775-f17de852a68c.h5 took 122.46440172195435 s
+
+progress: 600/3148
+processing a total of 18 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-NC-A5HL-01Z-00-DX1.E40E17C1-42BA-4C02-AA01-0E2891B3174A.h5 took 549.2156443595886 s
+
+progress: 601/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-7994-11A-01-TS1.5b13e9f4-3188-462a-b794-78b80c24e5ce.h5 took 135.57228302955627 s
+
+progress: 602/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-8505-01Z-00-DX1.D364C30D-BFB8-486B-A0D3-948FF8E90C3E.h5 took 156.0521309375763 s
+
+progress: 603/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-43-3394-01A-01-BS1.b56528fa-5cb2-4769-ba79-c3f091d3ced3.h5 took 237.6103994846344 s
+
+progress: 604/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-38-4631-11A-01-BS1.8777cd1a-1d4d-4d5e-b036-5fd2cb9406f8.h5 took 227.2973394393921 s
+
+progress: 605/3148
+processing a total of 22 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-39-5035-01Z-00-DX1.ad5d9143-f194-4cef-9a13-03190cf97ccf.h5 took 727.9869420528412 s
+
+progress: 606/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-73-4662-01A-01-TS1.a2819e02-b49d-4b3a-891c-9579c82021c8.h5 took 128.08257389068604 s
+
+progress: 607/3148
+processing a total of 59 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-97-7554-01Z-00-DX1.4107ca63-4642-42b9-b6f2-13778ecaf9a7.h5 took 1893.1231830120087 s
+
+progress: 608/3148
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-22-4604-11A-01-TS1.c9586bad-95e3-4d8d-983e-204a37c10e48.h5 took 241.089252948761 s
+
+progress: 609/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-22-5480-01A-01-TS1.e9c3bd43-0f2e-4314-8b26-27553f5b2cf2.h5 took 143.97830247879028 s
+
+progress: 610/3148
+processing a total of 53 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-NC-A5HR-01Z-00-DX1.B8B85EDD-96A6-40DF-B3BF-C97311A7E552.h5 took 1660.4862837791443 s
+
+progress: 611/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-38-7271-01A-01-TS1.8e38324c-8605-4f16-a842-082e4ffd94dd.h5 took 83.75533890724182 s
+
+progress: 612/3148
+processing a total of 12 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-50-5932-01A-01-TS1.e89b93f1-255e-42ac-a0eb-7c3df060b669.h5 took 400.01794028282166 s
+
+progress: 613/3148
+processing a total of 37 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-86-8585-01A-01-TS1.e2c01825-44df-4948-8772-b27f054a7c72.h5 took 1132.096284866333 s
+
+progress: 614/3148
+processing a total of 31 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-60-2709-01Z-00-DX1.ded10e7c-c1ca-4402-be0e-f3978994d4af.h5 took 981.0922827720642 s
+
+progress: 615/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-7672-01A-01-BS1.a38f352e-9626-4dab-b1b6-02b420384df5.h5 took 99.268963098526 s
+
+progress: 616/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-75-6203-01A-01-TS1.404556ce-7d82-42c5-be43-01d101667e53.h5 took 56.98216533660889 s
+
+progress: 617/3148
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-18-3407-01A-01-TS1.eb6d8014-eaf9-4679-955f-8ad4c5205850.h5 took 51.78288745880127 s
+
+progress: 618/3148
+processing a total of 40 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-62-A46U-01Z-00-DX1.5129535F-8B6A-4647-8A88-3EE125642874.h5 took 1247.9505896568298 s
+
+progress: 619/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-22-1000-01A-01-BS1.3d74dcf8-2061-49df-b93b-9eb47028bb0d.h5 took 168.70014214515686 s
+
+progress: 620/3148
+processing a total of 11 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-21-1082-01A-01-BS1.90b26544-b47c-4883-a018-984b1ca27ac7.h5 took 355.1113557815552 s
+
+progress: 621/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-52-7811-01A-01-BS1.52974717-08c5-4017-a586-f91483868060.h5 took 113.2779598236084 s
+
+progress: 622/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-18-3415-11A-01-TS1.b1e85518-9f4e-4599-87f8-1846fcb70a87.h5 took 57.89258527755737 s
+
+progress: 623/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-7911-11A-01-TS1.a095ee17-993e-42a4-b1aa-bf44204029fc.h5 took 156.96115612983704 s
+
+progress: 624/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-34-7107-01A-01-BS1.30eeffe2-33d4-4555-b0f1-c7ff3297d1b4.h5 took 204.81000971794128 s
+
+progress: 625/3148
+processing a total of 26 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-MP-A4SY-01Z-00-DX1.9535274F-C850-409E-80A1-B933B2F1A110.h5 took 807.2665288448334 s
+
+progress: 626/3148
+processing a total of 31 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-33-4547-01Z-00-DX1.7009df06-03f9-497a-b7bd-f8ef4244d152.h5 took 973.9385333061218 s
+
+progress: 627/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-8302-01Z-00-DX1.E0C2B152-BBA9-4AA7-9E6B-BD57B68163CB.h5 took 133.5736060142517 s
+
+progress: 628/3148
+processing a total of 38 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-50-5055-01Z-00-DX1.0c9d846b-89b4-4b18-a2eb-0f8d8e0a33c7.h5 took 1179.2429432868958 s
+
+progress: 629/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-60-2713-01A-01-TS1.b4a4ddec-6d50-402c-8a8a-7ecef48a8f1d.h5 took 119.80143880844116 s
+
+progress: 630/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-43-7657-01Z-00-DX1.d8a5d257-c5ca-4192-b6a7-4698b8390fca.h5 took 224.70738053321838 s
+
+progress: 631/3148
+processing a total of 15 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-34-5929-11A-01-TS1.1be544de-be1c-43be-8808-12b0c6a331e8.h5 took 480.9748342037201 s
+
+progress: 632/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-43-6770-01A-01-BS1.9840ba52-a555-4f7a-a12d-edffb838b03f.h5 took 182.00921773910522 s
+
+progress: 633/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-73-4676-01A-01-TS1.6e3a6123-c675-4563-b4d1-14e15ebea65b.h5 took 166.71225380897522 s
+
+progress: 634/3148
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2737-11A-01-BS1.9eee2e67-3d8b-4c52-a1f1-5cfebb4da5c4.h5 took 25.13953399658203 s
+
+progress: 635/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-49-4510-01A-01-TS1.3f8cedfa-a86e-42ae-87a9-70d554393c33.h5 took 156.31174659729004 s
+
+progress: 636/3148
+processing a total of 14 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-98-A53C-01Z-00-DX1.1E06B7B5-32C3-436C-AD66-27E5829ADA85.h5 took 439.80072116851807 s
+
+progress: 637/3148
+processing a total of 1 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-67-4679-01B-01-TS1.dad8f383-a3e6-4c49-b460-c9497efc48f4.h5 took 23.812334060668945 s
+
+progress: 638/3148
+processing a total of 34 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-49-4488-01Z-00-DX2.ce896a98-8b45-4606-8849-3a377b81e3de.h5 took 1024.3898870944977 s
+
+progress: 639/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-52-7810-01A-01-TS1.42a4fb5e-ca1f-4441-bea7-65bfd2eb2f19.h5 took 79.45303106307983 s
+
+progress: 640/3148
+processing a total of 39 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-33-AASI-01Z-00-DX1.71BC119D-9916-4214-9294-26301F2E430F.h5 took 1206.5437636375427 s
+
+progress: 641/3148
+processing a total of 33 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-33-A5GW-01Z-00-DX2.8E12990B-CA60-4C94-9309-9A0DA6C63588.h5 took 1014.3332951068878 s
+
+progress: 642/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-8120-01A-01-TS1.ee68ef00-ac9e-4833-a84e-c03fb2df1d0c.h5 took 71.2203459739685 s
+
+progress: 643/3148
+processing a total of 33 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-95-A4VN-01Z-00-DX1.B997A80F-C396-40AB-808A-B70EB83A2B74.h5 took 961.9733304977417 s
+
+progress: 644/3148
+processing a total of 49 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-18-3415-01Z-00-DX1.8C62F2CD-4A2F-4D1E-A662-D7D5AFE557AB.h5 took 1422.6576228141785 s
+
+progress: 645/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-78-8648-01A-01-TS1.861b33a9-153f-4115-a314-91e0d1a8d697.h5 took 144.90888094902039 s
+
+progress: 646/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-A491-01Z-00-DX1.E5F3B4E5-18EA-4067-AE28-119DABCE739A.h5 took 124.5394983291626 s
+
+progress: 647/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-73-4677-01A-01-BS1.7439af21-9d40-4c30-a478-1f9e7e33e3a3.h5 took 110.3703842163086 s
+
+progress: 648/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-67-3773-01A-01-TS1.dc8ffdb9-6b85-41f4-817e-36bfc559e3b0.h5 took 138.45765829086304 s
+
+progress: 649/3148
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-86-8075-01A-01-BS1.4aa32862-77f2-4ade-873e-57afb82c5e29.h5 took 284.6588764190674 s
+
+progress: 650/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-63-A5MJ-01A-01-TS1.0456CDB9-84D6-44F2-B2BF-FC1B1F590C4A.h5 took 118.73257994651794 s
+
+progress: 651/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-56-8083-01Z-00-DX1.140c8d5b-f660-4fef-b8da-6bb2c119c021.h5 took 58.672954082489014 s
+
+progress: 652/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-49-4510-01A-01-BS1.1690f93b-764b-43e8-a89c-af3cbe389a40.h5 took 178.79903197288513 s
+
+progress: 653/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-77-7338-01A-01-BS1.654045da-6384-4961-ac15-6afb85bf073b.h5 took 130.69764733314514 s
+
+progress: 654/3148
+processing a total of 35 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-95-7944-01Z-00-DX1.E66A3565-7B0D-412B-9C0C-81D7397E8B87.h5 took 763.0088126659393 s
+
+progress: 655/3148
+processing a total of 50 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-18-3406-01Z-00-DX1.8D07F006-425C-4724-BBB3-5BA099401234.h5 took 1088.3548073768616 s
+
+progress: 656/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-49-4505-01A-01-TS1.15b747c0-7a0c-4eb3-910c-f6ecc6cb3f8a.h5 took 136.78958582878113 s
+
+progress: 657/3148
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-MP-A4TC-01A-01-TS1.2C09E387-BF15-4ED1-944A-D27EE4972287.h5 took 185.8635230064392 s
+
+progress: 658/3148
+processing a total of 13 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-43-7656-11A-01-TS1.f89a4a31-1712-4be1-9330-5ee4104e1b28.h5 took 284.89398074150085 s
+
+progress: 659/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-7816-01A-01-TS1.f5aea275-cbd5-4e77-9e1d-dadb7fd95840.h5 took 79.4091374874115 s
+
+progress: 660/3148
+processing a total of 13 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-7660-01Z-00-DX1.f96c114b-f0fc-498a-97cc-e262344de357.h5 took 288.25411891937256 s
+
+progress: 661/3148
+processing a total of 10 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-34-5239-01A-01-BS1.a1dcf1cd-e343-4310-bba1-d8c8f5014e49.h5 took 219.77519965171814 s
+
+progress: 662/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-22-1005-01A-01-TS1.369217ed-cdd2-4fec-91a5-2db535ac3053.h5 took 149.13854956626892 s
+
+progress: 663/3148
+processing a total of 23 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-39-5035-01A-01-TS1.a360a0a1-8ef2-48d4-88f0-37b9a6e37c6e.h5 took 510.77444767951965 s
+
+progress: 664/3148
+processing a total of 10 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-49-4501-11A-01-TS1.a0312731-3a7e-4c09-9f10-88e164e4c73d.h5 took 222.7659034729004 s
+
+progress: 665/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-2665-01A-01-TS1.c5b2abc1-bff0-431b-8903-dde57038877d.h5 took 160.92993879318237 s
+
+progress: 666/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-33-AASB-01A-01-TSA.D1A340FC-96C2-4780-88D3-4EC1DC4964D0.h5 took 159.85897517204285 s
+
+progress: 667/3148
+processing a total of 3 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-95-7043-01A-01-BS1.ef0e9345-c695-481d-98f7-0bd114aef3e9.h5 took 56.22370195388794 s
+
+progress: 668/3148
+processing a total of 52 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-33-4538-01Z-00-DX8.ec0d10ef-ec0e-4ad2-81fb-907754694e42.h5 took 1143.4806842803955 s
+
+progress: 669/3148
+processing a total of 18 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-86-8073-01A-01-TS1.a5d126bf-ff68-42da-9b97-8372de03e05c.h5 took 396.0673713684082 s
+
+progress: 670/3148
+processing a total of 17 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-7659-11A-01-TS1.fc17a07c-16aa-415b-903d-914d8183c2db.h5 took 372.28128361701965 s
+
+progress: 671/3148
+processing a total of 38 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-78-7158-01Z-00-DX1.74db3dcd-2715-4ce7-8e48-30c8b7946ba0.h5 took 832.2199130058289 s
+
+progress: 672/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-90-7769-01A-01-TS1.084dd692-21e3-4df2-9ed5-c9220f1131d4.h5 took 119.9931263923645 s
+
+progress: 673/3148
+processing a total of 10 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-91-A4BD-01Z-00-DX1.2E575CAC-6AEB-4049-972A-EA43457A9C9D.h5 took 216.86934852600098 s
+
+progress: 674/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-63-5128-01A-01-BS1.2635b7d6-bf3d-40b0-89c0-419f0e4d9fb2.h5 took 133.79531025886536 s
+
+progress: 675/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2754-01Z-00-DX1.3cd19122-06f3-420e-9c3f-362225ff49eb.h5 took 127.47921371459961 s
+
+progress: 676/3148
+processing a total of 34 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-39-5029-01Z-00-DX1.74c5cb38-650e-4fe7-bc63-f6e88761346d.h5 took 746.598858833313 s
+
+progress: 677/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-78-7163-01A-01-TS1.4b63c412-8fd3-4353-abcd-b9b866b36f87.h5 took 42.458545446395874 s
+
+progress: 678/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-05-5715-01A-01-BS1.07f006df-4583-4bdc-ac13-82d2c5d178c7.h5 took 104.48632788658142 s
+
+progress: 679/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-78-7167-01A-01-BS1.7777a8a1-9d69-41b7-8e02-4e1bd4795624.h5 took 115.75416326522827 s
+
+progress: 680/3148
+processing a total of 35 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-73-4675-01Z-00-DX1.1027587f-8ec4-4b8c-8768-ff7b669683e0.h5 took 770.5186834335327 s
+
+progress: 681/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-63-A5MM-01A-01-TSA.8D99D26F-6BD0-4F49-ABFB-8F20ACB97C25.h5 took 45.86859941482544 s
+
+progress: 682/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-51-4079-01A-01-TS1.a9e1a7c9-cd00-4c66-838b-555a5c91c2db.h5 took 52.92901086807251 s
+
+progress: 683/3148
+processing a total of 18 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-63-A5MT-01Z-00-DX1.9F168173-804C-49CA-B157-7970CB55ED93.h5 took 401.8779487609863 s
+
+progress: 684/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2767-01A-01-TS1.6c88cd29-d984-437f-8559-6f73f0cbdc5d.h5 took 147.1890799999237 s
+
+progress: 685/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-78-7150-01A-01-BS1.c8f783f0-a7e0-42a7-9abd-9e34383a9d7f.h5 took 81.64227175712585 s
+
+progress: 686/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-18-3406-11A-01-TS1.bebef82c-348c-4686-8bcb-a8117a92da8e.h5 took 42.897376537323 s
+
+progress: 687/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-66-2791-01A-01-BS1.0e33b4ca-0d98-44bb-8085-9a3bdfeb76e5.h5 took 129.05112147331238 s
+
+progress: 688/3148
+processing a total of 7 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-64-1680-01A-01-BS1.05c0cf5d-5e06-41bc-9d70-6b27639fc2fb.h5 took 144.45389533042908 s
+
+progress: 689/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-94-7557-01Z-00-DX1.ac61f900-6f9f-44eb-91ad-98c98af8b741.h5 took 137.03780961036682 s
+
+progress: 690/3148
+processing a total of 26 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-MP-A4TF-01Z-00-DX1.F98B0438-6D32-4EA3-ABA8-E624457EA658.h5 took 583.3155603408813 s
+
+progress: 691/3148
+processing a total of 11 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-34-2596-01A-01-BS1.97310b4d-968a-4ade-b9f0-16f833a1698d.h5 took 240.75411796569824 s
+
+progress: 692/3148
+processing a total of 51 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-NC-A5HQ-01Z-00-DX1.E7FA7F88-2B81-4EBD-8A48-883BD6953428.h5 took 1122.4250645637512 s
+
+progress: 693/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-91-6831-01A-01-BS1.2d9c6566-9b9f-4f3a-b273-cb8be4fd93d1.h5 took 126.20100331306458 s
+
+progress: 694/3148
+processing a total of 12 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-75-7027-01Z-00-DX1.AC91B34F-DF67-4F95-B145-079A71A54E83.h5 took 266.5090117454529 s
+
+progress: 695/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-05-5429-01A-01-TS1.c67299ca-41d8-4a13-99f6-9d8e7a6f896d.h5 took 128.35691714286804 s
+
+progress: 696/3148
+processing a total of 12 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-7284-01Z-00-DX1.68b95b9b-1aab-4f03-aad3-1132467b7499.h5 took 267.4338676929474 s
+
+progress: 697/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-77-6845-01A-01-BS1.19f8e731-6b9d-4336-897c-bdc5f1083612.h5 took 97.86728882789612 s
+
+progress: 698/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-56-5897-01A-01-TS1.360c2b58-7187-4e91-a2ea-2194d2b05b99.h5 took 51.80183553695679 s
+
+progress: 699/3148
+processing a total of 8 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-63-7020-01Z-00-DX1.33435AC2-9EBC-422C-89DB-962153E8F3F6.h5 took 176.05867266654968 s
+
+progress: 700/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-8120-11A-01-TS1.08d94b45-130a-4c1b-94fc-4bff258f84bb.h5 took 88.85754585266113 s
+
+progress: 701/3148
+processing a total of 23 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-85-A50M-01Z-00-DX1.CFB67271-FC1B-4BA0-95DB-51D859D68D18.h5 took 506.91661381721497 s
+
+progress: 702/3148
+processing a total of 10 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-1594-01A-01-TS1.20b8b9ff-6239-455f-92d5-8ef50672340a.h5 took 231.67054986953735 s
+
+progress: 703/3148
+processing a total of 2 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-55-8621-01A-01-TS1.a1eca950-00a8-4d11-9233-0a04c29bf128.h5 took 46.325533866882324 s
+
+progress: 704/3148
+processing a total of 21 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-86-8074-01A-01-TS1.529fc24b-76e2-422c-a4a2-088f832ef994.h5 took 461.3468186855316 s
+
+progress: 705/3148
+processing a total of 14 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-39-5024-11A-01-TS1.55d33904-c049-4243-833a-4a02dc64dba5.h5 took 309.6753649711609 s
+
+progress: 706/3148
+processing a total of 5 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-05-4432-01A-01-BS1.81d59eb6-b750-4d71-820d-f207288d4514.h5 took 109.81637239456177 s
+
+progress: 707/3148
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-86-7713-11A-01-TS1.30b00886-b7f2-496c-8386-76cd8f4a74bc.h5 took 213.8099226951599 s
+
+progress: 708/3148
+processing a total of 41 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-85-7950-01Z-00-DX1.ddf7d987-7e4f-4327-83d5-0047e2806ed1.h5 took 898.2968270778656 s
+
+progress: 709/3148
+processing a total of 6 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-73-4659-01A-01-TS1.c0790aba-6245-47e2-83ca-4bc93bfb13c1.h5 took 123.8907961845398 s
+
+progress: 710/3148
+processing a total of 4 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-44-3917-01B-02-BS2.A4199939-3B75-4897-976A-DEE1BD46E1E7.h5 took 90.80770587921143 s
+
+progress: 711/3148
+processing a total of 9 batches
+
+computing features for /home/graduate2024/data_new/TCGA_LUAD_Feature_d1024/all_features/h5_files/TCGA-05-4398-01A-01-BS1.844b45df-df4e-41e1-9608-2743644bbcd1.h5 took 209.03520727157593 s
+
+progress: 712/3148
+processing a total of 39 batches

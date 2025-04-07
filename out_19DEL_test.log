@@ -1,0 +1,849 @@
+initializing dataset
+loading model checkpoint
+CoCa(
+  (text): TextTransformer(
+    (token_embedding): Embedding(32007, 768)
+    (transformer): Transformer(
+      (resblocks): ModuleList(
+        (0-11): 12 x ResidualAttentionBlock(
+          (ln_1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (ls_1): Identity()
+          (ln_2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+          (mlp): Sequential(
+            (c_fc): Linear(in_features=768, out_features=3072, bias=True)
+            (gelu): GELU(approximate='none')
+            (c_proj): Linear(in_features=3072, out_features=768, bias=True)
+          )
+          (ls_2): Identity()
+        )
+      )
+    )
+    (ln_final): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  )
+  (visual): VisualModel(
+    (trunk): VisionTransformer(
+      (patch_embed): PatchEmbed(
+        (proj): Conv2d(3, 768, kernel_size=(16, 16), stride=(16, 16))
+        (norm): Identity()
+      )
+      (pos_drop): Dropout(p=0.0, inplace=False)
+      (patch_drop): Identity()
+      (norm_pre): Identity()
+      (blocks): Sequential(
+        (0): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+        (1): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+        (2): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+        (3): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+        (4): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+        (5): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+        (6): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+        (7): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+        (8): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+        (9): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+        (10): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+        (11): Block(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.0, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop2): Dropout(p=0.0, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+      )
+      (norm): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+      (fc_norm): Identity()
+      (head_drop): Dropout(p=0.0, inplace=False)
+      (head): Identity()
+    )
+    (attn_pool_contrast): AttentionalPooler(
+      (attn): MultiheadAttention(
+        (out_proj): NonDynamicallyQuantizableLinear(in_features=512, out_features=512, bias=True)
+      )
+      (ln_q): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      (ln_k): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    )
+    (ln_contrast): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+    (head): Sequential()
+    (attn_pool_caption): AttentionalPooler(
+      (attn): MultiheadAttention(
+        (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+      )
+      (ln_q): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (ln_k): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    )
+    (ln_caption): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  )
+  (text_decoder): MultimodalTransformer(
+    (resblocks): ModuleList(
+      (0-11): 12 x ResidualAttentionBlock(
+        (ln_1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (attn): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+        )
+        (ls_1): Identity()
+        (ln_2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (mlp): Sequential(
+          (c_fc): Linear(in_features=768, out_features=3072, bias=True)
+          (gelu): GELU(approximate='none')
+          (c_proj): Linear(in_features=3072, out_features=768, bias=True)
+        )
+        (ls_2): Identity()
+      )
+    )
+    (cross_attn): ModuleList(
+      (0-11): 12 x ResidualAttentionBlock(
+        (ln_1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (attn): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+        )
+        (ls_1): Identity()
+        (ln_1_kv): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (ln_2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (mlp): Sequential(
+          (c_fc): Linear(in_features=768, out_features=3072, bias=True)
+          (gelu): GELU(approximate='none')
+          (c_proj): Linear(in_features=3072, out_features=768, bias=True)
+        )
+        (ls_2): Identity()
+      )
+    )
+    (ln_final): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  )
+)
+model successfully loading!!
+
+progress: 0/116
+0000C99F-AC7A-4908-84E3-EE665869A09C
+skipped 0000C99F-AC7A-4908-84E3-EE665869A09C
+
+progress: 1/116
+02F9D88F-88BD-4CA5-85B8-9234FD3E65B0
+skipped 02F9D88F-88BD-4CA5-85B8-9234FD3E65B0
+
+progress: 2/116
+04C2C329-D1AA-4754-BCBA-B8517D40C584
+skipped 04C2C329-D1AA-4754-BCBA-B8517D40C584
+
+progress: 3/116
+05150041-9E79-48F5-B53E-2578917E89C8
+skipped 05150041-9E79-48F5-B53E-2578917E89C8
+
+progress: 4/116
+0880DA44-AEEF-46C3-9A5C-E145CBC0FF34
+skipped 0880DA44-AEEF-46C3-9A5C-E145CBC0FF34
+
+progress: 5/116
+0E24ACED-CA11-404D-ABE0-13953A665B7B
+skipped 0E24ACED-CA11-404D-ABE0-13953A665B7B
+
+progress: 6/116
+106DD4A0-5218-4FCF-9E72-A11BFC702C12
+skipped 106DD4A0-5218-4FCF-9E72-A11BFC702C12
+
+progress: 7/116
+1081838C-9724-4213-8E8B-96DC5707EA8B
+skipped 1081838C-9724-4213-8E8B-96DC5707EA8B
+
+progress: 8/116
+1D1B98E5-7B98-4B6A-876B-3EE7E1807381
+skipped 1D1B98E5-7B98-4B6A-876B-3EE7E1807381
+
+progress: 9/116
+1E8D3C3C-F6A2-469C-B508-C935E28B9401
+skipped 1E8D3C3C-F6A2-469C-B508-C935E28B9401
+
+progress: 10/116
+1FE4643F-FA89-47A5-BDC6-50F678669D99
+skipped 1FE4643F-FA89-47A5-BDC6-50F678669D99
+
+progress: 11/116
+2250C39A-E3D6-4B79-809E-22CA3C910D05
+skipped 2250C39A-E3D6-4B79-809E-22CA3C910D05
+
+progress: 12/116
+2A4EE845-0CF8-4788-AD3E-A958666C5F9E
+skipped 2A4EE845-0CF8-4788-AD3E-A958666C5F9E
+
+progress: 13/116
+2A79FDCE-C130-4EE7-B070-F358088FA07E
+skipped 2A79FDCE-C130-4EE7-B070-F358088FA07E
+
+progress: 14/116
+2B9572D8-54FD-4F5C-84AD-75D94D51072A
+skipped 2B9572D8-54FD-4F5C-84AD-75D94D51072A
+
+progress: 15/116
+2E011845-DD1C-4693-9918-3482F7E500FE
+skipped 2E011845-DD1C-4693-9918-3482F7E500FE
+
+progress: 16/116
+2F512D8E-7AC4-43F5-88C5-DC9BAAE1890D
+skipped 2F512D8E-7AC4-43F5-88C5-DC9BAAE1890D
+
+progress: 17/116
+31F6540B-F6D9-49FF-9811-4518303B5CBB
+skipped 31F6540B-F6D9-49FF-9811-4518303B5CBB
+
+progress: 18/116
+3826D077-BF33-457F-8B9F-9CAAFD1CCAF2
+skipped 3826D077-BF33-457F-8B9F-9CAAFD1CCAF2
+
+progress: 19/116
+3DED921D-60E1-4EB9-B749-0B38A62365D6
+skipped 3DED921D-60E1-4EB9-B749-0B38A62365D6
+
+progress: 20/116
+3EF2F402-A8CB-43E1-B4DD-184162A09D18
+skipped 3EF2F402-A8CB-43E1-B4DD-184162A09D18
+
+progress: 21/116
+42AFBD96-8636-4447-9D22-7D48E93C072F
+skipped 42AFBD96-8636-4447-9D22-7D48E93C072F
+
+progress: 22/116
+437CCE2E-8F84-482C-8317-60EC16D3DEE9
+skipped 437CCE2E-8F84-482C-8317-60EC16D3DEE9
+
+progress: 23/116
+4518538A-8583-4E4A-8E66-FD3F110C7C0D
+skipped 4518538A-8583-4E4A-8E66-FD3F110C7C0D
+
+progress: 24/116
+45442F93-E626-4D8A-912B-45E0ED42BE60
+skipped 45442F93-E626-4D8A-912B-45E0ED42BE60
+
+progress: 25/116
+463C798B-05D9-4958-93B2-73257C734827
+skipped 463C798B-05D9-4958-93B2-73257C734827
+
+progress: 26/116
+498FD9C1-1BBB-4777-BE3D-45DB2E28E36D
+skipped 498FD9C1-1BBB-4777-BE3D-45DB2E28E36D
+
+progress: 27/116
+499502DF-3DFC-426B-95F9-8D5224AB266F
+skipped 499502DF-3DFC-426B-95F9-8D5224AB266F
+
+progress: 28/116
+49B41A33-DB9F-43B1-9532-8A770C3BCECF
+skipped 49B41A33-DB9F-43B1-9532-8A770C3BCECF
+
+progress: 29/116
+4B17C109-7100-41E5-BE91-E52551D80556
+skipped 4B17C109-7100-41E5-BE91-E52551D80556
+
+progress: 30/116
+4B40B780-4B19-491D-8812-49AEF33CCAA6
+skipped 4B40B780-4B19-491D-8812-49AEF33CCAA6
+
+progress: 31/116
+4BB4453C-99D4-4152-AFFA-3B0CED652A86
+skipped 4BB4453C-99D4-4152-AFFA-3B0CED652A86
+
+progress: 32/116
+4EEE4C8E-9AE2-4969-884E-4F9B1E45ECC9
+skipped 4EEE4C8E-9AE2-4969-884E-4F9B1E45ECC9
+
+progress: 33/116
+51053D36-9D40-45F1-9960-73E356FCBC9C
+skipped 51053D36-9D40-45F1-9960-73E356FCBC9C
+
+progress: 34/116
+5119A1F0-49DA-432B-A2B3-1698A5F7676B
+skipped 5119A1F0-49DA-432B-A2B3-1698A5F7676B
+
+progress: 35/116
+511B6ECD-8A39-4733-BA15-BF5260EB9911
+skipped 511B6ECD-8A39-4733-BA15-BF5260EB9911
+
+progress: 36/116
+5125D0F0-D962-484E-AA41-5713163B8BB8
+skipped 5125D0F0-D962-484E-AA41-5713163B8BB8
+
+progress: 37/116
+5298DD29-D9CB-490E-B3CF-311D2B9F3F57
+skipped 5298DD29-D9CB-490E-B3CF-311D2B9F3F57
+
+progress: 38/116
+534123F0-02E9-4B08-9D42-E226FCA68C57
+skipped 534123F0-02E9-4B08-9D42-E226FCA68C57
+
+progress: 39/116
+564A60D2-5DAC-4D5B-A818-622B4A22F84A
+skipped 564A60D2-5DAC-4D5B-A818-622B4A22F84A
+
+progress: 40/116
+56684B15-D2D3-4120-8DD9-FA28E416F0FB
+skipped 56684B15-D2D3-4120-8DD9-FA28E416F0FB
+
+progress: 41/116
+57F1D507-3279-4767-A320-2631E7EE3ABE
+skipped 57F1D507-3279-4767-A320-2631E7EE3ABE
+
+progress: 42/116
+5E087BAA-B469-45AC-9F9E-70252F0AEC2D
+skipped 5E087BAA-B469-45AC-9F9E-70252F0AEC2D
+
+progress: 43/116
+5EDF66C6-F5BE-447E-89FA-E864AF6AA2E0
+skipped 5EDF66C6-F5BE-447E-89FA-E864AF6AA2E0
+
+progress: 44/116
+651AE2F2-4EAC-4081-ACC0-85F1FBA8860F
+skipped 651AE2F2-4EAC-4081-ACC0-85F1FBA8860F
+
+progress: 45/116
+6BD65A35-2844-4008-8500-C9F71A419279
+skipped 6BD65A35-2844-4008-8500-C9F71A419279
+
+progress: 46/116
+6C962FB1-C3CE-4A42-B162-9E2A9E49184F
+skipped 6C962FB1-C3CE-4A42-B162-9E2A9E49184F
+
+progress: 47/116
+6D34D75A-268E-4EB1-9C59-BF89CAC52D56
+skipped 6D34D75A-268E-4EB1-9C59-BF89CAC52D56
+
+progress: 48/116
+6D757FFD-80AD-4A09-9E29-F13FE8F7F481
+skipped 6D757FFD-80AD-4A09-9E29-F13FE8F7F481
+
+progress: 49/116
+6D7671FA-C8B2-43AB-91AA-E448EC39834B
+skipped 6D7671FA-C8B2-43AB-91AA-E448EC39834B
+
+progress: 50/116
+6EBA9F6E-6E36-481C-A716-21C5247289A8
+skipped 6EBA9F6E-6E36-481C-A716-21C5247289A8
+
+progress: 51/116
+70F99254-F4CB-4E13-9956-A5DE2B9D3DD1
+skipped 70F99254-F4CB-4E13-9956-A5DE2B9D3DD1
+
+progress: 52/116
+72F6C6F5-2F64-4A0A-B0B9-E6888BB4C02B
+skipped 72F6C6F5-2F64-4A0A-B0B9-E6888BB4C02B
+
+progress: 53/116
+738B71ED-9BD8-483C-AA4A-9BCB583D0236
+skipped 738B71ED-9BD8-483C-AA4A-9BCB583D0236
+
+progress: 54/116
+73AD5C28-D092-472A-8CA1-F4C6548941D0
+skipped 73AD5C28-D092-472A-8CA1-F4C6548941D0
+
+progress: 55/116
+74C0CEB4-7562-4F6E-8ABA-6177C7ABB3BC
+skipped 74C0CEB4-7562-4F6E-8ABA-6177C7ABB3BC
+
+progress: 56/116
+76BA20BD-3FF0-4779-BC08-EBEB641502AE
+skipped 76BA20BD-3FF0-4779-BC08-EBEB641502AE
+
+progress: 57/116
+7807B668-F9F2-488C-8B7E-92976D89A245
+skipped 7807B668-F9F2-488C-8B7E-92976D89A245
+
+progress: 58/116
+781A80C4-D232-41D2-AF7E-23B7676A9355
+skipped 781A80C4-D232-41D2-AF7E-23B7676A9355
+
+progress: 59/116
+7AB84AC0-E711-400B-9F20-30CBAA25F42C
+skipped 7AB84AC0-E711-400B-9F20-30CBAA25F42C
+
+progress: 60/116
+7EC819BF-61CA-4924-91B1-D05A5724D2E8
+skipped 7EC819BF-61CA-4924-91B1-D05A5724D2E8
+
+progress: 61/116
+827FE5FF-E13B-4360-8C0F-EEF7F0DD032B
+skipped 827FE5FF-E13B-4360-8C0F-EEF7F0DD032B
+
+progress: 62/116
+86B96A2A-A0D6-47C9-9A88-6694187B1716
+skipped 86B96A2A-A0D6-47C9-9A88-6694187B1716
+
+progress: 63/116
+8815CEC7-F027-483D-A588-75023E7D774E
+skipped 8815CEC7-F027-483D-A588-75023E7D774E
+
+progress: 64/116
+8A921D13-0169-4EAC-967D-576612948233
+skipped 8A921D13-0169-4EAC-967D-576612948233
+
+progress: 65/116
+8AA0A98C-4BCB-4D19-91D2-BD1270A09F17
+skipped 8AA0A98C-4BCB-4D19-91D2-BD1270A09F17
+
+progress: 66/116
+8ACF6EF9-B2C9-4B08-AD57-089603AB616F
+skipped 8ACF6EF9-B2C9-4B08-AD57-089603AB616F
+
+progress: 67/116
+8AE71B6A-20DA-495D-B982-390451757CAD
+skipped 8AE71B6A-20DA-495D-B982-390451757CAD
+
+progress: 68/116
+8C199965-954D-44E7-963E-A21FAEB2AC70
+skipped 8C199965-954D-44E7-963E-A21FAEB2AC70
+
+progress: 69/116
+92B66650-CE30-4E7C-A30A-7BAF682BFA73
+skipped 92B66650-CE30-4E7C-A30A-7BAF682BFA73
+
+progress: 70/116
+94ABE04F-C68F-4343-9897-8FD21CE68BA6
+skipped 94ABE04F-C68F-4343-9897-8FD21CE68BA6
+
+progress: 71/116
+98A00BE2-21AF-49B5-96FC-E6BD4C207D67
+skipped 98A00BE2-21AF-49B5-96FC-E6BD4C207D67
+
+progress: 72/116
+9AC53203-C68C-4A4D-9625-C631F0C98434
+skipped 9AC53203-C68C-4A4D-9625-C631F0C98434
+
+progress: 73/116
+9AD8C89F-6742-4D9B-B819-2D676642739C
+skipped 9AD8C89F-6742-4D9B-B819-2D676642739C
+
+progress: 74/116
+9AF77BE4-C259-4667-867B-571CA9933CDA
+skipped 9AF77BE4-C259-4667-867B-571CA9933CDA
+
+progress: 75/116
+9C13E1A3-3A06-4E7D-8A4C-5CF42DB813AA
+skipped 9C13E1A3-3A06-4E7D-8A4C-5CF42DB813AA
+
+progress: 76/116
+9F4ED239-C3B0-4018-B3A1-BF0401199614
+skipped 9F4ED239-C3B0-4018-B3A1-BF0401199614
+
+progress: 77/116
+A1C691A0-113B-4DDC-84EE-8AE418D5431C
+skipped A1C691A0-113B-4DDC-84EE-8AE418D5431C
+
+progress: 78/116
+A2140954-930A-446D-B9F6-F398EA4EA09E
+skipped A2140954-930A-446D-B9F6-F398EA4EA09E
+
+progress: 79/116
+A4A33C96-BB05-4202-BDB4-0D215364A315
+skipped A4A33C96-BB05-4202-BDB4-0D215364A315
+
+progress: 80/116
+AA650DC7-1986-4368-A0E8-4DA20FD540DF
+skipped AA650DC7-1986-4368-A0E8-4DA20FD540DF
+
+progress: 81/116
+ABF253FB-03E1-4DBD-8C2B-9BF18B98ECC2
+skipped ABF253FB-03E1-4DBD-8C2B-9BF18B98ECC2
+
+progress: 82/116
+AC51C049-78D1-4E36-BB87-40EA68EDC5C9
+skipped AC51C049-78D1-4E36-BB87-40EA68EDC5C9
+
+progress: 83/116
+B587B45D-B0F1-44B4-9AC9-5A1B34C6F687
+skipped B587B45D-B0F1-44B4-9AC9-5A1B34C6F687
+
+progress: 84/116
+B5C40575-509B-461C-B6A8-10A1509BF643
+skipped B5C40575-509B-461C-B6A8-10A1509BF643
+
+progress: 85/116
+B9211FD7-9590-4404-9EBE-95BFED730C21
+skipped B9211FD7-9590-4404-9EBE-95BFED730C21
+
+progress: 86/116
+BA33D42F-BF40-49FA-8106-F6323BDEEF13
+skipped BA33D42F-BF40-49FA-8106-F6323BDEEF13
+
+progress: 87/116
+BAEF5546-DCE3-4C12-A3A8-2C0827288B10
+skipped BAEF5546-DCE3-4C12-A3A8-2C0827288B10
+
+progress: 88/116
+BDDEFC92-F6F9-4560-92A1-F5F2ABCB7DBB
+skipped BDDEFC92-F6F9-4560-92A1-F5F2ABCB7DBB
+
+progress: 89/116
+BEEFC089-561F-4412-8AE2-A487C0F60E0B
+skipped BEEFC089-561F-4412-8AE2-A487C0F60E0B
+
+progress: 90/116
+C7DA5758-B775-41C6-99DA-1DA6EDB494A3
+skipped C7DA5758-B775-41C6-99DA-1DA6EDB494A3
+
+progress: 91/116
+C86F90B1-4A31-494C-B7E0-595D2ED922AF
+skipped C86F90B1-4A31-494C-B7E0-595D2ED922AF
+
+progress: 92/116
+CC53B146-260F-48DB-9C4B-97AF16A92658
+skipped CC53B146-260F-48DB-9C4B-97AF16A92658
+
+progress: 93/116
+CD39FBC9-2FA8-4F33-87F0-FED3BFD0F772
+skipped CD39FBC9-2FA8-4F33-87F0-FED3BFD0F772
+
+progress: 94/116
+CFB0CC13-9FBF-406E-98E9-043BB9209C2F
+skipped CFB0CC13-9FBF-406E-98E9-043BB9209C2F
+
+progress: 95/116
+D0F2EFDB-58A4-4701-A943-29A1EA010FEF
+skipped D0F2EFDB-58A4-4701-A943-29A1EA010FEF
+
+progress: 96/116
+D33A46BB-6888-4392-996E-FE65611A9C72
+skipped D33A46BB-6888-4392-996E-FE65611A9C72
+
+progress: 97/116
+D3F46B79-63F2-4E02-A8B1-C88379E77384
+skipped D3F46B79-63F2-4E02-A8B1-C88379E77384
+
+progress: 98/116
+D466972F-DA25-427E-96D6-7BBC522E7EAE
+skipped D466972F-DA25-427E-96D6-7BBC522E7EAE
+
+progress: 99/116
+D7843C78-6351-443D-BDDF-8FCCA752E81A
+skipped D7843C78-6351-443D-BDDF-8FCCA752E81A
+
+progress: 100/116
+DBB49E20-8449-484C-8759-D051C3769BEC
+skipped DBB49E20-8449-484C-8759-D051C3769BEC
+
+progress: 101/116
+DDA9675D-348A-4F41-A1BB-5E90541489FB
+skipped DDA9675D-348A-4F41-A1BB-5E90541489FB
+
+progress: 102/116
+E11314B5-31EB-4246-98CA-1E7CC240F9FA
+skipped E11314B5-31EB-4246-98CA-1E7CC240F9FA
+
+progress: 103/116
+E284AFBE-131D-432B-AA4A-2A241ADA9FCB
+skipped E284AFBE-131D-432B-AA4A-2A241ADA9FCB
+
+progress: 104/116
+E2B2FE97-7CED-4A45-9962-94A582A04EA5
+skipped E2B2FE97-7CED-4A45-9962-94A582A04EA5
+
+progress: 105/116
+E343EB9E-C7CA-4707-8B2A-751A28E3FF5F
+skipped E343EB9E-C7CA-4707-8B2A-751A28E3FF5F
+
+progress: 106/116
+E361927E-4985-43B4-95C2-B9629BA2A38E
+skipped E361927E-4985-43B4-95C2-B9629BA2A38E
+
+progress: 107/116
+E67553C4-CBFB-4121-9A33-CB4E0148D214
+skipped E67553C4-CBFB-4121-9A33-CB4E0148D214
+
+progress: 108/116
+E7BD628B-896B-4368-A131-9C1BD0985F08
+skipped E7BD628B-896B-4368-A131-9C1BD0985F08
+
+progress: 109/116
+E7BFADD4-1095-41DF-93E9-DFB66B84E87C
+skipped E7BFADD4-1095-41DF-93E9-DFB66B84E87C
+
+progress: 110/116
+ECB7D7C0-FF7A-45F3-849C-F5FE40C1BFF0
+skipped ECB7D7C0-FF7A-45F3-849C-F5FE40C1BFF0
+
+progress: 111/116
+F1E98674-20D2-4285-8138-EC8E4F3821FD
+skipped F1E98674-20D2-4285-8138-EC8E4F3821FD
+
+progress: 112/116
+F384DD52-53C2-40F2-8939-F5B631955436
+skipped F384DD52-53C2-40F2-8939-F5B631955436
+
+progress: 113/116
+F61B55B8-E91D-4972-81DC-270067DD6D86
+skipped F61B55B8-E91D-4972-81DC-270067DD6D86
+
+progress: 114/116
+F8313EDD-DAE7-4ED1-AF79-C1CA4C5F389B
+skipped F8313EDD-DAE7-4ED1-AF79-C1CA4C5F389B
+
+progress: 115/116
+FA077222-60DF-4011-96BD-7C91979D094C
+skipped FA077222-60DF-4011-96BD-7C91979D094C
